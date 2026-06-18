@@ -2,7 +2,7 @@ name: Sync Figma tokens
 
 on:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: "0 2 * * *"
   workflow_dispatch:
 
 jobs:
@@ -13,13 +13,13 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Run token sync
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
           FIGMA_FILE_ID: ${{ secrets.FIGMA_FILE_ID }}
-        run: node scripts/sync-figma-tokens.js
+        run: node scripts/sync-figma-tokens.cjs
 
       - name: Commit updated tokens
         run: |
