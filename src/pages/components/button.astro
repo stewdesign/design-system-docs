@@ -1,5 +1,5 @@
 ---
-import StorybookEmbed from "../../components/StorybookEmbed.astro";
+
 ---
 
 <html lang="en">
@@ -12,9 +12,6 @@ import StorybookEmbed from "../../components/StorybookEmbed.astro";
         max-width: 900px;
         margin: 0 auto;
         padding: 2rem;
-        color: #00081c;
-      }
-      a {
         color: #00081c;
       }
       .back {
@@ -41,7 +38,7 @@ import StorybookEmbed from "../../components/StorybookEmbed.astro";
     </style>
   </head>
   <body>
-    <a href="/aa-design-system-docs/" class="back">&larr; Home</a>
+    <a href="/design-system-docs/" class="back">&larr; Home</a>
     <h1>Button</h1>
     <p>
       Use buttons for actions — submitting forms, confirming choices, navigating
@@ -50,7 +47,16 @@ import StorybookEmbed from "../../components/StorybookEmbed.astro";
     </p>
 
     <h2>Live component</h2>
-    <StorybookEmbed story="components-button--primary" />
+    <div
+      style="border: 2px dashed #ccc; padding: 2rem; text-align: center;
+                color: #666; border-radius: 4px; margin: 1rem 0;"
+    >
+      <p><strong>Storybook embed</strong></p>
+      <p style="font-size: 0.875rem;">
+        A live interactive component will appear here once Storybook is
+        connected.
+      </p>
+    </div>
 
     <h2>Variants</h2>
     <table>
