@@ -1,0 +1,44 @@
+---
+import TokenTable from "../../components/TokenTable.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Colour tokens — AA Design System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #00081c;
+      }
+      a {
+        color: #00081c;
+      }
+      .back {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: #666;
+        text-decoration: none;
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/aa-design-system-docs/" class="back">&larr; Home</a>
+    <h1>Colour tokens</h1>
+    <p>
+      These values are pulled automatically from the Figma Foundations file
+      every night. The table always reflects the current state of the file — no
+      manual update needed.
+    </p>
+
+    <h2>Surface — buttons</h2>
+    <TokenTable group="surface/buttons" />
+
+    <h2>All surface tokens</h2>
+    <TokenTable group="surface" />
+  </body>
+</html>

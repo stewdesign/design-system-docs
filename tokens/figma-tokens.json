@@ -1,0 +1,14 @@
+{
+  "surface/buttons/primary/default": {
+    "light": "#FFD300",
+    "dark": "#00081C",
+    "yellow": "#00081C",
+    "grey": "#FFD300"
+  },
+  "surface/buttons/secondary/default": {
+    "light": "#FFFFFF",
+    "dark": "#1A2B3C",
+    "yellow": "#FFFFFF",
+    "grey": "#2A2A2A"
+  }
+}

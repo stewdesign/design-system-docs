@@ -1,0 +1,65 @@
+---
+import tokens from "../../tokens/figma-tokens.json";
+const { group } = Astro.props;
+
+const filtered = Object.entries(tokens).filter(
+  ([key]) => !group || key.startsWith(group),
+);
+---
+
+{
+  filtered.length > 0 ? (
+    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+      <thead>
+        <tr style="background: #f5f5f5;">
+          <th style="padding: 8px 12px; text-align: left; border: 1px solid #ddd;">
+            Token
+          </th>
+          <th style="padding: 8px 12px; text-align: left; border: 1px solid #ddd;">
+            Light
+          </th>
+          <th style="padding: 8px 12px; text-align: left; border: 1px solid #ddd;">
+            Dark
+          </th>
+          <th style="padding: 8px 12px; text-align: left; border: 1px solid #ddd;">
+            Yellow
+          </th>
+          <th style="padding: 8px 12px; text-align: left; border: 1px solid #ddd;">
+            Grey
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {filtered.map(([key, val]) => (
+          <tr>
+            <td style="padding: 8px 12px; border: 1px solid #ddd; font-family: monospace;">
+              {key}
+            </td>
+            {["light", "dark", "yellow", "grey"].map((mode) => (
+              <td style="padding: 8px 12px; border: 1px solid #ddd;">
+                {val[mode] ? (
+                  <span style="display: flex; align-items: center; gap: 8px;">
+                    <span
+                      style={
+                        "width:16px;height:16px;border-radius:3px;background:" +
+                        val[mode] +
+                        ";border:1px solid #ddd;display:inline-block"
+                      }
+                    />
+                    {val[mode]}
+                  </span>
+                ) : (
+                  "—"
+                )}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  ) : (
+    <p style="color: #666; font-style: italic;">
+      No tokens found. Run the Figma sync action to populate this table.
+    </p>
+  )
+}
