@@ -1,5 +1,5 @@
 ---
-const { story, viewMode = 'docs' } = Astro.props;
+const { story, viewMode = 'docs', height = '600px' } = Astro.props;
 const base = import.meta.env.PUBLIC_STORYBOOK_URL;
 ---
 
@@ -7,7 +7,7 @@ const base = import.meta.env.PUBLIC_STORYBOOK_URL;
   <div style="border: 1px solid #ccc; border-radius: 4px; overflow: hidden; margin: 1rem 0;">
     <iframe
       src={`${base}/iframe.html?id=${story}&viewMode=${viewMode}`}
-      style="width: 100%; height: 600px; border: none;"
+      style={`width: 100%; height: ${height}; border: none;`}
       title={`Storybook: ${story}`}
     />
   </div>
