@@ -1,0 +1,134 @@
+---
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Checkbox — AA Design System</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 900px;
+             margin: 0 auto; padding: 2rem; color: #00081C; }
+      .back { display: inline-block; margin-bottom: 2rem;
+              color: #666; text-decoration: none; font-size: 0.875rem; }
+      table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+      th, td { padding: 8px 12px; border: 1px solid #ddd; text-align: left; }
+      th { background: #f5f5f5; }
+      .storybook-placeholder { border: 2px dashed #ccc; padding: 2rem;
+             text-align: center; color: #666; border-radius: 4px; margin: 1rem 0; }
+      code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-size: 0.85em; }
+    </style>
+  </head>
+  <body>
+    <a href={`${import.meta.env.BASE_URL}`} class="back">&larr; Home</a>
+    <h1>Checkbox</h1>
+    <p>A checkbox lets users select one or more options from a list, or confirm a single independent choice.</p>
+
+    <h2>Live component</h2>
+    <div class="storybook-placeholder">
+      <p><strong>Storybook embed</strong></p>
+      <p style="font-size: 0.875rem;">A live interactive component will appear here once Storybook is connected.</p>
+    </div>
+
+    <h2>Variants</h2>
+    <p>The checkbox component in Figma has two variants:</p>
+    <table>
+      <tr><th>Variant</th><th>Description</th></tr>
+      <tr>
+        <td><code>Default</code></td>
+        <td>Full checkbox with label and optional description text</td>
+      </tr>
+      <tr>
+        <td><code>Atom</code></td>
+        <td>Icon-only checkbox with no label — used where context is provided elsewhere (e.g. a table row, a list item with its own label)</td>
+      </tr>
+    </table>
+
+    <h2>Properties</h2>
+    <table>
+      <tr><th>Property</th><th>Options</th><th>Notes</th></tr>
+      <tr>
+        <td><code>variant</code></td>
+        <td>Default</td>
+        <td>Controls whether label/description are shown</td>
+      </tr>
+      <tr>
+        <td><code>state</code></td>
+        <td>Default, Checked</td>
+        <td>The selection state of the checkbox</td>
+      </tr>
+      <tr>
+        <td><code>valueType</code></td>
+        <td>Default, Hover, Focused</td>
+        <td>The interaction state — note this is named "Value Type" in the Figma layer structure</td>
+      </tr>
+      <tr>
+        <td><code>label</code></td>
+        <td>Text</td>
+        <td>Defaults to "Label" — only shown on the Default variant</td>
+      </tr>
+      <tr>
+        <td><code>description</code></td>
+        <td>Text</td>
+        <td>Optional, controlled by <code>hasDescription</code> — only shown on the Default variant</td>
+      </tr>
+    </table>
+
+    <h2>States</h2>
+    <table>
+      <tr><th>State</th><th>Description</th></tr>
+      <tr>
+        <td>Default / Default</td>
+        <td>Unchecked, resting state. White background, grey border.</td>
+      </tr>
+      <tr>
+        <td>Default / Hover</td>
+        <td>Unchecked, hovered. Light grey background fill with a black border.</td>
+      </tr>
+      <tr>
+        <td>Default / Focused</td>
+        <td>Unchecked, keyboard focus. White background, grey border, plus a dashed blue focus ring around the box.</td>
+      </tr>
+      <tr>
+        <td>Checked / Default</td>
+        <td>Selected, resting state. Dark filled background with white check mark.</td>
+      </tr>
+      <tr>
+        <td>Checked / Hover</td>
+        <td>Selected, hovered. Same dark fill as default checked state.</td>
+      </tr>
+      <tr>
+        <td>Checked / Focused</td>
+        <td>Selected, keyboard focus. Dark filled background with check mark, plus dashed blue focus ring.</td>
+      </tr>
+    </table>
+
+    <h2>Anatomy</h2>
+    <table>
+      <tr><th>Element</th><th>Required</th><th>Notes</th></tr>
+      <tr><td>Checkbox box</td><td>Yes</td><td>24×24px, rounded corners</td></tr>
+      <tr><td>Check icon</td><td>Conditional</td><td>Shown only when state is Checked</td></tr>
+      <tr><td>Focus ring</td><td>Conditional</td><td>Dashed border shown only when valueType is Focused</td></tr>
+      <tr><td>Label</td><td>Default variant only</td><td>Bold, heading-style text</td></tr>
+      <tr><td>Description</td><td>Default variant only, optional</td><td>Secondary body text below the label</td></tr>
+    </table>
+
+    <h2>Design tokens used</h2>
+    <table>
+      <tr><th>Token</th><th>Used for</th></tr>
+      <tr><td><code>surface/inputs/unchecked</code></td><td>Background when unchecked</td></tr>
+      <tr><td><code>surface/inputs/checked</code></td><td>Background when checked</td></tr>
+      <tr><td><code>surface/inputs/hover</code></td><td>Background on hover (unchecked)</td></tr>
+      <tr><td><code>border/inputs/default</code></td><td>Border colour, default state</td></tr>
+      <tr><td><code>border/default/focus</code></td><td>Focus ring colour</td></tr>
+      <tr><td><code>text/default/headings</code></td><td>Label text colour</td></tr>
+      <tr><td><code>text/default/body</code></td><td>Description text colour</td></tr>
+    </table>
+
+    <h2>Accessibility</h2>
+    <ul>
+      <li>Each checkbox must have an associated <code>label</code> element — for the Atom variant, provide an <code>aria-label</code> since no visible label is rendered</li>
+      <li>Focus state uses a dashed 2px ring at 32×32px, offset from the 24×24px box — must remain visible against all background themes</li>
+      <li>Checked state must not rely on colour alone — the check mark icon provides a non-colour signal</li>
+      <li>Disabled state is not yet defined in this component — flag with the design team before building out further variants</li>
+    </ul>
+  </body>
+</html>
