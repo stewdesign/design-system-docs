@@ -1,5 +1,7 @@
 ---
+import StorybookEmbed from '../../components/StorybookEmbed.astro';
 ---
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,10 +32,7 @@
     <p>A segmented control lets you switch between a small set of related options, with one clear choice active at a time.</p>
 
     <h2>Live component</h2>
-    <div class="storybook-placeholder">
-      <p><strong>Storybook embed</strong></p>
-      <p style="font-size: 0.875rem;">A live interactive component will appear here once Storybook is connected.</p>
-    </div>
+    <StorybookEmbed story="components-segmented-control--two-options" viewMode="story" />
 
     <h2>Usage</h2>
     <div class="guidance">

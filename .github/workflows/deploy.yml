@@ -28,6 +28,8 @@ jobs:
       - run: npm ci
 
       - name: Build Astro site
+        env:
+          PUBLIC_STORYBOOK_URL: ${{ secrets.STORYBOOK_URL }}
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3

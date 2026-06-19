@@ -1,5 +1,5 @@
 ---
-
+import StorybookEmbed from '../../components/StorybookEmbed.astro';
 ---
 
 <html lang="en">
@@ -70,17 +70,10 @@
     <p>
       A radio lets users select a single item from a mutually exclusive list.
     </p>
+   
     <h2>Live component</h2>
-    <div
-      style="border: 2px dashed #ccc; padding: 2rem; text-align: center;
-                color: #666; border-radius: 4px; margin: 1rem 0;"
-    >
-      <p><strong>Storybook embed</strong></p>
-      <p style="font-size: 0.875rem;">
-        A live interactive component will appear here once Storybook is
-        connected.
-      </p>
-    </div>
+    <StorybookEmbed story="components-radio--default-group" viewMode="story" />
+    
     <h2>Usage</h2>
     <div class="guidance">
       <div class="guidance-col do">
