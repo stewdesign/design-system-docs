@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import ComponentLayout from '../../layouts/ComponentLayout.astro';
+
+export async function getStaticPaths() {
+  const components = await getCollection('components');
+  return components.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<ComponentLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  storybookUrl={entry.data.storybookUrl}
+  figmaUrl={entry.data.figmaUrl}
+  previewImage={entry.data.previewImage}
+>
+  <Content />
+</ComponentLayout>
