@@ -5,7 +5,7 @@ import ComponentLayout from '../../layouts/ComponentLayout.astro';
 export async function getStaticPaths() {
   const components = await getCollection('components');
   return components.map(entry => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
