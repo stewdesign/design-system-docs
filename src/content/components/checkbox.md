@@ -26,28 +26,28 @@ Use a checkbox when a user needs to select multiple items from a list, or to con
 
 ## Anatomy
 
-| Element | Required | Notes |
-|---|---|---|
-| Checkbox box | Yes | 24×24px, rounded corners |
-| Check icon | Conditional | Shown only when checked |
-| Label | Default variant only | Bold, heading-style text |
-| Description | No | Optional secondary text |
+| Element      | Required             | Notes                    |
+| ------------ | -------------------- | ------------------------ |
+| Checkbox box | Yes                  | 24×24px, rounded corners |
+| Check icon   | Conditional          | Shown only when checked  |
+| Label        | Default variant only | Bold, heading-style text |
+| Description  | No                   | Optional secondary text  |
 
 ## Variants
 
-| Variant | Description |
-|---|---|
+| Variant | Description                                       |
+| ------- | ------------------------------------------------- |
 | Default | Full checkbox with label and optional description |
-| Atom | Icon-only, no label — provide aria-label |
+| Atom    | Icon-only, no label — provide aria-label          |
 
 ## States
 
-| State | Description |
-|---|---|
-| Default | Unchecked, resting state |
-| Hover | Light grey fill, black border |
-| Focused | Dashed blue focus ring |
-| Checked | Dark fill with check icon |
+| State   | Description                   |
+| ------- | ----------------------------- |
+| Default | Unchecked, resting state      |
+| Hover   | Light grey fill, black border |
+| Focused | Dashed blue focus ring        |
+| Checked | Dark fill with check icon     |
 
 ## Accessibility
 
