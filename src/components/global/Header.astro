@@ -1,0 +1,20 @@
+---
+const base = import.meta.env.BASE_URL;
+const { title } = Astro.props;
+---
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title} — AA Design System</title>
+</head>
+<header>
+  <a href={base}>AA Design System</a>
+  <nav>
+    <a href={`${base}components/button`}>Button</a>
+    <a href={`${base}components/radio`}>Radio</a>
+    <a href={`${base}components/checkbox`}>Checkbox</a>
+    <a href={`${base}components/segmented-control`}>Segmented Control</a>
+    <a href={`${base}components/accordion`}>Accordion</a>
+    <a href={`${base}tokens/colour`}>Colour Tokens</a>
+  </nav>
+</header>

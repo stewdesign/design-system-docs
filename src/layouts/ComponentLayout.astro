@@ -1,64 +1,28 @@
 ---
-const { title, description, storybookUrl, figmaUrl, previewImage } =
-  Astro.props;
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+
+const {
+  title,
+  description,
+  storybookUrl,
+  figmaUrl,
+  previewImage,
+} = Astro.props;
 ---
-
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} — AA Design System</title>
-  </head>
+  <Header title={title} />
   <body>
-    <header>
-      <a href={`${import.meta.env.BASE_URL}`}>AA Design System</a>
-      <nav>
-        <a href={`${import.meta.env.BASE_URL}/components/button`}>Button</a>
-        <a href={`${import.meta.env.BASE_URL}/components/radio`}>Radio</a>
-        <a href={`${import.meta.env.BASE_URL}/components/checkbox`}>Checkbox</a>
-        <a href={`${import.meta.env.BASE_URL}/components/segmented-control`}>Segmented Control</a>
-        <a href={`${import.meta.env.BASE_URL}/components/accordion`}>Accordion</a>
-        <a href={`${import.meta.env.BASE_URL}/tokens/colour`}>Colour Tokens</a>
-      </nav>
-    </header>
-
     <main>
-      <section data-section="hero">
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <div data-links>
-          {
-            storybookUrl && (
-              <a href={storybookUrl} target="_blank" rel="noopener">
-                View in Storybook
-              </a>
-            )
-          }
-          {
-            figmaUrl && (
-              <a href={figmaUrl} target="_blank" rel="noopener">
-                Open in Figma
-              </a>
-            )
-          }
-        </div>
-      </section>
-
-      {
-        previewImage && (
-          <section data-section="preview">
-            <img src={previewImage} alt={`${title} component preview`} />
-          </section>
-        )
-      }
-
-      <section data-section="content">
-        <slot />
-      </section>
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <div>
+        {storybookUrl && <a href={storybookUrl} target="_blank" rel="noopener">View in Storybook</a>}
+        {figmaUrl && <a href={figmaUrl} target="_blank" rel="noopener">Open in Figma</a>}
+      </div>
+      {previewImage && <img src={previewImage} alt={`${title} component preview`} />}
+      <slot />
     </main>
-
-    <footer>
-      <p>AA Design System</p>
-    </footer>
+    <Footer />
   </body>
 </html>
