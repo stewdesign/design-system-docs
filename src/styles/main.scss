@@ -1,0 +1,135 @@
+@use 'tokens' as *;
+
+// ─── Base ───────────────────────────────────────────
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--surface-default-primary);
+  color: var(--text-default-headings);
+}
+
+a {
+  color: var(--text-action-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// ─── Layout ─────────────────────────────────────────
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+// ─── Header ─────────────────────────────────────────
+header {
+  border-bottom: 1px solid var(--border-default-secondary);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    font-weight: bold;
+    color: var(--text-default-headings);
+  }
+}
+
+// ─── Nav ────────────────────────────────────────────
+nav {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    font-size: 0.9rem;
+    color: var(--text-default-body);
+
+    &:hover {
+      color: var(--text-default-headings);
+    }
+  }
+}
+
+// ─── Footer ─────────────────────────────────────────
+footer {
+  border-top: 1px solid var(--border-default-secondary);
+  padding: 1.5rem 2rem;
+  font-size: 0.85rem;
+  color: var(--text-default-body);
+  text-align: center;
+}
+
+// ─── Typography ─────────────────────────────────────
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-default-headings);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-default-headings);
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-default-headings);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-default-body);
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+
+  li {
+    margin-bottom: 0.4rem;
+  }
+}
+
+code {
+  background: var(--surface-default-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+// ─── Dark mode ──────────────────────────────────────
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--surface-default-primary);
+    color: var(--text-default-headings);
+  }
+}

@@ -1,33 +1,12 @@
 ---
 import TokenTable from "../../components/TokenTable.astro";
+import Header from '../../components/global/Header.astro';
+import Footer from '../../components/global/Footer.astro';
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Colour tokens — AA Design System</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 2rem;
-        color: #00081c;
-      }
-      a {
-        color: #00081c;
-      }
-      .back {
-        display: inline-block;
-        margin-bottom: 2rem;
-        color: #666;
-        text-decoration: none;
-        font-size: 0.875rem;
-      }
-    </style>
-  </head>
+  <Header title="Colour tokens" />
   <body>
-    <a href="/design-system-docs/" class="back">&larr; Home</a>
     <h1>Colour tokens</h1>
     <p>
       These values are pulled automatically from the Figma Foundations file
@@ -53,4 +32,5 @@ import TokenTable from "../../components/TokenTable.astro";
     <h2>Icon</h2>
     <TokenTable group="Icon" />
   </body>
+  <Footer />
 </html>
