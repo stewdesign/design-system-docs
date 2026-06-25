@@ -17,6 +17,28 @@
   font-display: swap;
 }
 
+:root {
+  --base-size: 1rem;
+  --type-scale: 1.125;
+  --h5: calc(var(--base-size) * var(--type-scale));
+  --h4: calc(var(--h5) * var(--type-scale));
+  --h3: calc(var(--h4) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+}
+
+@media screen and (min-width: 37.5em) {
+  :root {
+    --type-scale: 1.333;
+  }
+}
+
+@media screen and (min-width: 56.25em) {
+  :root {
+    --type-scale: 1.414;
+  }
+}
+
 // ─── Base ───────────────────────────────────────────
 *, *::before, *::after {
   box-sizing: border-box;
@@ -26,8 +48,11 @@
 
 body {
   font-family: var(--font-family-family-sans), Arial, sans-serif;
-  font-size: var(--typography-scale-03, 1rem);
+  font-size: var(--base-size);
+  font-weight: 400;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: var(--surface-default-primary);
   color: var(--text-default-headings);
 }
@@ -90,32 +115,21 @@ footer {
 }
 
 // ─── Typography ─────────────────────────────────────
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-family-display), Arial, sans-serif;
-  font-size: var(--typography-heading-1-font-size, 3.8rem);
-  font-weight: var(--typography-heading-1-font-weight, 700);
-}
-
-h2 {
-  font-family: var(--font-family-family-display), Arial, sans-serif;
-  font-size: var(--typography-heading-2-font-size, 3rem);
-  font-weight: var(--typography-heading-2-font-weight, 700);
-}
-
-h3 {
-  font-family: var(--font-family-family-display), Arial, sans-serif;
-  font-size: var(--typography-heading-3-font-size, 2.4rem);
-  font-weight: var(--typography-heading-3-font-weight, 700);
-}
-
-h4, h5, h6 {
-  font-family: var(--font-family-family-display), Arial, sans-serif;
-}
-
-p {
+  font-weight: normal;
+  line-height: 1.2;
+  margin-top: 1em;
   margin-bottom: 1rem;
-  color: var(--text-default-body);
 }
+
+
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+h3 { font-size: var(--h3); }
+h4 { font-size: var(--h4); }
+h5 { font-size: var(--h5); }
+p  { font-size: var(--base-size); }
 
 ul, ol {
   padding-left: 1.5rem;
