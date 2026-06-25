@@ -29,10 +29,14 @@ function resolveModeId(collection, modeId) {
   return mode ? mode.name.toLowerCase().replace(/\s+/g, '-') : modeId;
 }
 
+function isAlias(value) {
+  return value && typeof value === 'object' && value.type === 'VARIABLE_ALIAS';
+}
+
 function resolveValue(value, variables) {
   if (value && value.type === 'VARIABLE_ALIAS') {
     const ref = variables[value.id];
-    if (ref && ref.resolvedType === 'COLOR') {
+    if (ref) {
       const firstMode = Object.values(ref.valuesByMode)[0];
       return resolveValue(firstMode, variables);
     }
@@ -62,24 +66,64 @@ async function main() {
 
   const variables = data.meta.variables;
   const collections = data.meta.variableCollections;
-  const output = {};
+
+  const colorTokens = {};
+  const singleTokens = { string: {}, float: {} };
 
   Object.values(variables).forEach(variable => {
-    if (variable.resolvedType !== 'COLOR') return;
     const collection = collections[variable.variableCollectionId];
     if (!collection) return;
 
-    const tokenName = variable.name.replace(/\//g, '/');
-    output[tokenName] = {};
+    if (variable.resolvedType === 'COLOR') {
+      const tokenName = variable.name;
+      colorTokens[tokenName] = {};
+      Object.entries(variable.valuesByMode).forEach(([modeId, value]) => {
+        const modeName = resolveModeId(collection, modeId);
+        colorTokens[tokenName][modeName] = resolveValue(value, variables);
+      });
+    }
 
-    Object.entries(variable.valuesByMode).forEach(([modeId, value]) => {
-      const modeName = resolveModeId(collection, modeId);
-      output[tokenName][modeName] = resolveValue(value, variables);
-    });
+    if (variable.resolvedType === 'STRING') {
+      const firstMode = Object.values(variable.valuesByMode)[0];
+      const resolved = resolveValue(firstMode, variables);
+      if (resolved && typeof resolved === 'string') {
+        singleTokens.string[variable.name] = resolved;
+      }
+    }
+
+if (variable.resolvedType === 'FLOAT') {
+      const collection = collections[variable.variableCollectionId];
+      const modeCount = Object.keys(variable.valuesByMode).length;
+
+      if (modeCount === 1) {
+        // Single mode — store as plain value
+        const firstMode = Object.values(variable.valuesByMode)[0];
+        const resolved = resolveValue(firstMode, variables);
+        if (resolved !== null && resolved !== undefined && !isAlias(resolved)) {
+          singleTokens.float[variable.name] = resolved;
+        }
+      } else {
+        // Multiple modes — store as object with mode names as keys
+        const modeValues = {};
+        Object.entries(variable.valuesByMode).forEach(([modeId, value]) => {
+          const modeName = resolveModeId(collection, modeId);
+          const resolved = resolveValue(value, variables);
+          if (resolved !== null && resolved !== undefined && typeof resolved === 'number') {
+            modeValues[modeName] = resolved;
+          }
+        });
+        if (Object.keys(modeValues).length > 0) {
+          singleTokens.float[variable.name] = modeValues;
+        }
+      }
+    }
   });
 
-  fs.writeFileSync('tokens/figma-tokens.json', JSON.stringify(output, null, 2));
-  console.log(`Wrote ${Object.keys(output).length} tokens to tokens/figma-tokens.json`);
+  fs.writeFileSync('tokens/figma-tokens.json', JSON.stringify(colorTokens, null, 2));
+  console.log(`Wrote ${Object.keys(colorTokens).length} colour tokens to tokens/figma-tokens.json`);
+
+  fs.writeFileSync('tokens/figma-tokens-all.json', JSON.stringify({ color: colorTokens, string: singleTokens.string, float: singleTokens.float }, null, 2));
+  console.log(`Wrote all tokens to tokens/figma-tokens-all.json`);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });

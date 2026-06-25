@@ -1,5 +1,22 @@
 @use 'tokens' as *;
 
+
+@font-face {
+  font-family: 'aa-sans';
+  src: url('/design-system-docs/fonts/aa-sans-bold-digital.cadc4739541ee0415dc6.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'new-transport-aa';
+  src: url('/design-system-docs/fonts/NewTransportAA-Regular.f173238197093a46c8bd.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 // ─── Base ───────────────────────────────────────────
 *, *::before, *::after {
   box-sizing: border-box;
@@ -8,8 +25,8 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  font-size: 1rem;
+  font-family: var(--font-family-family-sans), Arial, sans-serif;
+  font-size: var(--typography-scale-03, 1rem);
   line-height: 1.6;
   background-color: var(--surface-default-primary);
   color: var(--text-default-headings);
@@ -30,25 +47,16 @@ img {
 }
 
 // ─── Layout ─────────────────────────────────────────
-.wrapper {
-  max-width: 1200px;
+main, header {
+  max-width: 70rem;
   margin: 0 auto;
-  padding: 0 2rem;
-}
-
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: calc(100% - 2rem);
+  padding-bottom: 2rem;
 }
 
 // ─── Header ─────────────────────────────────────────
 header {
   border-bottom: 1px solid var(--border-default-secondary);
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   a {
     font-weight: bold;
@@ -58,12 +66,13 @@ header {
 
 // ─── Nav ────────────────────────────────────────────
 nav {
-  display: flex;
-  gap: 1.5rem;
+  // display: flex;
+  // gap: 1.5rem;
 
   a {
     font-size: 0.9rem;
     color: var(--text-default-body);
+    margin-right: 1rem;
 
     &:hover {
       color: var(--text-default-headings);
@@ -82,23 +91,25 @@ footer {
 
 // ─── Typography ─────────────────────────────────────
 h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-default-headings);
+  font-family: var(--font-family-family-display), Arial, sans-serif;
+  font-size: var(--typography-heading-1-font-size, 3.8rem);
+  font-weight: var(--typography-heading-1-font-weight, 700);
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
-  color: var(--text-default-headings);
+  font-family: var(--font-family-family-display), Arial, sans-serif;
+  font-size: var(--typography-heading-2-font-size, 3rem);
+  font-weight: var(--typography-heading-2-font-weight, 700);
 }
 
 h3 {
-  font-size: 1.1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-default-headings);
+  font-family: var(--font-family-family-display), Arial, sans-serif;
+  font-size: var(--typography-heading-3-font-size, 2.4rem);
+  font-weight: var(--typography-heading-3-font-weight, 700);
+}
+
+h4, h5, h6 {
+  font-family: var(--font-family-family-display), Arial, sans-serif;
 }
 
 p {
