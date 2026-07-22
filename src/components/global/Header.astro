@@ -13,11 +13,18 @@ const { title } = Astro.props;
 <header>
   <a href={base}>AA Design System</a>
   <nav>
-    <a href={`${base}/components/button`}>Button</a>
-    <a href={`${base}/components/radio`}>Radio</a>
-    <a href={`${base}/components/checkbox`}>Checkbox</a>
-    <a href={`${base}/components/segmented-control`}>Segmented Control</a>
-    <a href={`${base}/components/accordion`}>Accordion</a>
-    <a href={`${base}/tokens/colour`}>Colour Tokens</a>
+    <div class="nav-group">
+      <span class="nav-group-label">Foundations</span>
+      <a href={`${base}/foundations/layout`}>Layout</a>
+      <a href={`${base}/tokens/colour`}>Colour</a>
+    </div>
+    <div class="nav-group">
+      <span class="nav-group-label">Components</span>
+      <a href={`${base}/components/button`}>Button</a>
+      <a href={`${base}/components/radio`}>Radio</a>
+      <a href={`${base}/components/checkbox`}>Checkbox</a>
+      <a href={`${base}/components/segmented-control`}>Segmented Control</a>
+      <a href={`${base}/components/accordion`}>Accordion</a>
+    </div>
   </nav>
 </header>
