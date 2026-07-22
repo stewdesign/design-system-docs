@@ -12,4 +12,12 @@ const components = defineCollection({
   }),
 });
 
-export const collections = { components };
+const foundations = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/foundations' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
+export const collections = { components, foundations };
