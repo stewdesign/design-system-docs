@@ -101,6 +101,11 @@
   grid-template-columns: subgrid;
 }
 
+.inner-section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 @media screen and (min-width: 56.25em) {
   .inner-section {
     display: grid;
@@ -132,6 +137,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+// CSS-only smooth scrolling for anchor jumps, e.g. the "On this page" links
+html {
+  scroll-behavior: smooth;
 }
 
 body {
