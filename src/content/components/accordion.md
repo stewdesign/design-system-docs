@@ -127,6 +127,16 @@ Use accordions when you need to present multiple sections of related content wit
 </section>
 <section class="inner-section">
 <div class="inner-section-content">
+<h3>Default closed</h3>
+<p>The accordion is closed to keep the interface uncluttered. This is the default state on page load.</p>
+</div>
+<figure>
+<img src="https://placehold.co/1280x720" alt="" />
+<figcaption>Image of the default closed variant.</figcaption>
+</figure>
+</section>
+<section class="inner-section">
+<div class="inner-section-content">
 <h3>Default open</h3>
 <p>An open accordion allows users to easily view and interact with expanded content.</p>
 </div>
