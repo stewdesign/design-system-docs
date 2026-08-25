@@ -11,7 +11,15 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
+
+const base = import.meta.env.BASE_URL;
+const allComponents = await getCollection('components');
+const sectionItems = allComponents.map(c => ({
+  href: `${base}/components/${c.id}`,
+  label: c.data.title,
+}));
+const current = `${base}/components/${entry.id}`;
 ---
 
 <ComponentLayout
@@ -20,6 +28,25 @@ const { Content } = await render(entry);
   storybookUrl={entry.data.storybookUrl}
   figmaUrl={entry.data.figmaUrl}
   previewImage={entry.data.previewImage}
+  version={entry.data.version}
+  lastUpdated={entry.data.lastUpdated}
+  platforms={entry.data.platforms}
+  anatomy={entry.data.anatomy}
+  variants={entry.data.variants}
+  behavior={entry.data.behavior}
+  bestPractices={entry.data.bestPractices}
+  designTokens={entry.data.designTokens}
+  accessibility={entry.data.accessibility}
+  relatedComponents={entry.data.relatedComponents}
+  headings={headings}
+  sectionTitle="Components"
+  sectionItems={sectionItems}
+  current={current}
+  breadcrumbs={[
+    { href: base, label: 'Home' },
+    { href: `${base}/components`, label: 'Components' },
+    { label: entry.data.title },
+  ]}
 >
   <Content />
 </ComponentLayout>

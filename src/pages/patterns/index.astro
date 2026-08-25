@@ -1,0 +1,20 @@
+---
+import SectionLayout from '../../layouts/SectionLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<SectionLayout
+  title="Patterns"
+  sectionTitle="Patterns"
+  sectionItems={[]}
+  current={`${base}/patterns`}
+  breadcrumbs={[
+    { href: base, label: 'Home' },
+    { label: 'Patterns' },
+  ]}
+>
+  <h1>Patterns</h1>
+  <p>Patterns are reusable solutions to common design problems, providing a consistent approach to solving user interface challenges across our products.</p>
+  <p>Nothing published yet — check back soon.</p>
+</SectionLayout>

@@ -1,38 +1,52 @@
 ---
+import { getCollection } from 'astro:content';
 import TokenTable from "../../components/TokenTable.astro";
-import Header from '../../components/global/Header.astro';
-import Footer from '../../components/global/Footer.astro';
+import SectionLayout from '../../layouts/SectionLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const allFoundations = await getCollection('foundations');
+const sectionItems = [
+  ...allFoundations.map(f => ({
+    href: `${base}/foundations/${f.id}`,
+    label: f.data.title,
+  })),
+  { href: `${base}/tokens/colour`, label: 'Colour' },
+];
 ---
 
-<html lang="en">
-  <Header title="Colour tokens" />
-  <body>
-    <main>
-    <h1>Colour tokens</h1>
-    <p>
-      These values are pulled automatically from the Figma Foundations file
-      every night. The table always reflects the current state of the file — no
-      manual update needed.
-    </p>
+<SectionLayout
+  title="Colour tokens"
+  sectionTitle="Foundations"
+  sectionItems={sectionItems}
+  current={`${base}/tokens/colour`}
+  breadcrumbs={[
+    { href: base, label: 'Home' },
+    { href: `${base}/foundations`, label: 'Foundations' },
+    { label: 'Colour tokens' },
+  ]}
+>
+  <h1>Colour tokens</h1>
+  <p>
+    These values are pulled automatically from the Figma Foundations file
+    every night. The table always reflects the current state of the file — no
+    manual update needed.
+  </p>
 
-    <h2>Surface — Action</h2>
-    <TokenTable group="Surface/Action" />
+  <h2>Surface — Action</h2>
+  <TokenTable group="Surface/Action" />
 
-    <h2>Surface — Default</h2>
-    <TokenTable group="Surface/Default" />
+  <h2>Surface — Default</h2>
+  <TokenTable group="Surface/Default" />
 
-    <h2>Surface — Inputs</h2>
-    <TokenTable group="Surface/Inputs" />
+  <h2>Surface — Inputs</h2>
+  <TokenTable group="Surface/Inputs" />
 
-    <h2>Text</h2>
-    <TokenTable group="Text" />
+  <h2>Text</h2>
+  <TokenTable group="Text" />
 
-    <h2>Border</h2>
-    <TokenTable group="Border" />
+  <h2>Border</h2>
+  <TokenTable group="Border" />
 
-    <h2>Icon</h2>
-    <TokenTable group="Icon" />
-    </main>
-  </body>
-  <Footer />
-</html>
+  <h2>Icon</h2>
+  <TokenTable group="Icon" />
+</SectionLayout>

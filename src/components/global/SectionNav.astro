@@ -1,0 +1,21 @@
+---
+// Contextual navigation for a documentation section (Components, Foundations,
+// Patterns). Rendered twice per page with the same data: once inside the
+// header's mobile drawer, once as the desktop sidebar in <main>.
+export interface Props {
+  title: string;
+  items: { href: string; label: string }[];
+  current?: string;
+}
+
+const { title, items, current } = Astro.props;
+const headingId = `${title.toLowerCase().replace(/\s+/g, '-')}-context-heading`;
+---
+<span class="context-title" id={headingId}>{title}</span>
+<nav aria-labelledby={headingId}>
+  {items.map((item) => (
+    <a href={item.href} aria-current={item.href === current ? 'page' : undefined}>
+      {item.label}
+    </a>
+  ))}
+</nav>

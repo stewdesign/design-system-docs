@@ -1,0 +1,17 @@
+---
+// In-page table of contents, built from whichever sections a given page
+// actually has data for — not every component has every section.
+export interface Props {
+  sections: { id: string; label: string }[];
+}
+
+const { sections } = Astro.props;
+---
+<nav class="on-this-page" aria-label="On this page">
+  <span class="context-title">On this page</span>
+  <ul>
+    {sections.map((s) => (
+      <li><a href={`#${s.id}`}>{s.label}</a></li>
+    ))}
+  </ul>
+</nav>

@@ -1,7 +1,10 @@
 ---
 const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer>
-  <p>&copy; {year} The AA. All rights reserved.</p>
+  <p>&copy; {year} The Design System. All rights reserved.</p>
 </footer>
+
+<script src={`${base}/scripts.js`}></script>

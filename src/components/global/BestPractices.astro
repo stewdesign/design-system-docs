@@ -1,0 +1,26 @@
+---
+// Do/Don't comparison, generated from two plain lists of short statements.
+export interface Props {
+  doItems: string[];
+  dontItems: string[];
+}
+
+const { doItems, dontItems } = Astro.props;
+---
+<section id="best-practices" aria-label="Best practices">
+  <h2>Best practices</h2>
+  <div class="best-practices-grid">
+    <div>
+      <h3>Do</h3>
+      <ul>
+        {doItems.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+    <div>
+      <h3>Don't</h3>
+      <ul>
+        {dontItems.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

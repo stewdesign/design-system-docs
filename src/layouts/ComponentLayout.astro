@@ -1,6 +1,11 @@
 ---
-import Header from '../components/global/Header.astro';
-import Footer from '../components/global/Footer.astro';
+import SectionLayout from './SectionLayout.astro';
+import PropertyGrid from '../components/global/PropertyGrid.astro';
+import BestPractices from '../components/global/BestPractices.astro';
+import TokenList from '../components/global/TokenList.astro';
+import AccessibilityList from '../components/global/AccessibilityList.astro';
+import RelatedComponents from '../components/global/RelatedComponents.astro';
+import OnThisPage from '../components/global/OnThisPage.astro';
 
 const {
   title,
@@ -8,21 +13,124 @@ const {
   storybookUrl,
   figmaUrl,
   previewImage,
+  version,
+  lastUpdated,
+  platforms,
+  anatomy,
+  variants,
+  behavior,
+  bestPractices,
+  designTokens,
+  accessibility,
+  relatedComponents,
+  sectionTitle,
+  sectionItems,
+  current,
+  breadcrumbs,
+  headings = [],
 } = Astro.props;
+
+const lastUpdatedIso = lastUpdated ? new Date(lastUpdated).toISOString().split('T')[0] : null;
+const hasBody = Astro.slots.has('default');
+
+// Section headings an editor (or, eventually, AI) writes straight into the
+// markdown body — e.g. "## Variants" followed by hand-authored HTML cards —
+// show up here automatically via Astro's own heading extraction. No schema
+// field or component wiring needed for these.
+const bodyHeadings = headings
+  .filter((h) => h.depth === 2)
+  .map((h) => ({ id: h.slug, label: h.text }));
+
+// The remaining sections are still frontmatter-driven components (Anatomy/
+// Properties/Variants/Behavior for components not yet migrated onto the
+// body-authored pattern, plus Best practices/Design tokens/Accessibility/
+// Related components, which stay frontmatter-driven either way). Each only
+// appears in the "On this page" nav when that component actually has data
+// for it.
+const tocSections = [
+  ...bodyHeadings,
+  anatomy && { id: 'anatomy', label: 'Anatomy' },
+  anatomy && { id: 'properties', label: 'Properties' },
+  variants && { id: 'variants', label: 'Variants' },
+  behavior && { id: 'behavior', label: 'Behavior' },
+  bestPractices && { id: 'best-practices', label: 'Best practices' },
+  designTokens && { id: 'design-tokens', label: 'Design tokens' },
+  accessibility && { id: 'accessibility', label: 'Accessibility' },
+  relatedComponents && { id: 'related-components', label: 'Related components' },
+].filter(Boolean);
 ---
-<html lang="en">
-  <Header title={title} />
-  <body>
-    <main>
+<SectionLayout
+  title={title}
+  sectionTitle={sectionTitle}
+  sectionItems={sectionItems}
+  current={current}
+  breadcrumbs={breadcrumbs}
+>
+  <article class="component-article">
+    <header class="article-header">
       <h1>{title}</h1>
       <p>{description}</p>
+
+      {(version || lastUpdated || platforms) && (
+        <dl class="meta-data">
+          {version && (
+            <div>
+              <dt>Version</dt>
+              <dd>{version}</dd>
+            </div>
+          )}
+          {lastUpdated && (
+            <div>
+              <dt>Last Updated</dt>
+              <dd><time datetime={lastUpdatedIso}>{lastUpdatedIso}</time></dd>
+            </div>
+          )}
+          {platforms && (
+            <div>
+              <dt>Platform</dt>
+              <dd>{platforms.map((p) => <span>{p}</span>)}</dd>
+            </div>
+          )}
+        </dl>
+      )}
+
       <div>
         {storybookUrl && <a href={storybookUrl} target="_blank" rel="noopener">View in Storybook</a>}
         {figmaUrl && <a href={figmaUrl} target="_blank" rel="noopener">Open in Figma</a>}
       </div>
-      {previewImage && <img src={previewImage} alt={`${title} component preview`} />}
-      <slot />
-    </main>
-    <Footer />
-  </body>
-</html>
+    </header>
+
+    {previewImage && (
+      <figure class="component-figure">
+        <img src={previewImage} alt={`${title} component preview`} />
+      </figure>
+    )}
+
+    {tocSections.length > 1 && <OnThisPage sections={tocSections} />}
+
+    {hasBody && <slot />}
+
+    {anatomy && (
+      <section id="anatomy" aria-label="Anatomy">
+        <h2>Anatomy</h2>
+        {anatomy.image && (
+          <figure>
+            <img src={anatomy.image} alt={`${title} anatomy diagram`} />
+            <figcaption>Anatomy of the component.</figcaption>
+          </figure>
+        )}
+        <ol>
+          {anatomy.parts.map((part) => <li>{part.name}</li>)}
+        </ol>
+      </section>
+    )}
+
+    {anatomy && <PropertyGrid id="properties" title="Properties" items={anatomy.parts} />}
+    {variants && <PropertyGrid id="variants" title="Variants" items={variants} />}
+    {behavior && <PropertyGrid id="behavior" title="Behavior" items={behavior} />}
+    {bestPractices && <BestPractices doItems={bestPractices.do} dontItems={bestPractices.dont} />}
+    {designTokens && <TokenList tokens={designTokens} />}
+    {accessibility && <AccessibilityList items={accessibility} />}
+    {relatedComponents && <RelatedComponents items={relatedComponents} />}
+  </article>
+</SectionLayout>

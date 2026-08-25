@@ -1,0 +1,28 @@
+---
+// Generic "labeled cards in a subgrid" section — reused for Properties,
+// Variants, and Behavior. Same template, different heading + data.
+export interface Props {
+  id: string;
+  title: string;
+  items: { name: string; description: string; image?: string }[];
+}
+
+const { id, title, items } = Astro.props;
+---
+<section id={id} aria-label={title} class="properties-wrapper">
+  <h2>{title}</h2>
+  {items.map((item) => (
+    <section class="inner-section">
+      <div class="inner-section-content">
+        <h3>{item.name}</h3>
+        <p>{item.description}</p>
+      </div>
+      {item.image && (
+        <figure>
+          <img src={item.image} alt={`${item.name} detail`} />
+          <figcaption>Image of the {item.name.toLowerCase()}.</figcaption>
+        </figure>
+      )}
+    </section>
+  ))}
+</section>

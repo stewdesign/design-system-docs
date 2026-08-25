@@ -1,0 +1,36 @@
+---
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import SectionNav from '../components/global/SectionNav.astro';
+import Breadcrumbs from '../components/global/Breadcrumbs.astro';
+
+const {
+  title,
+  sectionTitle,
+  sectionItems,
+  current,
+  breadcrumbs,
+} = Astro.props;
+---
+<html lang="en">
+  <Header title={title} sectionTitle={sectionTitle}>
+    {sectionTitle && sectionItems && (
+      <SectionNav slot="section-nav" title={sectionTitle} items={sectionItems} current={current} />
+    )}
+  </Header>
+  <body>
+    <main class="container grid">
+      <aside class="sidebar grid-item-25" aria-label="Desktop Sidebar Navigation">
+        {sectionTitle && sectionItems && (
+          <SectionNav title={sectionTitle} items={sectionItems} current={current} />
+        )}
+      </aside>
+
+      <section class="content grid-item-75">
+        {breadcrumbs && <Breadcrumbs trail={breadcrumbs} />}
+        <slot />
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,20 @@
+---
+// Breadcrumb trail. Pass every step from Home down to the current page;
+// the last entry is rendered as plain text (aria-current="page"), not a link.
+export interface Props {
+  trail: { href?: string; label: string }[];
+}
+
+const { trail } = Astro.props;
+---
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ul>
+    {trail.map((crumb, i) => (
+      i === trail.length - 1 ? (
+        <li><span aria-current="page">{crumb.label}</span></li>
+      ) : (
+        <li><a href={crumb.href}>{crumb.label}</a></li>
+      )
+    ))}
+  </ul>
+</nav>

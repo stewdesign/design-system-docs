@@ -1,0 +1,16 @@
+---
+// Simple name/value list for the design tokens a component relies on.
+export interface Props {
+  tokens: { name: string; value: string }[];
+}
+
+const { tokens } = Astro.props;
+---
+<section id="design-tokens" aria-label="Design tokens">
+  <h2>Design tokens</h2>
+  <ul class="token-list">
+    {tokens.map((t) => (
+      <li><strong>{t.name}</strong> — <code>{t.value}</code></li>
+    ))}
+  </ul>
+</section>

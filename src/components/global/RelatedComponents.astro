@@ -1,0 +1,19 @@
+---
+// Links to other components, with an optional note on when to use them instead.
+export interface Props {
+  items: { label: string; href: string; note?: string }[];
+}
+
+const { items } = Astro.props;
+---
+<section id="related-components" aria-label="Related components">
+  <h2>Related components</h2>
+  <ul>
+    {items.map((item) => (
+      <li>
+        <a href={item.href}>{item.label}</a>
+        {item.note && <> — {item.note}</>}
+      </li>
+    ))}
+  </ul>
+</section>

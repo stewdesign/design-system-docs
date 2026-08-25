@@ -1,14 +1,66 @@
 ---
 import Header from '../components/global/Header.astro';
 import Footer from '../components/global/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 <html lang="en">
   <Header title="Home" />
   <body>
     <main>
-      <h1>AA Design System</h1>
-      <p>Documentation site — proof of concept.</p>
+      <h1 class="scale">A unified foundation for every journey.</h1>
+      <p>Our brand and design system is built to project unwavering trust and stability, ensuring we show up with clarity—whether we are rescuing a stranded driver today or securing our customers' financial futures for tomorrow.</p>
+
+      <section>
+        <h2>Explore</h2>
+        <div class="grid">
+          <article class="grid-item-33">
+            <img src="https://placehold.co/1280x720" alt="" />
+            <h3>Foundations</h3>
+            <p>Learn about the core principles, guidelines, and resources that form the basis of our design system.</p>
+            <a href={`${base}/foundations`}>Explore Foundations</a>
+          </article>
+
+          <article class="grid-item-33">
+            <img src="https://placehold.co/1280x720" alt="" />
+            <h3>Components</h3>
+            <p>Discover the reusable UI elements that make up our design system, ensuring consistency and efficiency across our products.</p>
+            <a href={`${base}/components`}>Explore Components</a>
+          </article>
+
+          <article class="grid-item-33">
+            <img src="https://placehold.co/1280x720" alt="" />
+            <h3>Patterns</h3>
+            <p>Explore the design patterns that provide solutions to common user interface challenges, promoting usability and accessibility.</p>
+            <a href={`${base}/patterns`}>Explore Patterns</a>
+          </article>
+        </div>
+      </section>
     </main>
     <Footer />
   </body>
 </html>
+
+<style>
+  main > section {
+    margin-top: 2rem;
+  }
+
+  main > section .grid {
+    row-gap: var(--grid-gap);
+    margin-top: 1rem;
+  }
+
+  main > section article img {
+    width: 100%;
+    aspect-ratio: 1280 / 720;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+  }
+
+  main > section article a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+</style>

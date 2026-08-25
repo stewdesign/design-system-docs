@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import SectionLayout from '../../layouts/SectionLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const allComponents = await getCollection('components');
+const sectionItems = allComponents.map(c => ({
+  href: `${base}/components/${c.id}`,
+  label: c.data.title,
+}));
+---
+
+<SectionLayout
+  title="Components"
+  sectionTitle="Components"
+  sectionItems={sectionItems}
+  current={`${base}/components`}
+  breadcrumbs={[
+    { href: base, label: 'Home' },
+    { label: 'Components' },
+  ]}
+>
+  <h1>Components</h1>
+  <p>Components are the building blocks of our design system, providing reusable UI elements that ensure consistency and efficiency across our products.</p>
+  <ul>
+    {allComponents.map(c => (
+      <li><a href={`${base}/components/${c.id}`}>{c.data.title}</a></li>
+    ))}
+  </ul>
+</SectionLayout>
