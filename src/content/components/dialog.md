@@ -33,10 +33,13 @@ anatomy:
 variants:
   - name: "Default"
     description: "A 400px-wide text-focused dialog with a title, content slot, optional dismiss control and button group."
+    image: "https://placehold.co/1280x720"
   - name: "Media"
     description: "A 400px-wide dialog with a media region above the standard content area."
+    image: "https://placehold.co/1280x720"
   - name: "Media hero"
     description: "A 720px-wide, two-column dialog with media on the left and content on the right."
+    image: "https://placehold.co/1280x720"
 behavior:
   - name: "Open"
     description: "The dialog places its message and available actions in a focused surface above the surrounding interface."
