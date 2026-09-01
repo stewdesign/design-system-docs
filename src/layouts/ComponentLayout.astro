@@ -50,7 +50,6 @@ const bodyHeadings = headings
 const tocSections = [
   ...bodyHeadings,
   anatomy && { id: 'anatomy', label: 'Anatomy' },
-  anatomy && { id: 'properties', label: 'Properties' },
   variants && { id: 'variants', label: 'Variants' },
   behavior && { id: 'behavior', label: 'Behavior' },
   bestPractices && { id: 'best-practices', label: 'Best practices' },
@@ -125,7 +124,6 @@ const tocSections = [
       </section>
     )}
 
-    {anatomy && <PropertyGrid id="properties" title="Properties" items={anatomy.parts} />}
     {variants && <PropertyGrid id="variants" title="Variants" items={variants} />}
     {behavior && <PropertyGrid id="behavior" title="Behavior" items={behavior} />}
     {bestPractices && <BestPractices doItems={bestPractices.do} dontItems={bestPractices.dont} />}
