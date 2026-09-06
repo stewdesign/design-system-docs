@@ -13,10 +13,11 @@ const section = sectionTitle?.toLowerCase();
   <title>{title} — AA Design System</title>
 </head>
 <PagefindConfig />
-<header>
+<header id="site-header" class="container" role="banner">
   <nav id="global-nav" aria-label="Main Navigation">
     <a href={base}>Design System</a>
-
+    
+    <div class="menu-search">
     <button
       id="menu-toggle"
       aria-expanded="false"
@@ -26,29 +27,30 @@ const section = sectionTitle?.toLowerCase();
       Menu
     </button>
 
-    <div id="primary-menu" class="nav-drawer" aria-hidden="true">
-      <ul class="global-links">
-        <li><a href={`${base}/foundations`} aria-current={section === 'foundations' ? 'page' : undefined}>Foundations</a></li>
-        <li><a href={`${base}/components`} aria-current={section === 'components' ? 'page' : undefined}>Components</a></li>
-        <li><a href={`${base}/patterns`} aria-current={section === 'patterns' ? 'page' : undefined}>Patterns</a></li>
-      </ul>
+      <div id="primary-menu" class="nav-drawer" aria-hidden="true">
+        <ul class="global-links">
+          <li><a href={`${base}/foundations`} aria-current={section === 'foundations' ? 'page' : undefined}>Foundations</a></li>
+          <li><a href={`${base}/components`} aria-current={section === 'components' ? 'page' : undefined}>Components</a></li>
+          <li><a href={`${base}/patterns`} aria-current={section === 'patterns' ? 'page' : undefined}>Patterns</a></li>
+        </ul>
 
-      {Astro.slots.has('section-nav') && (
-        <div class="mobile-context-nav">
-          <slot name="section-nav" />
-        </div>
-      )}
+        {Astro.slots.has('section-nav') && (
+          <div class="mobile-context-nav">
+            <slot name="section-nav" />
+          </div>
+        )}
+      </div>
+      
+      <button
+        id="search-toggle"
+        aria-haspopup="dialog"
+        aria-controls="search-dialog"
+        aria-label="Search"
+      >
+        Search <kbd>⌘K</kbd>
+      </button>
     </div>
   </nav>
-
-  <button
-    id="search-toggle"
-    aria-haspopup="dialog"
-    aria-controls="search-dialog"
-    aria-label="Search"
-  >
-    Search <kbd>⌘K</kbd>
-  </button>
 
   <div id="search-dialog" class="search-dialog" role="dialog" aria-modal="true" aria-label="Search" aria-hidden="true">
     <div class="search-dialog-backdrop" data-search-dismiss></div>
