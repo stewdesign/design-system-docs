@@ -1,0 +1,41 @@
+---
+// One or more repeated title + two-figure comparisons. Preferred usage:
+// do's and don'ts, or side-by-side comparison of two components/patterns.
+// Note: each pair currently shares one heading above both figures — give
+// each figure's own figcaption the distinguishing label (e.g. "Do" / "Don't")
+// until/unless the pair gets its own heading per figure.
+export interface Figure {
+  image: string;
+  imageAlt?: string;
+  caption: string;
+}
+
+export interface SideBySideItem {
+  title: string;
+  figures: [Figure, Figure];
+}
+
+export interface Props {
+  id: string;
+  title: string;
+  items: SideBySideItem[];
+}
+
+const { id, title, items } = Astro.props;
+---
+<section class="cards" aria-labelledby={id}>
+  <h2 id={id}>{title}</h2>
+
+  {items.map((item) => (
+    <div class="grid">
+      <h3 class="grid-item-100">{item.title}</h3>
+
+      {item.figures.map((fig) => (
+        <figure class="nested-grid-item-50-lg">
+          <img src={fig.image} alt={fig.imageAlt ?? ''} />
+          <figcaption>{fig.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  ))}
+</section>

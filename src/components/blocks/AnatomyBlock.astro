@@ -1,0 +1,29 @@
+---
+// Numbered parts list + a single supporting figure, side by side from 48em
+// up. Preferred usage: anatomy diagrams, where callout numbers on the image
+// need to match a numbered list.
+export interface Props {
+  id: string;
+  title: string;
+  items: string[];
+  image: string;
+  imageAlt?: string;
+  caption: string;
+}
+
+const { id, title, items, image, imageAlt = '', caption } = Astro.props;
+---
+<section class="two-col" aria-labelledby={id}>
+  <h2 id={id}>{title}</h2>
+
+  <div class="grid">
+    <ol class="anatomy-items nested-grid-item-50-lg">
+      {items.map((item) => <li style="margin-top: 0">{item}</li>)}
+    </ol>
+
+    <figure class="nested-grid-item-50-lg">
+      <img src={image} alt={imageAlt} />
+      <figcaption>{caption}</figcaption>
+    </figure>
+  </div>
+</section>

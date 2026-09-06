@@ -7,9 +7,9 @@ export interface Props {
 
 const { sections } = Astro.props;
 ---
-<nav class="on-this-page" aria-label="On this page">
-  <span class="context-title">On this page</span>
-  <ul>
+<nav class="on-this-page grid" aria-labelledby="on-this-page-heading">
+  <h2 id="on-this-page-heading" class="nested-grid-item-50">On this page</h2>
+  <ul class="nested-grid-item-50">
     {sections.map((s) => (
       <li><a href={`#${s.id}`}>{s.label}</a></li>
     ))}

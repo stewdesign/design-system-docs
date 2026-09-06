@@ -1,6 +1,5 @@
 @use 'tokens' as *;
 
-
 @font-face {
   font-family: 'aa-sans';
   src: url('/design-system-docs/fonts/aa-sans-bold-digital.cadc4739541ee0415dc6.woff') format('woff');
@@ -54,10 +53,24 @@
   --grid-item-33: span 4;
   --grid-item-25: span 4;
 
+  --nested-grid-item-50: span 4;
+  --nested-grid-item-50-lg: span 4;
+
   --grid-item-single: span 4;
+
+  --gap-sm: .5rem;
+  --gap-md: 1rem;
+  --gap-lg: 1.5rem;
+  --gap-xl: 2rem;
+
+  --padding-sm: .5rem;
+  --padding-md: 1rem;
+  --padding-lg: 1.5rem;
+  --padding-xl: 2rem;
+  --padding-xxl: 3rem;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 48em) {
   :root {
     --grid-column: repeat(12, 1fr);
 
@@ -68,13 +81,17 @@
     --grid-item-33: span 4;
     --grid-item-25: span 3;
 
+    --nested-grid-item-50: span 6;
+    --nested-grid-item-50-lg: span 12;
+
     --grid-item-single: 2 / span 10;
   }
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 70em) {
   :root {
     --grid-item-single: 3 / span 8;
+    --nested-grid-item-50-lg: span 6;
   }
 }
 
@@ -95,6 +112,9 @@
 .grid-item-50  { grid-column: var(--grid-item-50); }
 .grid-item-33  { grid-column: var(--grid-item-33); }
 .grid-item-25  { grid-column: var(--grid-item-25); }
+
+.nested-grid-item-50      { grid-column: var(--nested-grid-item-50); }
+.nested-grid-item-50-lg   { grid-column: var(--nested-grid-item-50-lg); }
 
 // Subgrid layout used on component/foundation detail pages
 .content {
@@ -157,34 +177,133 @@ body {
 
 a {
   color: var(--text-action-link);
-  text-decoration: none;
+  text-underline-offset: .5rem;
 }
 
 a:hover {
-  text-decoration: underline;
+   text-decoration-thickness: .125rem;
 }
 
 img {
   max-width: 100%;
   display: block;
+  border-radius: 1rem;
 }
 
 // ─── Layout ─────────────────────────────────────────
-main, header {
-  max-width: 70rem;
+.container {
+  max-width: 80rem;
   margin: 0 auto;
   width: calc(100% - 2rem);
-  padding-bottom: 2rem;
+}
+
+.article-header, .on-this-page {
+  padding: var(--padding-lg) 0;
+
+  @media (min-width: 48em) {
+    padding: var(--padding-xxl) 0;
+  }
+}
+
+.meta-data {
+  padding: 1rem;
+  border: 1px solid var(--border-default-tertiary);
+  margin-top: 2rem;
+}
+
+.article-header h1 {
+  padding-bottom: var(--padding-lg);
+  margin-bottom: var(--padding-lg);
+  border-bottom: 1px solid var(--border-default-tertiary);
+}
+
+main {
+  padding-top: var(--padding-xl);
+}
+
+ol.anatomy-items {
+  list-style: none;
+  counter-reset: item;
+  padding-left: 0;
+
+  @media screen and (min-width: 37.5em) {
+    column-count: 2;
+    column-gap: var(--gap-lg);
+  }
+
+  li {
+    counter-increment: item;
+    padding: var(--padding-sm) 0;
+    margin-top: 0;
+  }
+
+  li:before {
+    content: counter(item);
+    margin-right: var(--gap-sm);
+    background: var(--surface-action-secondary-default);
+    border-radius: 100%;
+    color: var(--text-neutral-tertiary);
+    text-align: center;
+    align-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+  }
+}
+
+.content section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: var(--padding-lg) 0;
+
+  @media (min-width: 48em) {
+    padding: var(--padding-xxl) 0;
+  }
+
+  h2 {
+    padding-bottom: var(--padding-md);
+    border-bottom: 1px solid var(--border-default-tertiary);
+  }
+
+  p, ul, ol {
+    margin-top: 1rem;
+  }
+
+  ul, ol {
+    li {
+      margin-top: 0.5rem;
+    }
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+  }
+}
+
+.two-col {
+  @media (max-width: 70em) {
+    figure {
+      order: -1;
+    }
+  }
+}
+
+.cards, .two-col {
+  .grid {
+    gap: var(--gap-lg);
+  }
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 // ─── Header ─────────────────────────────────────────
-header {
-  border-bottom: 1px solid var(--border-default-secondary);
-
-  a {
-    font-weight: bold;
-    color: var(--text-default-headings);
-  }
+#site-header {
+  padding: var(--padding-xl) 0;
 }
 
 #global-nav {
@@ -196,23 +315,55 @@ header {
 
 // ─── Nav ────────────────────────────────────────────
 nav {
-  // display: flex;
-  // gap: 1.5rem;
-
-  a {
-    font-size: 0.9rem;
-    color: var(--text-default-body);
-    margin-right: 1rem;
-
-    &:hover {
-      color: var(--text-default-headings);
-    }
-  }
-
   ul {
     list-style: none;
-    display: flex;
-    gap: 1rem;
+    padding: 0;
+  }
+}
+
+.menu-search {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+}
+
+#primary-menu ul {
+  display: flex;
+  gap: var(--gap-lg);
+
+  a {
+    text-decoration: none;
+    font-style: italic;
+    font-family: var(--font-family-family-display), Arial, sans-serif;
+    font-size: 1.25rem;
+    color: var(--text-headings-primary);
+
+    &[aria-current="page"] {
+      text-decoration: underline;
+      text-decoration-thickness: .125rem;
+    }
+  }
+}
+
+.breadcrumbs ul {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: var(--padding-md);
+}
+
+.on-this-page {
+  gap: var(--gap-lg);
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding: var(--padding-sm) 0;
+    border-top: 1px solid var(--border-default-tertiary);
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: .125rem;
+    }
   }
 }
 
@@ -254,7 +405,7 @@ nav {
   }
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 48em) {
   #menu-toggle {
     display: none;
   }
@@ -286,8 +437,6 @@ nav {
 #search-toggle {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  margin-top: 1rem;
 
   kbd {
     font-size: 0.75rem;
@@ -356,11 +505,9 @@ body.search-open {
 
 // ─── Footer ─────────────────────────────────────────
 footer {
-  border-top: 1px solid var(--border-default-secondary);
-  padding: 1.5rem 2rem;
-  font-size: 0.85rem;
-  color: var(--text-default-body);
-  text-align: center;
+  p {
+    font-size: 0.75rem;
+  }
 }
 
 // ─── Typography ─────────────────────────────────────
@@ -368,8 +515,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-family-display), Arial, sans-serif;
   font-weight: normal;
   line-height: 1.2;
-  margin-top: .5em;
-  margin-bottom: 1rem;
 }
 
 
@@ -401,7 +546,7 @@ h5 { font-size: var(--h5); }
 
 p  {
   font-size: var(--base-size);
-  max-width: 66ch; 
+  max-width: 66ch;
 }
 
 h1.scale {
@@ -413,11 +558,6 @@ h1.scale {
 
 ul, ol {
   padding-left: 1.5rem;
-  margin-bottom: 1rem;
-
-  li {
-    margin-bottom: 0.4rem;
-  }
 }
 
 code {

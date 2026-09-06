@@ -1,0 +1,37 @@
+---
+// One or more repeated title/copy/figure blocks, stacked full-width (no
+// column split). Preferred usage: full-screen states and context, e.g.
+// mobile and desktop views. Can also be used for specs.
+export interface LargeSectionItem {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt?: string;
+  caption: string;
+}
+
+export interface Props {
+  id: string;
+  title: string;
+  items: LargeSectionItem[];
+}
+
+const { id, title, items } = Astro.props;
+---
+<section class="single-col" aria-labelledby={id}>
+  <h2 id={id}>{title}</h2>
+
+  {items.map((item) => (
+    <div class="section-content">
+      <div class="section-description">
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+      </div>
+
+      <figure>
+        <img src={item.image} alt={item.imageAlt ?? ''} />
+        <figcaption>{item.caption}</figcaption>
+      </figure>
+    </div>
+  ))}
+</section>

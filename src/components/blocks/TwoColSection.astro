@@ -1,0 +1,42 @@
+---
+// One or more repeated title/copy/figure pairs, each split into two columns
+// from 48em up. Preferred usage: behaviour and properties.
+export interface TwoColItem {
+  title: string;
+  description: string;
+  list?: string[];
+  image: string;
+  imageAlt?: string;
+  caption: string;
+}
+
+export interface Props {
+  id: string;
+  title: string;
+  items: TwoColItem[];
+}
+
+const { id, title, items } = Astro.props;
+---
+<section class="two-col" aria-labelledby={id}>
+  <h2 id={id}>{title}</h2>
+
+  {items.map((item) => (
+    <div class="grid">
+      <div class="description nested-grid-item-50-lg">
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+        {item.list && (
+          <ul>
+            {item.list.map((entry) => <li>{entry}</li>)}
+          </ul>
+        )}
+      </div>
+
+      <figure class="nested-grid-item-50-lg">
+        <img src={item.image} alt={item.imageAlt ?? ''} />
+        <figcaption>{item.caption}</figcaption>
+      </figure>
+    </div>
+  ))}
+</section>

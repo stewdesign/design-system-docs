@@ -6,6 +6,10 @@ import TokenList from '../components/global/TokenList.astro';
 import AccessibilityList from '../components/global/AccessibilityList.astro';
 import RelatedComponents from '../components/global/RelatedComponents.astro';
 import OnThisPage from '../components/global/OnThisPage.astro';
+import AnatomyBlock from '../components/blocks/AnatomyBlock.astro';
+import TwoColSection from '../components/blocks/TwoColSection.astro';
+import LargeSection from '../components/blocks/LargeSection.astro';
+import SideBySideSection from '../components/blocks/SideBySideSection.astro';
 
 const {
   title,
@@ -16,6 +20,7 @@ const {
   version,
   lastUpdated,
   platforms,
+  sections,
   anatomy,
   variants,
   behavior,
@@ -33,6 +38,9 @@ const {
 const lastUpdatedIso = lastUpdated ? new Date(lastUpdated).toISOString().split('T')[0] : null;
 const hasBody = Astro.slots.has('default');
 
+const slugify = (text: string) =>
+  text.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
 // Section headings an editor (or, eventually, AI) writes straight into the
 // markdown body — e.g. "## Variants" followed by hand-authored HTML cards —
 // show up here automatically via Astro's own heading extraction. No schema
@@ -41,14 +49,48 @@ const bodyHeadings = headings
   .filter((h) => h.depth === 2)
   .map((h) => ({ id: h.slug, label: h.text }));
 
+// `sections` is the new, ordered block-based way to build a page: each
+// entry names a `type` (one of the reusable blocks in components/blocks,
+// or one of the existing fixed sections) and this one lookup decides both
+// its "On this page" nav entry and how it renders — so the two can never
+// drift apart. New generic blocks take their id/label from their own
+// `heading`; the existing fixed sections keep the id/label their
+// component already renders under.
+function sectionMeta(s) {
+  switch (s.type) {
+    case 'anatomy':
+    case 'two-col':
+    case 'large':
+    case 'side-by-side':
+      return { id: slugify(s.heading), label: s.heading };
+    case 'variants':
+      return { id: 'variants', label: 'Variants' };
+    case 'behavior':
+      return { id: 'behavior', label: 'Behavior' };
+    case 'best-practices':
+      return { id: 'best-practices', label: 'Best practices' };
+    case 'design-tokens':
+      return { id: 'design-tokens', label: 'Design tokens' };
+    case 'accessibility':
+      return { id: 'accessibility', label: 'Accessibility' };
+    case 'related-components':
+      return { id: 'related-components', label: 'Related components' };
+    default:
+      return null;
+  }
+}
+
+const sectionsToc = (sections ?? []).map(sectionMeta).filter(Boolean);
+
 // The remaining sections are still frontmatter-driven components (Anatomy/
 // Properties/Variants/Behavior for components not yet migrated onto the
-// body-authored pattern, plus Best practices/Design tokens/Accessibility/
-// Related components, which stay frontmatter-driven either way). Each only
-// appears in the "On this page" nav when that component actually has data
-// for it.
+// `sections` array or the body-authored pattern, plus Best practices/
+// Design tokens/Accessibility/Related components, which stay frontmatter-
+// driven either way). Each only appears in the "On this page" nav when
+// that component actually has data for it.
 const tocSections = [
   ...bodyHeadings,
+  ...sectionsToc,
   anatomy && { id: 'anatomy', label: 'Anatomy' },
   variants && { id: 'variants', label: 'Variants' },
   behavior && { id: 'behavior', label: 'Behavior' },
@@ -108,6 +150,43 @@ const tocSections = [
     {tocSections.length > 1 && <OnThisPage sections={tocSections} />}
 
     {hasBody && <slot />}
+
+    {sections && sections.map((s) => {
+      const { id, label } = sectionMeta(s);
+      switch (s.type) {
+        case 'anatomy':
+          return (
+            <AnatomyBlock
+              id={id}
+              title={label}
+              items={s.items}
+              image={s.image}
+              imageAlt={s.imageAlt}
+              caption={s.caption}
+            />
+          );
+        case 'two-col':
+          return <TwoColSection id={id} title={label} items={s.items} />;
+        case 'large':
+          return <LargeSection id={id} title={label} items={s.items} />;
+        case 'side-by-side':
+          return <SideBySideSection id={id} title={label} items={s.items} />;
+        case 'variants':
+          return <PropertyGrid id="variants" title="Variants" items={s.items} />;
+        case 'behavior':
+          return <PropertyGrid id="behavior" title="Behavior" items={s.items} />;
+        case 'best-practices':
+          return <BestPractices doItems={s.do} dontItems={s.dont} />;
+        case 'design-tokens':
+          return <TokenList tokens={s.tokens} />;
+        case 'accessibility':
+          return <AccessibilityList items={s.items} />;
+        case 'related-components':
+          return <RelatedComponents items={s.items} />;
+        default:
+          return null;
+      }
+    })}
 
     {anatomy && (
       <section id="anatomy" aria-label="Anatomy">
