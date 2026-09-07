@@ -56,7 +56,7 @@ sections:
           - image: https://placehold.co/1280x720
             caption: "Do: use radio when all options are visible at the same time."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use radio if there are more than 6 options."
+            caption: "Don't: use radio if there are more than 6 options. Use a select instead"
       - title: Whether a choice is required
         figures:
           - image: https://placehold.co/1280x720
