@@ -58,7 +58,7 @@ sections:
             caption: "Do: use brief, recognisable sentence-case labels."
           - image: "https://placehold.co/1280x720"
             imageAlt: "Choice chips with long labels"
-            caption: "Don't: use long labels that make the chip group difficult to scan."
+            caption: "Don't: use long labels that make the chip group difficult to scan. Use radio buttons instead."
 
   - type: design-tokens
     tokens:
@@ -85,4 +85,7 @@ sections:
       - label: "Filter chip"
         href: "/components/filter-chip"
         note: "Use when people can select multiple independent options."
+      - label: "Radio"
+        href: "/components/radio"
+        note: "Use when Labels need to be longer than two words."
 ---
