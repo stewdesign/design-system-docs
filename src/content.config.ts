@@ -21,6 +21,7 @@ const propertyItem = z.object({
 const figureItem = z.object({
   image: z.string(),
   imageAlt: z.string().optional(),
+  label: z.string().optional(),
   caption: z.string(),
 });
 

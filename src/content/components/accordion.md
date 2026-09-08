@@ -83,27 +83,35 @@ sections:
       - title: What content to hide
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: organise and group related, optional content into collapsible sections."
+            label: Do
+            caption: "Organise and group related, optional content into collapsible sections."
           - image: https://placehold.co/1280x720
-            caption: "Don't: hide critical information that must always be visible."
+            label: Don't
+            caption: "Hide critical information that must always be visible."
       - title: When to use it
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: reduce visual clutter on pages with lots of information."
+            label: Do
+            caption: "Reduce visual clutter on pages with lots of information."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use an accordion for navigation or primary actions."
+            label: Don't
+            caption: "Use an accordion for navigation or primary actions."
       - title: How much content
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: reveal details only when needed."
+            label: Do
+            caption: "Reveal details only when needed."
           - image: https://placehold.co/1280x720
-            caption: "Don't: collapse content that's very short — for example, a single sentence."
+            label: Don't
+            caption: "Collapse content that's very short — for example, a single sentence."
       - title: Nesting
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: keep accordions flat, to help users scan and digest content easily."
+            label: Do
+            caption: "Keep accordions flat, to help users scan and digest content easily."
           - image: https://placehold.co/1280x720
-            caption: "Don't: nest an accordion inside another accordion."
+            label: Don't
+            caption: "Nest an accordion inside another accordion."
   - type: design-tokens
     tokens:
       - name: Container background

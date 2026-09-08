@@ -2,11 +2,12 @@
 // One or more repeated title + two-figure comparisons. Preferred usage:
 // do's and don'ts, or side-by-side comparison of two components/patterns.
 // Note: each pair currently shares one heading above both figures — give
-// each figure's own figcaption the distinguishing label (e.g. "Do" / "Don't")
-// until/unless the pair gets its own heading per figure.
+// each figure its own `label` (e.g. "Do" / "Don't") to distinguish them,
+// since the heading alone covers both.
 export interface Figure {
   image: string;
   imageAlt?: string;
+  label?: string;
   caption: string;
 }
 
@@ -22,6 +23,11 @@ export interface Props {
 }
 
 const { id, title, items } = Astro.props;
+
+// Turns "Do" / "Don't" into "do" / "dont" so CSS can target
+// `.do-dont-label[data-variant="do"]` / `[data-variant="dont"]` without
+// depending on the exact label text.
+const variantOf = (label: string) => label.toLowerCase().replace(/[^a-z]/g, '');
 ---
 <section class="cards" aria-labelledby={id}>
   <h2 id={id}>{title}</h2>
@@ -33,7 +39,9 @@ const { id, title, items } = Astro.props;
       {item.figures.map((fig) => (
         <figure class="nested-grid-item-50-lg">
           <img src={fig.image} alt={fig.imageAlt ?? ''} />
-          <figcaption>{fig.caption}</figcaption>
+          <figcaption>
+            {fig.label && <span class="do-dont-label" data-variant={variantOf(fig.label)}>{fig.label}</span>} {fig.caption}
+          </figcaption>
         </figure>
       ))}
     </div>

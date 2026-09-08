@@ -295,6 +295,21 @@ ol.anatomy-items {
   }
 }
 
+// "Do"/"Don't" label in the side-by-side (.cards) block's figcaptions —
+// see SideBySideSection.astro, which sets data-variant from the label text.
+.do-dont-label {
+  font-family: var(--font-family-family-display), Arial, sans-serif;
+  text-transform: uppercase;
+
+  &[data-variant="do"] {
+    color: var(--text-positive-secondary);
+  }
+
+  &[data-variant="dont"] {
+    color: var(--text-danger-primary);
+  }
+}
+
 .section-content {
   display: flex;
   flex-direction: column;

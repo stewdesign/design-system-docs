@@ -68,21 +68,27 @@ sections:
       - title: Scope of content
         figures:
           - image: "https://placehold.co/1280x720"
-            caption: "Do: use a dialog for a focused decision, confirmation or short task that needs an immediate response."
+            label: Do
+            caption: "Use a dialog for a focused decision, confirmation or short task that needs an immediate response."
           - image: "https://placehold.co/1280x720"
-            caption: "Don't: use a dialog for long-form reading or complex multi-step workflows."
+            label: Don't
+            caption: "Use a dialog for long-form reading or complex multi-step workflows."
       - title: Required actions
         figures:
           - image: "https://placehold.co/1280x720"
-            caption: "Do: make the title specific and make the primary action describe its outcome."
+            label: Do
+            caption: "Make the title specific and make the primary action describe its outcome."
           - image: "https://placehold.co/1280x720"
-            caption: "Don't: add a dismiss control when the user must explicitly choose an action to proceed."
+            label: Don't
+            caption: "Add a dismiss control when the user must explicitly choose an action to proceed."
       - title: Use of media
         figures:
           - image: "https://placehold.co/1280x720"
-            caption: "Do: use the Media or Media hero variant only when the image materially helps users understand the decision."
+            label: Do
+            caption: "Use the Media or Media hero variant only when the image materially helps users understand the decision."
           - image: "https://placehold.co/1280x720"
-            caption: "Don't: use decorative media that competes with the dialog's message or actions."
+            label: Don't
+            caption: "Use decorative media that competes with the dialog's message or actions."
   - type: design-tokens
     tokens:
       - name: "Default dialog size"

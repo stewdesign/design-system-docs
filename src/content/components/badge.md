@@ -61,21 +61,27 @@ sections:
       - title: Placement
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: place badges in the top-right of icon buttons, or inline to the right of text labels."
+            label: Do
+            caption: "Place badges in the top-right of icon buttons, or inline to the right of text labels."
           - image: https://placehold.co/1280x720
-            caption: "Don't: customise the badge's placement position."
+            label: Don't
+            caption: "Customise the badge's placement position."
       - title: Count limit
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: adhere to the maximum value constraint of 99+."
+            label: Do
+            caption: "Adhere to the maximum value constraint of 99+."
           - image: https://placehold.co/1280x720
-            caption: "Don't: allow numbers exceeding 99 in the display."
+            label: Don't
+            caption: "Allow numbers exceeding 99 in the display."
       - title: Sizing and formatting
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: keep sizing consistent across all screen sizes and platforms."
+            label: Do
+            caption: "Keep sizing consistent across all screen sizes and platforms."
           - image: https://placehold.co/1280x720
-            caption: "Don't: add ending punctuation to the label."
+            label: Don't
+            caption: "Add ending punctuation to the label."
   - type: design-tokens
     tokens:
       - name: Standard height

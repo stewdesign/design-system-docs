@@ -48,21 +48,27 @@ sections:
       - title: Selection limit
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use radio when only one option can be selected at any time."
+            label: Do
+            caption: "Use radio when only one option can be selected at any time."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use radio when more than one option can be selected — use checkboxes instead."
+            label: Don't
+            caption: "Use radio when more than one option can be selected — use checkboxes instead."
       - title: Number of options
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use radio when all options are visible at the same time."
+            label: Do
+            caption: "Use radio when all options are visible at the same time."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use radio if there are more than 6 options. Use a select instead"
+            label: Don't
+            caption: "Use radio if there are more than 6 options — use a select instead."
       - title: Whether a choice is required
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use radio when the choice is clear and mutually exclusive."
+            label: Do
+            caption: "Use radio when the choice is clear and mutually exclusive."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use radio if the choice is optional or can be skipped."
+            label: Don't
+            caption: "Use radio if the choice is optional or can be skipped."
   - type: design-tokens
     tokens:
       - name: Border default

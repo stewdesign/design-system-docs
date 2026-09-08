@@ -59,27 +59,35 @@ sections:
       - title: Number of options
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use it for switching between 2–4 closely related options."
+            label: Do
+            caption: "Use it for switching between 2–4 closely related options."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use it for more than 5 options — use another pattern."
+            label: Don't
+            caption: "Use it for more than 5 options — use another pattern."
       - title: What it controls
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use it for changing views, filters, or modes on the same content."
+            label: Do
+            caption: "Use it for changing views, filters, or modes on the same content."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use it for options that navigate to new pages."
+            label: Don't
+            caption: "Use it for options that navigate to new pages."
       - title: Selection behaviour
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use it when the result updates instantly and one option is active at a time."
+            label: Do
+            caption: "Use it when the result updates instantly and one option is active at a time."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use it for choices that stack or combine."
+            label: Don't
+            caption: "Use it for choices that stack or combine."
       - title: Option complexity
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use it when options are equal in importance and self-explanatory."
+            label: Do
+            caption: "Use it when options are equal in importance and self-explanatory."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use it when users need descriptions or help text to understand the options."
+            label: Don't
+            caption: "Use it when users need descriptions or help text to understand the options."
   - type: design-tokens
     tokens:
       - name: Track background

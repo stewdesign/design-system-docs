@@ -63,21 +63,27 @@ sections:
       - title: Actions vs. navigation
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use a button for actions — submitting a form, confirming a choice, triggering a process."
+            label: Do
+            caption: "Use a button for actions — submitting a form, confirming a choice, triggering a process."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use a button for navigation to another page — use a link instead."
+            label: Don't
+            caption: "Use a button for navigation to another page — use a link instead."
       - title: One clear primary action
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use one clear, tappable call to action when you need it to stand out."
+            label: Do
+            caption: "Use one clear, tappable call to action when you need it to stand out."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use more than one primary button per view."
+            label: Don't
+            caption: "Use more than one primary button per view."
       - title: Every button does something
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use a button when the action changes state or data."
+            label: Do
+            caption: "Use a button when the action changes state or data."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use a button as a decorative element with no action."
+            label: Don't
+            caption: "Use a button as a decorative element with no action."
   - type: design-tokens
     tokens:
       - name: Background primary

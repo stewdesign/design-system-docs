@@ -58,15 +58,19 @@ sections:
       - title: Multiple selection
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use checkboxes when more than one option can be selected from a list."
+            label: Do
+            caption: "Use checkboxes when more than one option can be selected from a list."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use checkboxes when only one option can be selected — use radio instead."
+            label: Don't
+            caption: "Use checkboxes when only one option can be selected — use radio instead."
       - title: Timing of the action
         figures:
           - image: https://placehold.co/1280x720
-            caption: "Do: use a checkbox for a single yes/no setting that can be toggled independently."
+            label: Do
+            caption: "Use a checkbox for a single yes/no setting that can be toggled independently."
           - image: https://placehold.co/1280x720
-            caption: "Don't: use a checkbox when the action should apply immediately — use a switch instead."
+            label: Don't
+            caption: "Use a checkbox when the action should apply immediately — use a switch instead."
   - type: accessibility
     items:
       - Each checkbox must have an associated label element
