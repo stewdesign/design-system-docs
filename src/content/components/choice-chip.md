@@ -36,6 +36,11 @@ sections:
         image: "/design-system-docs/images/components/choice-chip/hover.jpg"
         imageAlt: "Hovered choice chip"
         caption: "Hover state"
+      - title: Hover 2
+        description: "On pointer devices, hover provides temporary feedback without changing the selected value."
+        image: "/design-system-docs/images/components/choice-chip/hover.jpg"
+        imageAlt: "Hovered choice chip"
+        caption: "Hover state"
 
   - type: side-by-side
     heading: Best practices
