@@ -13,11 +13,8 @@ sections:
     heading: Anatomy
     items:
       - "Label"
-      - "Optional description"
       - "Choice chip container"
-      - "Text label"
-      - "Optional leading icon"
-    image: "/images/components/choice-chip/anatomy.jpg"
+    image: "/design-system-docs/images/components/choice-chip/anatomy.jpg"
     imageAlt: "Anatomy of a choice chip field with label, description, and chips"
     caption: "A choice chip field combines a clear prompt with a short set of mutually exclusive options."
 
