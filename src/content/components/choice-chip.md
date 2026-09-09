@@ -23,17 +23,17 @@ sections:
     items:
       - title: Default
         description: "All unselected options use the default chip treatment. Selecting one option clears the previous selection in the same group."
-        image: "https://placehold.co/1280x720"
+        image: "/design-system-docs/images/components/choice-chip/default.jpg"
         imageAlt: "Unselected choice chips"
         caption: "Default choice chips"
       - title: Selected
         description: "The selected option uses a solid container fill to establish the active choice. Do not show a checkmark."
-        image: "https://placehold.co/1280x720"
+        image: "/design-system-docs/images/components/choice-chip/Selected.jpg"
         imageAlt: "Selected choice chip with solid fill"
         caption: "Selected choice chip"
       - title: Hover
         description: "On pointer devices, hover provides temporary feedback without changing the selected value."
-        image: "https://placehold.co/1280x720"
+        image: "/design-system-docs/images/components/choice-chip/hover.jpg"
         imageAlt: "Hovered choice chip"
         caption: "Hover state"
 
@@ -42,18 +42,18 @@ sections:
     items:
       - title: Keep choices mutually exclusive
         figures:
-          - image: "https://placehold.co/1280x720"
+          - image: "/design-system-docs/images/components/choice-chip/mutually exclusive-do.jpg"
             imageAlt: "One fuel type selected in a choice chip group"
             caption: "Do: use one selected option for a single-choice question."
-          - image: "https://placehold.co/1280x720"
+          - image: "/design-system-docs/images/components/choice-chip/mutually exclusive-do-1.jpg"
             imageAlt: "Multiple choice chips selected"
             caption: "Don't: use choice chips for independent selections."
       - title: Use concise labels
         figures:
-          - image: "https://placehold.co/1280x720"
+          - image: "/design-system-docs/images/components/choice-chip/concise labels-do.jpg"
             imageAlt: "Choice chips with short labels"
             caption: "Do: use brief, recognisable sentence-case labels."
-          - image: "https://placehold.co/1280x720"
+          - image: "/design-system-docs/images/components/choice-chip/concise labels-don't.jpg"
             imageAlt: "Choice chips with long labels"
             caption: "Don't: use long labels that make the chip group difficult to scan. Use radio buttons instead."
 
