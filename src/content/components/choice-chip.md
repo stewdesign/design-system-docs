@@ -17,7 +17,7 @@ sections:
       - "Choice chip container"
       - "Text label"
       - "Optional leading icon"
-    image: "https://placehold.co/1280x548"
+    image: "/images/components/choice-chip/anatomy.jpg"
     imageAlt: "Anatomy of a choice chip field with label, description, and chips"
     caption: "A choice chip field combines a clear prompt with a short set of mutually exclusive options."
 
