@@ -90,4 +90,11 @@ sections:
       - label: "Radio"
         href: "/components/radio"
         note: "Use when Labels need to be longer than two words."
+  
+  -type: largeSection
+    heading: Specifications
+    image: "/design-system-docs/images/components/choice-chip/anatomy.jpg"
+    imageAlt: "Anatomy of a choice chip field with label, description, and chips"
+    caption: "A choice chip field combines a clear prompt with a short set of mutually exclusive options."
+
 ---
