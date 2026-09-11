@@ -4,7 +4,7 @@ description: >-
   Choice chips let people select one option from a short, mutually exclusive set. Use them for compact choices such as fuel type or month, where the available options are clear at a glance. A selected choice chip uses a solid container fill and no checkmark, behaving like a radio button or segmented control. Do not use choice chips when people can select more than one option; use a filter chip for multi-select instead. Use open radio controls when options need supporting text, prices, or a full-width vertical layout.
 figmaUrl: "https://www.figma.com/design/ftKlYPN3ybfppm54r2CyjK/Toolbox?node-id=14003-23522"
 previewImage: "https://placehold.co/1280x720"
-lastUpdated: 2026-09-07
+lastUpdated: 2026-09-11
 platforms:
   - Web
   - Mobile app
@@ -36,11 +36,6 @@ sections:
         image: "/design-system-docs/images/components/choice-chip/hover.jpg"
         imageAlt: "Hovered choice chip"
         caption: "Hover state"
-      - title: Hover 2
-        description: "On pointer devices, hover provides temporary feedback without changing the selected value."
-        image: "/design-system-docs/images/components/choice-chip/hover.jpg"
-        imageAlt: "Hovered choice chip"
-        caption: "Hover state"
 
   - type: side-by-side
     heading: Best practices
@@ -48,19 +43,28 @@ sections:
       - title: Keep choices mutually exclusive
         figures:
           - image: "/design-system-docs/images/components/choice-chip/mutually exclusive-do.jpg"
-            imageAlt: "One fuel type selected in a choice chip group"
-            caption: "Do: use one selected option for a single-choice question."
+            label: Do
+            caption: "Use one selected option for a single-choice question."
           - image: "/design-system-docs/images/components/choice-chip/mutually exclusive-do-1.jpg"
-            imageAlt: "Multiple choice chips selected"
-            caption: "Don't: use choice chips for independent selections."
+            label: Don't
+            caption: "Use choice chips for independent selections."
       - title: Use concise labels
         figures:
           - image: "/design-system-docs/images/components/choice-chip/concise labels-do.jpg"
-            imageAlt: "Choice chips with short labels"
-            caption: "Do: use brief, recognisable sentence-case labels."
+            label: Do
+            caption: "Use brief, recognisable sentence-case labels."
           - image: "/design-system-docs/images/components/choice-chip/concise labels-don't.jpg"
-            imageAlt: "Choice chips with long labels"
-            caption: "Don't: use long labels that make the chip group difficult to scan. Use radio buttons instead."
+            label: Don't
+            caption: "Use long labels that make the chip group difficult to scan — use radio buttons instead."
+
+  - type: large
+    heading: Specifications
+    items:
+      - title: Sizing and spacing
+        description: "Choice chips keep a minimum touch target of 44 × 44px regardless of the visible chip height, so a compact chip still meets tap-target guidance on mobile. Chips within a group sit 8px apart and wrap onto a new line when they exceed the available width, rather than truncating or scrolling."
+        image: "https://placehold.co/1280x720"
+        imageAlt: "Annotated choice chip diagram showing height, padding, corner radius, and spacing measurements"
+        caption: "Choice chip sizing and spacing at full scale"
 
   - type: design-tokens
     tokens:
@@ -90,11 +94,4 @@ sections:
       - label: "Radio"
         href: "/components/radio"
         note: "Use when Labels need to be longer than two words."
-  
-  -type: largeSection
-    heading: Specifications
-    image: "/design-system-docs/images/components/choice-chip/anatomy.jpg"
-    imageAlt: "Anatomy of a choice chip field with label, description, and chips"
-    caption: "A choice chip field combines a clear prompt with a short set of mutually exclusive options."
-
 ---
