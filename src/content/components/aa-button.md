@@ -21,10 +21,10 @@ sections:
   - type: anatomy
     heading: Anatomy
     items:
-      - Leading icon slot (icon-start)
+      - Leading icon slot (icon-start) [optional]
       - Label
-      - Trailing icon slot (icon-end)
-      - Loading spinner
+      - Trailing icon slot (icon-end) [optional]
+      - Loading spinner [optional; shown when loading]
     image: https://placehold.co/1280x720
     imageAlt: Labelled Aa-button anatomy diagram
     caption: The loading spinner replaces the trailing icon position while the label remains visible.
@@ -82,6 +82,34 @@ sections:
         caption: Icons follow the label size and sit within optically balanced spacing.
 
   - type: side-by-side
+    heading: When to use
+    items:
+      - title: Use for clear, standalone actions
+        figures:
+          - image: https://placehold.co/1280x720
+            imageAlt: Aa-button used for a form action
+            caption: "Do: use Aa-button for primary, secondary or tertiary actions, including submit, reset and in-page actions."
+          - image: https://placehold.co/1280x720
+            imageAlt: Icon-only control beside Aa-button
+            caption: "Don't: use Aa-button for an icon-only control; use Aa-icon-button instead."
+      - title: Use for prominent navigation
+        figures:
+          - image: https://placehold.co/1280x720
+            imageAlt: Aa-button rendered as a navigational link
+            caption: "Do: set href for a navigational call to action that belongs in the action hierarchy."
+          - image: https://placehold.co/1280x720
+            imageAlt: Inline text link in a paragraph
+            caption: "Don't: use a link-style button for ordinary inline navigation in body copy; use a standard text link."
+      - title: Match the interaction pattern
+        figures:
+          - image: https://placehold.co/1280x720
+            imageAlt: Danger Aa-button for deleting cover
+            caption: "Do: use intent=\"danger\" for destructive or high-consequence actions, such as deleting cover."
+          - image: https://placehold.co/1280x720
+            imageAlt: Selection controls and grouped actions
+            caption: "Don't: use a set of buttons for choices or grouped actions; use selection controls or Aa-button-group."
+
+  - type: side-by-side
     heading: Content guidance
     items:
       - title: Make the action specific
@@ -128,12 +156,16 @@ sections:
 
   - type: accessibility
     items:
+      - "### Focus order"
       - Use the native button element for in-page actions and a native anchor with href for navigation; do not simulate either with a generic element.
       - Buttons and anchors participate in the natural tab order; disabled native buttons and disabled or loading anchors are removed from it.
+      - "### Keyboard interactions"
       - Enter activates a button or follows a link; Space activates a native button but not an anchor.
+      - "### ARIA"
       - Use the native disabled attribute on buttons. Disabled or loading anchors remove href and receive aria-disabled="true".
       - Apply aria-busy="true" while loading on both button and anchor forms.
       - Do not add a role override; the native semantic element supplies the correct role.
+      - "### SEO and AI discovery"
       - For navigational actions, always supply href so the destination is a real, crawlable link.
       - Write labels that describe the action or destination without surrounding context; avoid labels such as “Click here”.
       - Do not nest other interactive elements, including links or buttons, inside icon slots.
