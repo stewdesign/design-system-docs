@@ -7,7 +7,7 @@ export interface TwoColItem {
   list?: string[];
   image: string;
   imageAlt?: string;
-  caption: string;
+  caption?: string;
 }
 
 export interface Props {
@@ -35,7 +35,7 @@ const { id, title, items } = Astro.props;
 
       <figure class="nested-grid-item-50-lg">
         <img src={item.image} alt={item.imageAlt ?? ''} />
-        <figcaption>{item.caption}</figcaption>
+        {item.caption && <figcaption>{item.caption}</figcaption>}
       </figure>
     </div>
   ))}

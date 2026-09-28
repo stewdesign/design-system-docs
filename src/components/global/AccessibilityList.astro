@@ -1,14 +1,67 @@
 ---
-// Plain list of accessibility requirements.
+// Accessibility requirements. Newer pages use the fixed sub-sections
+// (focus order, keyboard, ARIA, SEO), each rendered under its own h3 only
+// when present; older pages pass a flat `items` list.
 export interface Props {
-  items: string[];
+  items?: string[];
+  focusOrder?: string[];
+  keyboard?: { key: string; action: string }[];
+  aria?: string[];
+  seo?: string[];
 }
 
-const { items } = Astro.props;
+const { items, focusOrder, keyboard, aria, seo } = Astro.props;
+
+const lists = [
+  { heading: 'Focus order', entries: focusOrder },
+  { heading: 'ARIA', entries: aria },
+  { heading: 'SEO and AI discovery', entries: seo },
+];
 ---
 <section id="accessibility" aria-label="Accessibility">
   <h2>Accessibility</h2>
-  <ul>
-    {items.map((item) => <li>{item}</li>)}
-  </ul>
+
+  {items && (
+    <ul>
+      {items.map((item) => <li>{item}</li>)}
+    </ul>
+  )}
+
+  {focusOrder && (
+    <>
+      <h3>{lists[0].heading}</h3>
+      <ul>{focusOrder.map((item) => <li>{item}</li>)}</ul>
+    </>
+  )}
+
+  {keyboard && (
+    <>
+      <h3>Keyboard interactions</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Keyboard interactions">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Key</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {keyboard.map((k) => (
+              <tr>
+                <th scope="row"><kbd>{k.key}</kbd></th>
+                <td>{k.action}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  {lists.slice(1).map((l) => l.entries && (
+    <>
+      <h3>{l.heading}</h3>
+      <ul>{l.entries.map((item) => <li>{item}</li>)}</ul>
+    </>
+  ))}
 </section>

@@ -582,6 +582,59 @@ code {
   font-size: 0.85em;
 }
 
+// ─── Do / Don't columns (best-practices block) ──────
+.best-practices-grid {
+  display: grid;
+  gap: var(--gap-lg);
+
+  @media (min-width: 48em) {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+
+// ─── Tables (properties, keyboard interactions) ─────
+.table-scroll {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.table-scroll table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  text-align: left;
+
+  th, td {
+    padding: 0.75rem 1rem 0.75rem 0;
+    border-bottom: 1px solid var(--border-default-tertiary);
+    vertical-align: top;
+  }
+
+  thead th {
+    border-bottom-color: var(--border-default-secondary);
+  }
+
+  tbody th {
+    font-weight: normal;
+    white-space: nowrap;
+  }
+}
+
+#accessibility .table-scroll table {
+  min-width: 0;
+}
+
+// ─── Draft label (dev only; drafts are not built in production) ─
+.draft-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--surface-danger-tertiary);
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
 // ─── Dark mode ──────────────────────────────────────
 @media (prefers-color-scheme: dark) {
   html {

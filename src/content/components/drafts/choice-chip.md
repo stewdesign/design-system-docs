@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Choice chip
 description: >-
   Choice chips let people select one option from a short, mutually exclusive set. Use them for compact choices such as fuel type or month, where the available options are clear at a glance. A selected choice chip uses a solid container fill and no checkmark, behaving like a radio button or segmented control. Do not use choice chips when people can select more than one option; use a filter chip for multi-select instead. Use open radio controls when options need supporting text, prices, or a full-width vertical layout.

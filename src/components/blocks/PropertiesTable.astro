@@ -1,0 +1,50 @@
+---
+// The component's API as a table: Property | Options | Default |
+// Description. One table per entry in `tables`, each with an optional h3
+// title (used by composite components, e.g. a parent and its child item).
+export interface PropertyRow {
+  name: string;
+  options: string;
+  defaultValue?: string;
+  description: string;
+}
+
+export interface Props {
+  id: string;
+  title: string;
+  tables: { title?: string; rows: PropertyRow[] }[];
+}
+
+const { id, title, tables } = Astro.props;
+---
+<section class="properties" aria-labelledby={id}>
+  <h2 id={id}>{title}</h2>
+
+  {tables.map((table) => (
+    <>
+      {table.title && <h3>{table.title}</h3>}
+      <div class="table-scroll" tabindex="0" role="region" aria-label={table.title ?? title}>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Property</th>
+              <th scope="col">Options</th>
+              <th scope="col">Default</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row) => (
+              <tr>
+                <th scope="row"><code>{row.name}</code></th>
+                <td><code>{row.options}</code></td>
+                <td>{row.defaultValue ? <code>{row.defaultValue}</code> : '–'}</td>
+                <td>{row.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  ))}
+</section>

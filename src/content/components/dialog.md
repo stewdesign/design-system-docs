@@ -1,131 +1,218 @@
 ---
-title: "Dialog"
+# Gaps from the source doc (TODOs), for review:
+#   - When not to use: not covered in source or stories — no guidance found for alternative components.
+#   - SEO and AI discovery: not covered in source or stories.
+title: Dialog
 description: >-
-  A dialog presents focused information or actions in a contained surface
-  without taking users away from their current context. It supports a
-  concise text-only layout, a media-led layout, and a two-column media
-  hero layout. Use it to bring a decision, confirmation or short task into
-  focus while preserving the user's current place in the experience —
-  choosing Default for concise copy, Media when an image adds helpful
-  context, and Media hero when a larger two-column composition is needed.
-  Avoid it for extended content, complex forms, multi-step journeys, or
-  information users may need to revisit; use a dedicated page, drawer or
-  inline section instead when more space or context is needed. Keep the
-  content brief, make the available actions unambiguous, use a dismiss
-  control only when closing without an explicit action is appropriate,
-  and ensure any image supports rather than distracts from the decision.
-figmaUrl: "https://www.figma.com/design/ftKlYPN3ybfppm54r2CyjK/Toolbox?m=auto&node-id=17390-4658&t=4wwlHOLxgh3UMtji-1"
-previewImage: "https://placehold.co/1280x720"
-lastUpdated: 2026-09-01
+  Dialog is a true modal dialog, built on the same scrim/panel shape as Header dropdown's
+  mega-menu panel, but as a real role="dialog" modal rather than a hover-only panel.
+  It supports a default text-only layout, and two media variants that add an image.
+storybookUrl: ''
+figmaUrl: https://www.figma.com/design/ftKlYPN3ybfppm54r2CyjK/Toolbox?node-id=17390-4658
+previewImage: https://placehold.co/1280x720
+lastUpdated: '2026-09-28'
 platforms:
-  - "Web"
+- Web
+- Mobile app
 sections:
-  - type: anatomy
-    heading: Anatomy
-    image: "https://placehold.co/1280x720"
-    caption: Anatomy of the component.
-    items:
-      - "Dialog container"
-      - "Media"
-      - "Content"
-      - "Title"
-      - "Content slot"
-      - "Button group"
-      - "Dismiss control"
-  - type: two-col
-    heading: Variants
-    items:
-      - title: "Default"
-        description: "A 400px-wide text-focused dialog with a title, content slot, optional dismiss control and button group."
-        image: "https://placehold.co/1280x720"
-        caption: Image of the default variant.
-      - title: "Media"
-        description: "A 400px-wide dialog with a media region above the standard content area."
-        image: "https://placehold.co/1280x720"
-        caption: Image of the media variant.
-      - title: "Media hero"
-        description: "A 720px-wide, two-column dialog with media on the left and content on the right."
-        image: "https://placehold.co/1280x720"
-        caption: Image of the media hero variant.
-  - type: two-col
-    heading: Behavior
-    items:
-      - title: "Open"
-        description: "The dialog places its message and available actions in a focused surface above the surrounding interface."
-        image: "https://placehold.co/1280x720"
-        caption: Image of the open behavior.
-      - title: "Dismiss"
-        description: "When the dismiss control is included, users can close the dialog without selecting a primary or secondary action."
-        image: "https://placehold.co/1280x720"
-        caption: Image of the dismiss behavior.
-      - title: "Action selection"
-        description: "The button group provides the available next steps, including a prominent primary action where required."
-        image: "https://placehold.co/1280x720"
-        caption: Image of the action selection behavior.
-  - type: side-by-side
-    heading: Best practices
-    items:
-      - title: Scope of content
-        figures:
-          - image: "https://placehold.co/1280x720"
-            label: Do
-            caption: "Use a dialog for a focused decision, confirmation or short task that needs an immediate response."
-          - image: "https://placehold.co/1280x720"
-            label: Don't
-            caption: "Use a dialog for long-form reading or complex multi-step workflows."
-      - title: Required actions
-        figures:
-          - image: "https://placehold.co/1280x720"
-            label: Do
-            caption: "Make the title specific and make the primary action describe its outcome."
-          - image: "https://placehold.co/1280x720"
-            label: Don't
-            caption: "Add a dismiss control when the user must explicitly choose an action to proceed."
-      - title: Use of media
-        figures:
-          - image: "https://placehold.co/1280x720"
-            label: Do
-            caption: "Use the Media or Media hero variant only when the image materially helps users understand the decision."
-          - image: "https://placehold.co/1280x720"
-            label: Don't
-            caption: "Use decorative media that competes with the dialog's message or actions."
-  - type: design-tokens
-    tokens:
-      - name: "Default dialog size"
-        value: "400px wide × 189px high"
-      - name: "Media dialog size"
-        value: "400px wide × 436.5px high; media region 400px × 247.5px"
-      - name: "Media hero size"
-        value: "720px wide × 420px high; 360px media column and 360px content column"
-      - name: "Container radius"
-        value: "24px"
-      - name: "Content padding"
-        value: "24px on all sides (Padding/xl; var--(aa-space-800))"
-      - name: "Content stack gap"
-        value: "20px (var--(aa-vertical-type-heading-to-content))"
-      - name: "Title-to-content gap"
-        value: "16px (var--(aa-vertical-type-label-gap))"
-      - name: "Button group gap"
-        value: "12px (Padding/md)"
-      - name: "Heading typography"
-        value: "Headings/Heading 4: New Transport AA Bold, 22.78px, 120% line height, -1% letter spacing"
-      - name: "Body typography"
-        value: "Body/Body Base: New Transport AA Regular, 16px, 150% line height"
-      - name: "Content surface"
-        value: "var--(aa-surface-default-secondary): #f7f7f6"
-      - name: "Heading colour"
-        value: "var--(aa-text-default-headings): #00081c"
-      - name: "Body colour"
-        value: "var--(aa-text-default-body): #4d5260"
-      - name: "Primary button surface"
-        value: "var--(aa-surface-buttons-primary-default): #ffd300"
-  - type: accessibility
-    items:
-      - "Use role=\"dialog\" and set aria-modal=\"true\" when the dialog blocks interaction with the page."
-      - "Provide an accessible name through the visible title with aria-labelledby, or an equivalent aria-label when no visible title is available."
-      - "Move focus into the dialog when it opens, keep keyboard focus within it while open, and return focus to the invoking control when it closes."
-      - "Ensure the dismiss icon button has an accessible name such as \"Close dialog\"; do not rely on the icon alone."
-      - "Make every action reachable by keyboard and provide a visible focus indicator."
-      - "Use a logical action order and make the primary action's outcome clear from its label."
-      - "Do not make the dialog's meaning depend on its image, colour or position alone."
+- type: anatomy
+  heading: Anatomy
+  items:
+  - >-
+    Scrim (part="scrim"): a full-viewport backdrop, rgb(0 0 0 / 60%) with a 4px
+    blur, that closes the dialog when clicked.
+  - >-
+    Dialog panel (part="dialog"): the centred modal surface, role="dialog" with
+    aria-modal="true".
+  - >-
+    Media (part="media", media/media-hero variants only): an image, with a close
+    button floated over it.
+  - Heading (part="heading", Heading level 4).
+  - >-
+    Close button (part="close"): inline next to the heading in default, or floated
+    over the media in media/media-hero.
+  - 'Body (part="body"): a default <slot> for the dialog''s content.'
+  - >-
+    Actions (part="actions"): a slot="actions" for action buttons, hidden automatically
+    when empty.
+  image: https://placehold.co/1280x720
+  imageAlt: Labelled Dialog anatomy diagram
+- type: two-col
+  heading: Examples
+  items:
+  - title: Default
+    description: Text-only dialog with heading, body and actions.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: Default'
+  - title: Media
+    description: Image above the content, with the close button floated over the
+      image.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: Media'
+  - title: Media hero
+    description: >-
+      Image and content side by side, with the close button floated over the whole
+      card.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: Media hero'
+  - title: Closed
+    description: The dialog rendered in its closed state.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: Closed'
+  - title: Z-index fault (internal test story, excluded from docs)
+    description: >-
+      Verifies the dialog's z-index: 1000 paints above a real Header regardless
+      of DOM order.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: Z-index fault (internal test story, excluded from docs)'
+- type: two-col
+  heading: Behaviour and states
+  items:
+  - title: Open/close
+    description: >-
+      Kept in the DOM at all times and toggled with the inert attribute rather than
+      hidden, so the open/close transition (opacity + translateY + scale, 260ms
+      cubic-bezier(0.16, 1, 0.3, 1)) can play. The scrim uses the identical treatment
+      as Header dropdown's own scrim.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: open/close'
+  - title: Stacking
+    description: >-
+      :host is position: fixed, full-viewport, and reflects open at z-index: 1000
+      — deliberately above Header's own z-index: 10 — so the dialog wins the stacking
+      order outright rather than relying on DOM order. :host stays pointer-events:
+      none while closed so it never blocks clicks on the page underneath.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: stacking'
+  - title: Focus management
+    description: >-
+      Opening the dialog stores the currently focused element, then moves focus
+      to the dialog panel itself (deferred one animation frame after inert is removed).
+      Closing the dialog returns focus to the element that had it before opening.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: focus management'
+  - title: Escape
+    description: Pressing Escape while open closes the dialog.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: escape'
+  - title: Scrim click
+    description: Clicking the scrim closes the dialog.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: scrim click'
+  - title: Close button
+    description: >-
+      Two visual treatments depending on variant — default renders it inline next
+      to the heading on tertiary-action tokens; media/media-hero float it over the
+      image (or, for media-hero, over the whole card) on the secondary surface token
+      instead.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: close button'
+  - title: Actions slot
+    description: >-
+      The actions row is hidden automatically (via slotchange measurement) when
+      no elements are slotted into slot="actions".
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: actions slot'
+  - title: Events
+    description: >-
+      Fires dialog-close (bubbling, composed CustomEvent) when the dialog closes
+      via Escape, scrim click or the close button.
+    image: https://placehold.co/1280x720
+    imageAlt: 'Dialog: events'
+- type: best-practices
+  heading: When to use
+  doHeading: Use it for
+  dontHeading: Don't use it for
+  do:
+  - >-
+    Presenting content or a focused task that requires the user's full attention
+    before returning to the page, e.g. a confirmation with actions.
+  - >-
+    Displaying an image alongside supporting content and actions (media/media-hero
+    variants).
+- type: side-by-side
+  heading: Content guidance
+  list:
+  - >-
+    Write the heading to describe the purpose of the dialog, since it also serves
+    as the dialog's accessible name.
+  - >-
+    Write action button labels using active verbs describing the exact action, per
+    Button content guidance.
+  - Use sentence case, not title case.
+  - Avoid colons at the end of labels.
+  - Avoid adverbs like "simply", "just" or "easily".
+  - Use British English spelling throughout.
+- type: side-by-side
+  heading: Things to consider
+  list:
+  - >-
+    Render Dialog at the document root, not nested inside animated content — an
+    ancestor with a transform (or filter/will-change/contain) outside this component's
+    own shadow root creates a containing block that traps position: fixed, overriding
+    the viewport-wide placement the dialog otherwise guarantees. This codebase's
+    own aa-motion foundation applies exactly that kind of transform to Panel/Hero
+    content while entering.
+  - >-
+    The scrim and dialog panel each have an explicit z-index (0/1) rather than relying
+    on DOM order, since backdrop-filter promotes an element to its own compositing
+    layer.
+- type: properties
+  heading: Properties
+  tables:
+  - rows:
+    - name: open
+      options: boolean (reflected)
+      defaultValue: 'false'
+      description: Whether the dialog is open.
+    - name: variant
+      options: default | media | media-hero
+      defaultValue: default
+      description: 'Layout: text-only, image above content, or side-by-side image
+        and content.'
+    - name: heading
+      options: string
+      defaultValue: '''Text Heading'''
+      description: Dialog heading text, also used as the aria-label.
+    - name: image-src
+      options: string
+      defaultValue: ''''''
+      description: Image source for media/media-hero variants.
+    - name: image-alt
+      options: string
+      defaultValue: ''''''
+      description: Alt text for the image.
+    - name: close-label
+      options: string
+      defaultValue: '''Close'''
+      description: Accessible label for the close button.
+- type: accessibility
+  focusOrder:
+  - >-
+    Opening the dialog moves focus into the dialog panel itself. Closing it returns
+    focus to whichever element had focus before the dialog opened.
+  keyboard:
+  - key: Escape
+    action: Closes the dialog.
+  aria:
+  - role="dialog" and aria-modal="true" on the dialog panel.
+  - aria-label on the dialog panel, set to the heading value.
+  - aria-label on the close button, set to close-label.
+  - inert applied to the dialog panel and scrim while closed.
+- type: related-components
+  items:
+  - label: Header dropdown
+    href: /components/header-dropdown
+    note: >-
+      Shares the same scrim/panel shape and transition, as a hover-only mega-menu
+      rather than a modal.
+  - label: Heading
+    href: /components/heading
+    note: Renders the dialog heading.
+  - label: Button group
+    href: /components/button-group
+    note: Used to lay out the action buttons in the actions slot.
+  - label: Icon
+    href: /components/icon
+    note: Supplies the close icon.
 ---
