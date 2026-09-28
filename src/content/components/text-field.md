@@ -134,26 +134,55 @@ sections:
       prefix, and the error message are present.
     image: https://placehold.co/1280x720
     imageAlt: 'Text field: aria-describedby'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Any single-line free-text input: names, emails, phone numbers, search queries,
-    passwords.
-  - >-
-    Fields that need a prefix (e.g. a currency symbol) or a trailing icon (e.g.
-    an info icon) alongside the value.
-  - Fields requiring inline validation messaging (error).
-  dont:
-  - Multi-line input
-  - >-
-    Numeric steppers or currency amounts requiring formatting/validation logic beyond
-    a plain prefix — consider a dedicated numeric input component if one exists.
-  - >-
-    Selecting from a fixed set of options — use a select, radio group or combobox
-    component instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Text field example: Any single-line free-text input: names, emails, phone
+        numbers, search queries, passwords.
+      label: Do
+      caption: >-
+        Any single-line free-text input: names, emails, phone numbers, search queries,
+        passwords.
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Text field example: Multi-line input'
+      label: Don't
+      caption: Multi-line input
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Text field example: Fields that need a prefix (e.g. a currency symbol) or
+        a trailing icon (e.g. an info icon) alongside the value.
+      label: Do
+      caption: >-
+        Fields that need a prefix (e.g. a currency symbol) or a trailing icon (e.g.
+        an info icon) alongside the value.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Text field example: Numeric steppers or currency amounts requiring formatting/validation
+        logic beyond a plain prefix — consider a dedicated numeric input component
+        if one exists.
+      label: Don't
+      caption: >-
+        Numeric steppers or currency amounts requiring formatting/validation logic
+        beyond a plain prefix — consider a dedicated numeric input component if
+        one exists.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Text field example: Fields requiring inline validation messaging
+        (error).'
+      label: Do
+      caption: Fields requiring inline validation messaging (error).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Text field example: Selecting from a fixed set of options — use a select,
+        radio group or combobox component instead.
+      label: Don't
+      caption: >-
+        Selecting from a fixed set of options — use a select, radio group or combobox
+        component instead.
 - type: side-by-side
   heading: Content guidance
   list:

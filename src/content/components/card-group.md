@@ -76,24 +76,49 @@ sections:
       width (500px) so cards don't stretch excessively wide in a single-column layout.
     image: https://placehold.co/1280x720
     imageAlt: 'Card group: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A grid or row of related Card elements under a shared heading — feature highlights,
-    cover options, service categories.
-  - >-
-    When cards should align to equal height across a row regardless of content length.
-  dont:
-  - A single card with no group heading — use Card directly.
-  - >-
-    Free-form or custom layouts needing more control than a heading-plus-cards-row
-    pattern — nest Columns directly instead.
-  - >-
-    Splitting arbitrary content left/right — use Columns or Container for general
-    layout needs.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Card group example: A grid or row of related Card elements under a shared
+        heading — feature highlights, cover options, service categories.
+      label: Do
+      caption: >-
+        A grid or row of related Card elements under a shared heading — feature
+        highlights, cover options, service categories.
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Card group example: A single card with no group heading — use Card
+        directly.'
+      label: Don't
+      caption: A single card with no group heading — use Card directly.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Card group example: When cards should align to equal height across a row
+        regardless of content length.
+      label: Do
+      caption: >-
+        When cards should align to equal height across a row regardless of content
+        length.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Card group example: Free-form or custom layouts needing more control than
+        a heading-plus-cards-row pattern — nest Columns directly instead.
+      label: Don't
+      caption: >-
+        Free-form or custom layouts needing more control than a heading-plus-cards-row
+        pattern — nest Columns directly instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Card group example: Splitting arbitrary content left/right — use Columns
+        or Container for general layout needs.
+      label: Don't
+      caption: >-
+        Splitting arbitrary content left/right — use Columns or Container for general
+        layout needs.
 - type: side-by-side
   heading: Content guidance
   list:

@@ -132,28 +132,55 @@ sections:
       of 21rem.
     image: https://placehold.co/1280x720
     imageAlt: 'Select: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A single-selection field with more options than comfortably fit in a segmented
-    control or a set of radio buttons.
-  - >-
-    Form fields where a native-<select>-style interaction is expected, but the design
-    needs custom visual states (error, hover, focus) matched to the rest of the
-    design system.
-  dont:
-  - >-
-    2-4 always-visible, closely related options — use Segmented control instead
-    so all choices are visible without opening a panel.
-  - >-
-    Multi-select choices — Select only supports a single value; use a multi-select
-    checkbox group instead.
-  - >-
-    A short, mutually exclusive set of options where showing all choices at once
-    aids comparison — use Selector with input-type="radio" instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Select example: A single-selection field with more options than comfortably
+        fit in a segmented control or a set of radio buttons.
+      label: Do
+      caption: >-
+        A single-selection field with more options than comfortably fit in a segmented
+        control or a set of radio buttons.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Select example: 2-4 always-visible, closely related options — use Segmented
+        control instead so all choices are visible without opening a panel.
+      label: Don't
+      caption: >-
+        2-4 always-visible, closely related options — use Segmented control instead
+        so all choices are visible without opening a panel.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Select example: Form fields where a native-<select>-style interaction is
+        expected, but the design needs custom visual states (error, hover, focus)
+        matched to the rest of the design system.
+      label: Do
+      caption: >-
+        Form fields where a native-<select>-style interaction is expected, but the
+        design needs custom visual states (error, hover, focus) matched to the rest
+        of the design system.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Select example: Multi-select choices — Select only supports a single value;
+        use a multi-select checkbox group instead.
+      label: Don't
+      caption: >-
+        Multi-select choices — Select only supports a single value; use a multi-select
+        checkbox group instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Select example: A short, mutually exclusive set of options where showing
+        all choices at once aids comparison — use Selector with input-type="radio"
+        instead.
+      label: Don't
+      caption: >-
+        A short, mutually exclusive set of options where showing all choices at
+        once aids comparison — use Selector with input-type="radio" instead.
 - type: side-by-side
   heading: Content guidance
   list:

@@ -111,30 +111,66 @@ sections:
       margins.
     image: https://placehold.co/1280x720
     imageAlt: 'Columns: child wrapping'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Any responsive multi-column layout — page sections, card grids, form layouts,
-    sidebar + content splits.
-  - >-
-    Layouts that need to respond to their container's width rather than the viewport
-    (e.g. inside a panel or narrow slot).
-  - >-
-    Proportional splits (e.g. a 1:2 sidebar/content layout) that should hold their
-    ratio across breakpoints.
-  - Item counts that don't divide evenly into a fixed grid — use auto.
-  dont:
-  - >-
-    A single, non-responsive stack of items with no column requirement — a plain
-    flex/block wrapper is simpler.
-  - >-
-    Fine-grained placement of specific items to specific grid cells — Columns is
-    deliberately parent-declares-layout-only, with no per-child span or position
-    properties.
-  - Data tables — use a dedicated table component instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Columns example: Any responsive multi-column layout — page sections, card
+        grids, form layouts, sidebar + content splits.
+      label: Do
+      caption: >-
+        Any responsive multi-column layout — page sections, card grids, form layouts,
+        sidebar + content splits.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Columns example: A single, non-responsive stack of items with no column
+        requirement — a plain flex/block wrapper is simpler.
+      label: Don't
+      caption: >-
+        A single, non-responsive stack of items with no column requirement — a plain
+        flex/block wrapper is simpler.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Columns example: Layouts that need to respond to their container's width
+        rather than the viewport (e.g. inside a panel or narrow slot).
+      label: Do
+      caption: >-
+        Layouts that need to respond to their container's width rather than the
+        viewport (e.g. inside a panel or narrow slot).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Columns example: Fine-grained placement of specific items to specific grid
+        cells — Columns is deliberately parent-declares-layout-only, with no per-child
+        span or position properties.
+      label: Don't
+      caption: >-
+        Fine-grained placement of specific items to specific grid cells — Columns
+        is deliberately parent-declares-layout-only, with no per-child span or position
+        properties.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Columns example: Proportional splits (e.g. a 1:2 sidebar/content layout)
+        that should hold their ratio across breakpoints.
+      label: Do
+      caption: >-
+        Proportional splits (e.g. a 1:2 sidebar/content layout) that should hold
+        their ratio across breakpoints.
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Columns example: Data tables — use a dedicated table component
+        instead.'
+      label: Don't
+      caption: Data tables — use a dedicated table component instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Columns example: Item counts that don't divide evenly into a fixed grid
+        — use auto.
+      label: Do
+      caption: Item counts that don't divide evenly into a fixed grid — use auto.
 - type: side-by-side
   heading: Things to consider
   list:

@@ -119,29 +119,64 @@ sections:
       reduce.
     image: https://placehold.co/1280x720
     imageAlt: 'Alert: reduced motion'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Communicating the result of an action (success, error) directly in the page
-    flow.
-  - >-
-    Flagging a warning or blocking issue that needs the user's attention before
-    proceeding.
-  - Providing informational context tied to a specific section of a page.
-  - >-
-    Critical, hard-to-miss messaging (variant="critical") for serious, high-consequence
-    situations.
-  dont:
-  - >-
-    Transient, auto-dismissing confirmation toasts — use a dedicated toast/notification
-    component instead.
-  - Inline field-level validation messages — use Message instead.
-  - >-
-    A persistent page banner unrelated to a specific event or state — consider Hero
-    or a plain content section.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Alert example: Communicating the result of an action (success, error) directly
+        in the page flow.
+      label: Do
+      caption: >-
+        Communicating the result of an action (success, error) directly in the page
+        flow.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Alert example: Transient, auto-dismissing confirmation toasts — use a dedicated
+        toast/notification component instead.
+      label: Don't
+      caption: >-
+        Transient, auto-dismissing confirmation toasts — use a dedicated toast/notification
+        component instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Alert example: Flagging a warning or blocking issue that needs the user's
+        attention before proceeding.
+      label: Do
+      caption: >-
+        Flagging a warning or blocking issue that needs the user's attention before
+        proceeding.
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Alert example: Inline field-level validation messages — use Message
+        instead.'
+      label: Don't
+      caption: Inline field-level validation messages — use Message instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Alert example: Providing informational context tied to a specific section
+        of a page.
+      label: Do
+      caption: Providing informational context tied to a specific section of a page.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Alert example: A persistent page banner unrelated to a specific event or
+        state — consider Hero or a plain content section.
+      label: Don't
+      caption: >-
+        A persistent page banner unrelated to a specific event or state — consider
+        Hero or a plain content section.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Alert example: Critical, hard-to-miss messaging (variant="critical") for
+        serious, high-consequence situations.
+      label: Do
+      caption: >-
+        Critical, hard-to-miss messaging (variant="critical") for serious, high-consequence
+        situations.
 - type: side-by-side
   heading: Content guidance
   list:

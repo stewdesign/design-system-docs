@@ -45,21 +45,39 @@ sections:
       stays neutral, matching Figma's own Error variant.
     image: https://placehold.co/1280x720
     imageAlt: 'Input label: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Composed inside other input components (e.g. Checkbox, Radio, Text field, Input
-    group, Numerical stepper) to render their label, description and helper consistently.
-  dont:
-  - >-
-    As a standalone public component — it isn't intended to be used directly outside
-    of another input component, and doesn't render a real <label> element itself.
-  - >-
-    For a group-level heading over multiple inputs (e.g. a <fieldset>) — use Input
-    legend instead, which uses heading-weight type.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input label example: Composed inside other input components (e.g. Checkbox,
+        Radio, Text field, Input group, Numerical stepper) to render their label,
+        description and helper consistently.
+      label: Do
+      caption: >-
+        Composed inside other input components (e.g. Checkbox, Radio, Text field,
+        Input group, Numerical stepper) to render their label, description and helper
+        consistently.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input label example: As a standalone public component — it isn't intended
+        to be used directly outside of another input component, and doesn't render
+        a real <label> element itself.
+      label: Don't
+      caption: >-
+        As a standalone public component — it isn't intended to be used directly
+        outside of another input component, and doesn't render a real <label> element
+        itself.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input label example: For a group-level heading over multiple inputs (e.g.
+        a <fieldset>) — use Input legend instead, which uses heading-weight type.
+      label: Don't
+      caption: >-
+        For a group-level heading over multiple inputs (e.g. a <fieldset>) — use
+        Input legend instead, which uses heading-weight type.
 - type: side-by-side
   heading: Content guidance
   list:

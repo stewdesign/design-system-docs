@@ -71,23 +71,44 @@ sections:
       square.
     image: https://placehold.co/1280x720
     imageAlt: 'Brand icon: sizing'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Displaying a recognisable AA product or brand mark (e.g. "AA Cars", "AA Insurance")
-    in navigation, cards or promotional content.
-  - >-
-    Where a specific colour treatment is needed to sit correctly on a given background
-    (e.g. white or layer-white on a dark or photographic background).
-  dont:
-  - >-
-    General-purpose UI iconography (arrows, checks, alerts, etc.) — use Icon instead.
-  - >-
-    Where no matching brand asset exists for the required name — check AvailableNames
-    in the Brand Icon story before using a name.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Brand icon example: Displaying a recognisable AA product or brand mark (e.g.
+        "AA Cars", "AA Insurance") in navigation, cards or promotional content.
+      label: Do
+      caption: >-
+        Displaying a recognisable AA product or brand mark (e.g. "AA Cars", "AA
+        Insurance") in navigation, cards or promotional content.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Brand icon example: General-purpose UI iconography (arrows, checks, alerts,
+        etc.) — use Icon instead.
+      label: Don't
+      caption: >-
+        General-purpose UI iconography (arrows, checks, alerts, etc.) — use Icon
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Brand icon example: Where a specific colour treatment is needed to sit correctly
+        on a given background (e.g. white or layer-white on a dark or photographic
+        background).
+      label: Do
+      caption: >-
+        Where a specific colour treatment is needed to sit correctly on a given
+        background (e.g. white or layer-white on a dark or photographic background).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Brand icon example: Where no matching brand asset exists for the required
+        name — check AvailableNames in the Brand Icon story before using a name.
+      label: Don't
+      caption: >-
+        Where no matching brand asset exists for the required name — check AvailableNames
+        in the Brand Icon story before using a name.
 - type: side-by-side
   heading: Content guidance
   list:

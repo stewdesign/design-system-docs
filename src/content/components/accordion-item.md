@@ -92,25 +92,51 @@ sections:
     description: No breakpoints of its own; it sizes to its container's inline size.
     image: https://placehold.co/1280x720
     imageAlt: 'Accordion item: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - As a child of Accordion — it has no standalone use case outside that group.
-  - >-
-    For an individual FAQ entry, a collapsible content section, or one row in a
-    grouped set of expandable panels.
-  dont:
-  - >-
-    Never nested outside Accordion — it relies on the group for shared size, surface
-    and exclusive-open coordination.
-  - >-
-    For a single, page-level expand/collapse control unrelated to a set — consider
-    a plain disclosure pattern instead.
-  - >-
-    For primary or urgent content the user must see immediately — see content guidance
-    below.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion item example: As a child of Accordion — it has no standalone use
+        case outside that group.
+      label: Do
+      caption: As a child of Accordion — it has no standalone use case outside that
+        group.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion item example: Never nested outside Accordion — it relies on the
+        group for shared size, surface and exclusive-open coordination.
+      label: Don't
+      caption: >-
+        Never nested outside Accordion — it relies on the group for shared size,
+        surface and exclusive-open coordination.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion item example: For an individual FAQ entry, a collapsible content
+        section, or one row in a grouped set of expandable panels.
+      label: Do
+      caption: >-
+        For an individual FAQ entry, a collapsible content section, or one row in
+        a grouped set of expandable panels.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion item example: For a single, page-level expand/collapse control
+        unrelated to a set — consider a plain disclosure pattern instead.
+      label: Don't
+      caption: >-
+        For a single, page-level expand/collapse control unrelated to a set — consider
+        a plain disclosure pattern instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion item example: For primary or urgent content the user must see
+        immediately — see content guidance below.
+      label: Don't
+      caption: >-
+        For primary or urgent content the user must see immediately — see content
+        guidance below.
 - type: side-by-side
   heading: Content guidance
   list:

@@ -127,28 +127,66 @@ sections:
       is not handled by the component itself.
     image: https://placehold.co/1280x720
     imageAlt: 'List item: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A row of content in a scannable vertical list — settings, account options, cover
-    choices, search results.
-  - >-
-    Rows that navigate elsewhere on click — set href so the whole row is a real
-    link.
-  - >-
-    Rows that host a single, genuinely interactive control (switch, checkbox, radio,
-    icon button) without an outer link.
-  - Grouped, related rows sharing a single surface — wrap items in List item group.
-  dont:
-  - A single, standalone call-to-action — use Button instead.
-  - Primary in-page navigation between top-level sections — use Menu/Menu item.
-  - >-
-    A row that needs both a full-row link and multiple independent interactive controls
-    in the trailing area — only one trailing control is supported per item; consider
-    a custom layout instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item example: A row of content in a scannable vertical list — settings,
+        account options, cover choices, search results.
+      label: Do
+      caption: >-
+        A row of content in a scannable vertical list — settings, account options,
+        cover choices, search results.
+    - image: https://placehold.co/1280x720
+      imageAlt: 'List item example: A single, standalone call-to-action — use Button
+        instead.'
+      label: Don't
+      caption: A single, standalone call-to-action — use Button instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item example: Rows that navigate elsewhere on click — set href so the
+        whole row is a real link.
+      label: Do
+      caption: >-
+        Rows that navigate elsewhere on click — set href so the whole row is a real
+        link.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item example: Primary in-page navigation between top-level sections
+        — use Menu/Menu item.
+      label: Don't
+      caption: Primary in-page navigation between top-level sections — use Menu/Menu
+        item.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item example: Rows that host a single, genuinely interactive control
+        (switch, checkbox, radio, icon button) without an outer link.
+      label: Do
+      caption: >-
+        Rows that host a single, genuinely interactive control (switch, checkbox,
+        radio, icon button) without an outer link.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item example: A row that needs both a full-row link and multiple independent
+        interactive controls in the trailing area — only one trailing control is
+        supported per item; consider a custom layout instead.
+      label: Don't
+      caption: >-
+        A row that needs both a full-row link and multiple independent interactive
+        controls in the trailing area — only one trailing control is supported per
+        item; consider a custom layout instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item example: Grouped, related rows sharing a single surface — wrap
+        items in List item group.
+      label: Do
+      caption: Grouped, related rows sharing a single surface — wrap items in List
+        item group.
 - type: side-by-side
   heading: Content guidance
   list:

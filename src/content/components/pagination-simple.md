@@ -66,25 +66,48 @@ sections:
     - No loading, disabled or error state exists for this component.
     image: https://placehold.co/1280x720
     imageAlt: 'Pagination simple: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A small, fixed number of pages where a compact visual indicator is preferred
-    over a numeric label — e.g. a short image carousel or a brief onboarding flow.
-  - >-
-    When direct navigation to any page (not just stepping) is desired, since every
-    dot is independently clickable.
-  dont:
-  - >-
-    Large page counts, where a row of dots would become unreadable or unusably small
-    — use Pagination counter's "page of total" pattern instead.
-  - >-
-    When users need to know the exact page number/total count at a glance — dots
-    convey position, not a numeric count; use Pagination counter if that information
-    matters.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination simple example: A small, fixed number of pages where a compact
+        visual indicator is preferred over a numeric label — e.g. a short image
+        carousel or a brief onboarding flow.
+      label: Do
+      caption: >-
+        A small, fixed number of pages where a compact visual indicator is preferred
+        over a numeric label — e.g. a short image carousel or a brief onboarding
+        flow.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination simple example: Large page counts, where a row of dots would
+        become unreadable or unusably small — use Pagination counter's "page of
+        total" pattern instead.
+      label: Don't
+      caption: >-
+        Large page counts, where a row of dots would become unreadable or unusably
+        small — use Pagination counter's "page of total" pattern instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination simple example: When direct navigation to any page (not just
+        stepping) is desired, since every dot is independently clickable.
+      label: Do
+      caption: >-
+        When direct navigation to any page (not just stepping) is desired, since
+        every dot is independently clickable.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination simple example: When users need to know the exact page number/total
+        count at a glance — dots convey position, not a numeric count; use Pagination
+        counter if that information matters.
+      label: Don't
+      caption: >-
+        When users need to know the exact page number/total count at a glance —
+        dots convey position, not a numeric count; use Pagination counter if that
+        information matters.
 - type: side-by-side
   heading: Content guidance
   list:

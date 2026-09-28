@@ -63,25 +63,52 @@ sections:
       List item children.
     image: https://placehold.co/1280x720
     imageAlt: 'List item group: no state of its own'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Grouping a set of related List item rows on a single visual surface, e.g. a
-    menu of cover options or a settings screen.
-  - >-
-    Whenever list items should read as one coherent block rather than a loose, ungrouped
-    stack.
-  dont:
-  - >-
-    A single, standalone list item with no group context — render the List item
-    directly, without wrapping it.
-  - A general-purpose responsive grid or column layout — use Columns instead.
-  - >-
-    A grouped set of cards or chips — use Card group/Chip group instead, which follow
-    the same thin-wrapper pattern for their respective components.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item group example: Grouping a set of related List item rows on a single
+        visual surface, e.g. a menu of cover options or a settings screen.
+      label: Do
+      caption: >-
+        Grouping a set of related List item rows on a single visual surface, e.g.
+        a menu of cover options or a settings screen.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item group example: A single, standalone list item with no group context
+        — render the List item directly, without wrapping it.
+      label: Don't
+      caption: >-
+        A single, standalone list item with no group context — render the List item
+        directly, without wrapping it.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item group example: Whenever list items should read as one coherent
+        block rather than a loose, ungrouped stack.
+      label: Do
+      caption: >-
+        Whenever list items should read as one coherent block rather than a loose,
+        ungrouped stack.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item group example: A general-purpose responsive grid or column layout
+        — use Columns instead.
+      label: Don't
+      caption: A general-purpose responsive grid or column layout — use Columns
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item group example: A grouped set of cards or chips — use Card group/Chip
+        group instead, which follow the same thin-wrapper pattern for their respective
+        components.
+      label: Don't
+      caption: >-
+        A grouped set of cards or chips — use Card group/Chip group instead, which
+        follow the same thin-wrapper pattern for their respective components.
 - type: side-by-side
   heading: Things to consider
   list:

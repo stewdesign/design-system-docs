@@ -124,27 +124,66 @@ sections:
       container up to a 500px max width with a 120px minimum.
     image: https://placehold.co/1280x720
     imageAlt: 'Radio: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - A set of mutually exclusive options where exactly one must (or can) be selected.
-  - >-
-    Options that benefit from supporting description or helper copy alongside the
-    label — use default or outline.
-  - A dense, icon-only selection control with no room for copy — use atom.
-  - >-
-    A selection that should read as a bordered, tappable card (e.g. plan/cover options)
-    — use outline.
-  dont:
-  - Multiple options that can be selected independently — use Checkbox instead.
-  - >-
-    A binary on/off toggle rather than a choice among options — use Switch/toggle
-    instead.
-  - >-
-    A small, closed set of mutually exclusive options better suited to a compact
-    segmented control — use Segmented control.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Radio example: A set of mutually exclusive options where exactly one must
+        (or can) be selected.
+      label: Do
+      caption: A set of mutually exclusive options where exactly one must (or can)
+        be selected.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Radio example: Multiple options that can be selected independently — use
+        Checkbox instead.
+      label: Don't
+      caption: Multiple options that can be selected independently — use Checkbox
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Radio example: Options that benefit from supporting description or helper
+        copy alongside the label — use default or outline.
+      label: Do
+      caption: >-
+        Options that benefit from supporting description or helper copy alongside
+        the label — use default or outline.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Radio example: A binary on/off toggle rather than a choice among options
+        — use Switch/toggle instead.
+      label: Don't
+      caption: >-
+        A binary on/off toggle rather than a choice among options — use Switch/toggle
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Radio example: A dense, icon-only selection control with no room for copy
+        — use atom.
+      label: Do
+      caption: A dense, icon-only selection control with no room for copy — use
+        atom.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Radio example: A small, closed set of mutually exclusive options better
+        suited to a compact segmented control — use Segmented control.
+      label: Don't
+      caption: >-
+        A small, closed set of mutually exclusive options better suited to a compact
+        segmented control — use Segmented control.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Radio example: A selection that should read as a bordered, tappable card
+        (e.g. plan/cover options) — use outline.
+      label: Do
+      caption: >-
+        A selection that should read as a bordered, tappable card (e.g. plan/cover
+        options) — use outline.
 - type: side-by-side
   heading: Content guidance
   list:

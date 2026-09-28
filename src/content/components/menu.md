@@ -122,28 +122,56 @@ sections:
       own.'
     image: https://placehold.co/1280x720
     imageAlt: 'Menu: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A group of related navigation destinations under a single expandable heading,
-    e.g. in primary or mobile navigation.
-  - >-
-    A single, leaf-level navigation link with no children — set href directly rather
-    than slotting a lone Menu item.
-  - >-
-    Navigation groups that need an icon for quick visual scanning (variant="icon"
-    or "hero").
-  dont:
-  - >-
-    A settings or account list with no navigational hierarchy — use List item/List
-    item group instead.
-  - >-
-    An accordion for FAQ-style content rather than navigation — use Accordion item,
-    even though it shares the same expand/collapse technique.
-  - A flat set of top-level tabs — use Tabs/Tab.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Menu example: A group of related navigation destinations under a single
+        expandable heading, e.g. in primary or mobile navigation.
+      label: Do
+      caption: >-
+        A group of related navigation destinations under a single expandable heading,
+        e.g. in primary or mobile navigation.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Menu example: A settings or account list with no navigational hierarchy
+        — use List item/List item group instead.
+      label: Don't
+      caption: >-
+        A settings or account list with no navigational hierarchy — use List item/List
+        item group instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Menu example: A single, leaf-level navigation link with no children — set
+        href directly rather than slotting a lone Menu item.
+      label: Do
+      caption: >-
+        A single, leaf-level navigation link with no children — set href directly
+        rather than slotting a lone Menu item.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Menu example: An accordion for FAQ-style content rather than navigation
+        — use Accordion item, even though it shares the same expand/collapse technique.
+      label: Don't
+      caption: >-
+        An accordion for FAQ-style content rather than navigation — use Accordion
+        item, even though it shares the same expand/collapse technique.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Menu example: Navigation groups that need an icon for quick visual scanning
+        (variant="icon" or "hero").
+      label: Do
+      caption: >-
+        Navigation groups that need an icon for quick visual scanning (variant="icon"
+        or "hero").
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Menu example: A flat set of top-level tabs — use Tabs/Tab.'
+      label: Don't
+      caption: A flat set of top-level tabs — use Tabs/Tab.
 - type: side-by-side
   heading: Content guidance
   list:

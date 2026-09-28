@@ -68,24 +68,52 @@ sections:
     description: None; it's an inline-flex element sized to its content.
     image: https://placehold.co/1280x720
     imageAlt: 'Badge: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - Showing a notification count (e.g. unread messages) — variant="count".
-  - Flagging status with a short label (e.g. "New", "Overdue") — variant="label".
-  - >-
-    A minimal presence/status indicator with no text, such as the notification dot
-    on Avatar — variant="dot".
-  dont:
-  - A removable or selectable tag — use Chip or Tag instead.
-  - >-
-    Longer descriptive text — a badge's fixed, compact shape is only meant for very
-    short labels or numbers.
-  - >-
-    An interactive control — Badge has no click behaviour; use Button or Chip if
-    the element needs to respond to interaction.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Badge example: Showing a notification count (e.g. unread messages) — variant="count".
+      label: Do
+      caption: Showing a notification count (e.g. unread messages) — variant="count".
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Badge example: A removable or selectable tag — use Chip or Tag
+        instead.'
+      label: Don't
+      caption: A removable or selectable tag — use Chip or Tag instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Badge example: Flagging status with a short label (e.g. "New", "Overdue")
+        — variant="label".
+      label: Do
+      caption: Flagging status with a short label (e.g. "New", "Overdue") — variant="label".
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Badge example: Longer descriptive text — a badge's fixed, compact shape
+        is only meant for very short labels or numbers.
+      label: Don't
+      caption: >-
+        Longer descriptive text — a badge's fixed, compact shape is only meant for
+        very short labels or numbers.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Badge example: A minimal presence/status indicator with no text, such as
+        the notification dot on Avatar — variant="dot".
+      label: Do
+      caption: >-
+        A minimal presence/status indicator with no text, such as the notification
+        dot on Avatar — variant="dot".
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Badge example: An interactive control — Badge has no click behaviour; use
+        Button or Chip if the element needs to respond to interaction.
+      label: Don't
+      caption: >-
+        An interactive control — Badge has no click behaviour; use Button or Chip
+        if the element needs to respond to interaction.
 - type: side-by-side
   heading: Content guidance
   list:

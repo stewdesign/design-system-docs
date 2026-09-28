@@ -13,7 +13,7 @@ export interface Figure {
 
 export interface SideBySideItem {
   title?: string;
-  figures: [Figure, Figure];
+  figures: Figure[];
 }
 
 export interface Props {
@@ -44,6 +44,11 @@ const variantOf = (label: string) => label.toLowerCase().replace(/[^a-z]/g, '');
   {items.map((item) => (
     <div class="grid">
       {item.title && <h3 class="grid-item-100">{item.title}</h3>}
+
+      {/* A lone Don't stays in the right-hand column. */}
+      {item.figures.length === 1 && variantOf(item.figures[0].label ?? '') === 'dont' && (
+        <div class="nested-grid-item-50-lg" aria-hidden="true"></div>
+      )}
 
       {item.figures.map((fig) => (
         <figure class="nested-grid-item-50-lg">

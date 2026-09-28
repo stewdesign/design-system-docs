@@ -141,24 +141,44 @@ sections:
       content can't paint over it or its mega menu.
     image: https://placehold.co/1280x720
     imageAlt: 'Header: stacking'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    The primary site-wide header for full navigation journeys (experience="default").
-  - >-
-    Simplified in-journey headers where only a single action is needed alongside
-    the logo — a danger-styled "Report a breakdown" button (your-account) or a progress
-    stepper (in-journey).
-  dont:
-  - >-
-    Do not author Header dropdown directly — mega-menu content is always supplied
-    through Header's own dropdown slot.
-  - >-
-    Don't duplicate the primary nav links elsewhere for desktop — the desktop row
-    is derived automatically from the slotted Menu elements.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Header example: The primary site-wide header for full navigation journeys
+        (experience="default").
+      label: Do
+      caption: >-
+        The primary site-wide header for full navigation journeys (experience="default").
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Header example: Do not author Header dropdown directly — mega-menu content
+        is always supplied through Header's own dropdown slot.
+      label: Don't
+      caption: >-
+        Do not author Header dropdown directly — mega-menu content is always supplied
+        through Header's own dropdown slot.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Header example: Simplified in-journey headers where only a single action
+        is needed alongside the logo — a danger-styled "Report a breakdown" button
+        (your-account) or a progress stepper (in-journey).
+      label: Do
+      caption: >-
+        Simplified in-journey headers where only a single action is needed alongside
+        the logo — a danger-styled "Report a breakdown" button (your-account) or
+        a progress stepper (in-journey).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Header example: Don't duplicate the primary nav links elsewhere for desktop
+        — the desktop row is derived automatically from the slotted Menu elements.
+      label: Don't
+      caption: >-
+        Don't duplicate the primary nav links elsewhere for desktop — the desktop
+        row is derived automatically from the slotted Menu elements.
 - type: side-by-side
   heading: Content guidance
   list:

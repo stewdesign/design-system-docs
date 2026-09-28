@@ -82,25 +82,55 @@ sections:
       of viewport.
     image: https://placehold.co/1280x720
     imageAlt: 'Avatar: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Representing a specific person (a user, team member, or named contact) with
-    a photo or initials.
-  - Pairing with a name in a list, comment, or profile summary.
-  - Showing an online/notification status via the optional badge.
-  dont:
-  - >-
-    As a clickable control (e.g. opening a profile menu) — wrap it in a real interactive
-    element or use the separate AvatarButton pattern; Avatar itself has no built-in
-    interactive states.
-  - Displaying a generic icon unrelated to a specific person — use Icon instead.
-  - >-
-    Showing more than one initial — the fixed-width circle only accommodates a single
-    character.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Avatar example: Representing a specific person (a user, team member, or
+        named contact) with a photo or initials.
+      label: Do
+      caption: >-
+        Representing a specific person (a user, team member, or named contact) with
+        a photo or initials.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Avatar example: As a clickable control (e.g. opening a profile menu) — wrap
+        it in a real interactive element or use the separate AvatarButton pattern;
+        Avatar itself has no built-in interactive states.
+      label: Don't
+      caption: >-
+        As a clickable control (e.g. opening a profile menu) — wrap it in a real
+        interactive element or use the separate AvatarButton pattern; Avatar itself
+        has no built-in interactive states.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Avatar example: Pairing with a name in a list, comment, or profile
+        summary.'
+      label: Do
+      caption: Pairing with a name in a list, comment, or profile summary.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Avatar example: Displaying a generic icon unrelated to a specific person
+        — use Icon instead.
+      label: Don't
+      caption: Displaying a generic icon unrelated to a specific person — use Icon
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Avatar example: Showing an online/notification status via the optional
+        badge.'
+      label: Do
+      caption: Showing an online/notification status via the optional badge.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Avatar example: Showing more than one initial — the fixed-width circle only
+        accommodates a single character.
+      label: Don't
+      caption: >-
+        Showing more than one initial — the fixed-width circle only accommodates
+        a single character.
 - type: side-by-side
   heading: Content guidance
   list:

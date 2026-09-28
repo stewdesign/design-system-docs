@@ -138,33 +138,66 @@ sections:
       media queries.
     image: https://placehold.co/1280x720
     imageAlt: 'Panel: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Any major page section that needs its own background colour, section-level spacing,
-    and a consistent content width — the standard container for Columns and section
-    content.
-  - >-
-    When a section needs visual separation via colour (e.g. alternating white/grey
-    panels down a page) or an accent inset block (e.g. a callout in yellow) within
-    an otherwise neutral section.
-  - >-
-    When the content should be constrained to a narrow, centred reading measure
-    (narrow) rather than the panel's full width.
-  dont:
-  - >-
-    For layout/column structure within a section — that's Columns' job; Panel only
-    owns the outer band, width and spacing.
-  - >-
-    For a small, local grouping of content that doesn't represent a full page section
-    — use a lighter-weight container instead.
-  - >-
-    When content needs its own independent spacing rhythm rather than sharing the
-    row-gap contract described above — check whether the row-gap/margin-zeroing
-    behaviour fits before slotting complex nested layouts directly.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Panel example: Any major page section that needs its own background colour,
+        section-level spacing, and a consistent content width — the standard container
+        for Columns and section content.
+      label: Do
+      caption: >-
+        Any major page section that needs its own background colour, section-level
+        spacing, and a consistent content width — the standard container for Columns
+        and section content.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Panel example: For layout/column structure within a section — that's Columns'
+        job; Panel only owns the outer band, width and spacing.
+      label: Don't
+      caption: >-
+        For layout/column structure within a section — that's Columns' job; Panel
+        only owns the outer band, width and spacing.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Panel example: When a section needs visual separation via colour (e.g. alternating
+        white/grey panels down a page) or an accent inset block (e.g. a callout
+        in yellow) within an otherwise neutral section.
+      label: Do
+      caption: >-
+        When a section needs visual separation via colour (e.g. alternating white/grey
+        panels down a page) or an accent inset block (e.g. a callout in yellow)
+        within an otherwise neutral section.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Panel example: For a small, local grouping of content that doesn't represent
+        a full page section — use a lighter-weight container instead.
+      label: Don't
+      caption: >-
+        For a small, local grouping of content that doesn't represent a full page
+        section — use a lighter-weight container instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Panel example: When the content should be constrained to a narrow, centred
+        reading measure (narrow) rather than the panel's full width.
+      label: Do
+      caption: >-
+        When the content should be constrained to a narrow, centred reading measure
+        (narrow) rather than the panel's full width.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Panel example: When content needs its own independent spacing rhythm rather
+        than sharing the row-gap contract described above — check whether the row-gap/margin-zeroing
+        behaviour fits before slotting complex nested layouts directly.
+      label: Don't
+      caption: >-
+        When content needs its own independent spacing rhythm rather than sharing
+        the row-gap contract described above — check whether the row-gap/margin-zeroing
+        behaviour fits before slotting complex nested layouts directly.
 - type: side-by-side
   heading: Content guidance
   list:
