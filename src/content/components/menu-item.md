@@ -88,25 +88,54 @@ sections:
       of its own.
     image: https://placehold.co/1280x720
     imageAlt: 'Menu item: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - A single destination inside an Menu disclosure, as a slotted child.
-  - Marking the current page within a navigation group (current).
-  - >-
-    A leaf item that should show a trailing icon to signal it opens/links elsewhere
-    (trailing-icon).
-  dont:
-  - >-
-    Outside an Menu — this component relies on its parent for divider placement
-    and shares its visual language with the menu disclosure; use List item for a
-    general-purpose list row instead.
-  - A primary, stand-alone call-to-action — use Button.
-  - >-
-    A leaf-only navigation item with no parent group — set href directly on Menu
-    instead of slotting a single Menu item.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Menu item example: A single destination inside an Menu disclosure, as a
+        slotted child.
+      label: Do
+      caption: A single destination inside an Menu disclosure, as a slotted child.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Menu item example: Outside an Menu — this component relies on its parent
+        for divider placement and shares its visual language with the menu disclosure;
+        use List item for a general-purpose list row instead.
+      label: Don't
+      caption: >-
+        Outside an Menu — this component relies on its parent for divider placement
+        and shares its visual language with the menu disclosure; use List item for
+        a general-purpose list row instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Menu item example: Marking the current page within a navigation
+        group (current).'
+      label: Do
+      caption: Marking the current page within a navigation group (current).
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Menu item example: A primary, stand-alone call-to-action — use
+        Button.'
+      label: Don't
+      caption: A primary, stand-alone call-to-action — use Button.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Menu item example: A leaf item that should show a trailing icon to signal
+        it opens/links elsewhere (trailing-icon).
+      label: Do
+      caption: >-
+        A leaf item that should show a trailing icon to signal it opens/links elsewhere
+        (trailing-icon).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Menu item example: A leaf-only navigation item with no parent group — set
+        href directly on Menu instead of slotting a single Menu item.
+      label: Don't
+      caption: >-
+        A leaf-only navigation item with no parent group — set href directly on
+        Menu instead of slotting a single Menu item.
 - type: side-by-side
   heading: Content guidance
   list:

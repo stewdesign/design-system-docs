@@ -65,7 +65,9 @@ const sideBySideSection = z.object({
   list: z.array(z.string()).optional(),
   items: z.array(z.object({
     title: z.string().optional(),
-    figures: z.tuple([figureItem, figureItem]),
+    // Usually a Do and a Don't. A row can hold one figure when the two
+    // lists are different lengths.
+    figures: z.array(figureItem).min(1).max(2),
   })).default([]),
 });
 

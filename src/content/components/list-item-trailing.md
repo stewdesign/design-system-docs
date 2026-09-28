@@ -50,22 +50,39 @@ sections:
       inside the row's own link.
     image: https://placehold.co/1280x720
     imageAlt: 'List item trailing: independent focusability'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Exclusively inside List item's slot="trailing", to present an action or control
-    at the end of the row — e.g. a chevron icon button for navigation, or a switch/checkbox/radio
-    for an inline setting.
-  dont:
-  - >-
-    Standalone, outside of List item — it has no independent story or usage pattern
-    and exists purely to support that parent component.
-  - >-
-    As a general-purpose wrapper for interactive controls elsewhere in the system
-    — use the control (Switch, Checkbox, etc.) directly instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item trailing example: Exclusively inside List item's slot="trailing",
+        to present an action or control at the end of the row — e.g. a chevron icon
+        button for navigation, or a switch/checkbox/radio for an inline setting.
+      label: Do
+      caption: >-
+        Exclusively inside List item's slot="trailing", to present an action or
+        control at the end of the row — e.g. a chevron icon button for navigation,
+        or a switch/checkbox/radio for an inline setting.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item trailing example: Standalone, outside of List item — it has no
+        independent story or usage pattern and exists purely to support that parent
+        component.
+      label: Don't
+      caption: >-
+        Standalone, outside of List item — it has no independent story or usage
+        pattern and exists purely to support that parent component.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item trailing example: As a general-purpose wrapper for interactive
+        controls elsewhere in the system — use the control (Switch, Checkbox, etc.)
+        directly instead.
+      label: Don't
+      caption: >-
+        As a general-purpose wrapper for interactive controls elsewhere in the system
+        — use the control (Switch, Checkbox, etc.) directly instead.
 - type: side-by-side
   heading: Things to consider
   list:

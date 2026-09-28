@@ -100,25 +100,60 @@ sections:
       footer.
     image: https://placehold.co/1280x720
     imageAlt: 'Quick quote card: layout'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A single, prominent promo entry point into a quick-quote flow for one product
-    line (breakdown, car, home, finance).
-  - Inside Header dropdown's slot="quick-quote", its primary intended placement.
-  - A general decorative promo card using one of the non-product-line surface tints.
-  dont:
-  - A set of several equally-weighted CTAs — use Button/Button group instead.
-  - >-
-    A generic content tile with no promotional imagery or product-line association
-    — use Tile instead, which shares this component's href-or-button pattern but
-    without the surface theming.
-  - >-
-    A card that needs multiple independent interactive elements (e.g. a separate
-    dismiss control) — this component is designed as a single interactive target.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Quick quote card example: A single, prominent promo entry point into a quick-quote
+        flow for one product line (breakdown, car, home, finance).
+      label: Do
+      caption: >-
+        A single, prominent promo entry point into a quick-quote flow for one product
+        line (breakdown, car, home, finance).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Quick quote card example: A set of several equally-weighted CTAs — use Button/Button
+        group instead.
+      label: Don't
+      caption: A set of several equally-weighted CTAs — use Button/Button group
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Quick quote card example: Inside Header dropdown's slot="quick-quote", its
+        primary intended placement.
+      label: Do
+      caption: Inside Header dropdown's slot="quick-quote", its primary intended
+        placement.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Quick quote card example: A generic content tile with no promotional imagery
+        or product-line association — use Tile instead, which shares this component's
+        href-or-button pattern but without the surface theming.
+      label: Don't
+      caption: >-
+        A generic content tile with no promotional imagery or product-line association
+        — use Tile instead, which shares this component's href-or-button pattern
+        but without the surface theming.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Quick quote card example: A general decorative promo card using one of the
+        non-product-line surface tints.
+      label: Do
+      caption: A general decorative promo card using one of the non-product-line
+        surface tints.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Quick quote card example: A card that needs multiple independent interactive
+        elements (e.g. a separate dismiss control) — this component is designed
+        as a single interactive target.
+      label: Don't
+      caption: >-
+        A card that needs multiple independent interactive elements (e.g. a separate
+        dismiss control) — this component is designed as a single interactive target.
 - type: side-by-side
   heading: Content guidance
   list:

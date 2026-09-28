@@ -62,21 +62,37 @@ sections:
       custom properties, computed inline per render.
     image: https://placehold.co/1280x720
     imageAlt: 'List item leading: status'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Exclusively inside List item's slot="leading", to present an icon, avatar or
-    status indicator ahead of the item's label/description.
-  dont:
-  - >-
-    Standalone, outside of List item — it has no independent story or usage pattern
-    and exists purely to support that parent component.
-  - >-
-    As a general-purpose icon container elsewhere in the system — use Icon (optionally
-    with its own background styling) directly instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item leading example: Exclusively inside List item's slot="leading",
+        to present an icon, avatar or status indicator ahead of the item's label/description.
+      label: Do
+      caption: >-
+        Exclusively inside List item's slot="leading", to present an icon, avatar
+        or status indicator ahead of the item's label/description.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item leading example: Standalone, outside of List item — it has no
+        independent story or usage pattern and exists purely to support that parent
+        component.
+      label: Don't
+      caption: >-
+        Standalone, outside of List item — it has no independent story or usage
+        pattern and exists purely to support that parent component.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        List item leading example: As a general-purpose icon container elsewhere
+        in the system — use Icon (optionally with its own background styling) directly
+        instead.
+      label: Don't
+      caption: >-
+        As a general-purpose icon container elsewhere in the system — use Icon (optionally
+        with its own background styling) directly instead.
 - type: side-by-side
   heading: Things to consider
   list:

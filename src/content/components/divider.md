@@ -48,15 +48,24 @@ sections:
       from variant.
     image: https://placehold.co/1280x720
     imageAlt: 'Divider: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - Separating sections of content with a plain horizontal rule.
-  - >-
-    Choosing a contrast level (variant) appropriate to how strongly the separation
-    should read against surrounding content.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Divider example: Separating sections of content with a plain horizontal
+        rule.'
+      label: Do
+      caption: Separating sections of content with a plain horizontal rule.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Divider example: Choosing a contrast level (variant) appropriate to how
+        strongly the separation should read against surrounding content.
+      label: Do
+      caption: >-
+        Choosing a contrast level (variant) appropriate to how strongly the separation
+        should read against surrounding content.
 - type: side-by-side
   heading: Things to consider
   list:

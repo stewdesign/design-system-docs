@@ -89,22 +89,54 @@ sections:
       Hero's "full-bleed host, capped inner content" pattern.
     image: https://placehold.co/1280x720
     imageAlt: 'Breadcrumb: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - At the top of any page nested more than one level deep in the site hierarchy.
-  - Helping users understand and navigate back through the page hierarchy.
-  - Pages that sit directly in a yellow-themed section of the site (theme="yellow").
-  dont:
-  - On top-level or landing pages with no meaningful hierarchy above them.
-  - >-
-    As a replacement for primary navigation — breadcrumbs supplement, not replace,
-    the main nav.
-  - >-
-    Inside Panel — like Hero, it's designed to carry its own full-bleed background
-    directly in the page.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Breadcrumb example: At the top of any page nested more than one level deep
+        in the site hierarchy.
+      label: Do
+      caption: At the top of any page nested more than one level deep in the site
+        hierarchy.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Breadcrumb example: On top-level or landing pages with no meaningful hierarchy
+        above them.
+      label: Don't
+      caption: On top-level or landing pages with no meaningful hierarchy above
+        them.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Breadcrumb example: Helping users understand and navigate back through the
+        page hierarchy.
+      label: Do
+      caption: Helping users understand and navigate back through the page hierarchy.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Breadcrumb example: As a replacement for primary navigation — breadcrumbs
+        supplement, not replace, the main nav.
+      label: Don't
+      caption: >-
+        As a replacement for primary navigation — breadcrumbs supplement, not replace,
+        the main nav.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Breadcrumb example: Pages that sit directly in a yellow-themed section of
+        the site (theme="yellow").
+      label: Do
+      caption: Pages that sit directly in a yellow-themed section of the site (theme="yellow").
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Breadcrumb example: Inside Panel — like Hero, it's designed to carry its
+        own full-bleed background directly in the page.
+      label: Don't
+      caption: >-
+        Inside Panel — like Hero, it's designed to carry its own full-bleed background
+        directly in the page.
 - type: side-by-side
   heading: Content guidance
   list:

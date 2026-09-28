@@ -74,21 +74,35 @@ sections:
       page theme.
     image: https://placehold.co/1280x720
     imageAlt: 'Footer: theme'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    The footer of any AA site page, where a consistent set of navigation, legal
-    and brand elements is required.
-  dont:
-  - >-
-    Mid-page navigation or link groups — use standard navigation or link list components
-    instead.
-  - >-
-    A minimal or single-purpose page that doesn't need the full section/legal link
-    structure
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Footer example: The footer of any AA site page, where a consistent set of
+        navigation, legal and brand elements is required.
+      label: Do
+      caption: >-
+        The footer of any AA site page, where a consistent set of navigation, legal
+        and brand elements is required.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Footer example: Mid-page navigation or link groups — use standard navigation
+        or link list components instead.
+      label: Don't
+      caption: >-
+        Mid-page navigation or link groups — use standard navigation or link list
+        components instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Footer example: A minimal or single-purpose page that doesn't need the full
+        section/legal link structure
+      label: Don't
+      caption: >-
+        A minimal or single-purpose page that doesn't need the full section/legal
+        link structure
 - type: side-by-side
   heading: Content guidance
   list:

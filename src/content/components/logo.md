@@ -63,23 +63,43 @@ sections:
       graphic.
     image: https://placehold.co/1280x720
     imageAlt: 'Logo: no interactive states'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - The header/navigation brand mark.
-  - >-
-    Anywhere The AA's logo needs to be shown as a crisp, recolourable inline graphic
-    (e.g. a footer, a print-style summary, a loading/splash screen).
-  dont:
-  - >-
-    As a clickable home-page link — wrap Logo in a real <a> (or a link-capable component)
-    rather than adding click behaviour to the logo itself, since it has no href
-    or interactive semantics.
-  - >-
-    As a decorative background image — use a raster/background-image approach instead;
-    this component is designed for the standalone brand mark at content scale.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Logo example: The header/navigation brand mark.'
+      label: Do
+      caption: The header/navigation brand mark.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Logo example: As a clickable home-page link — wrap Logo in a real <a> (or
+        a link-capable component) rather than adding click behaviour to the logo
+        itself, since it has no href or interactive semantics.
+      label: Don't
+      caption: >-
+        As a clickable home-page link — wrap Logo in a real <a> (or a link-capable
+        component) rather than adding click behaviour to the logo itself, since
+        it has no href or interactive semantics.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Logo example: Anywhere The AA's logo needs to be shown as a crisp, recolourable
+        inline graphic (e.g. a footer, a print-style summary, a loading/splash screen).
+      label: Do
+      caption: >-
+        Anywhere The AA's logo needs to be shown as a crisp, recolourable inline
+        graphic (e.g. a footer, a print-style summary, a loading/splash screen).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Logo example: As a decorative background image — use a raster/background-image
+        approach instead; this component is designed for the standalone brand mark
+        at content scale.
+      label: Don't
+      caption: >-
+        As a decorative background image — use a raster/background-image approach
+        instead; this component is designed for the standalone brand mark at content
+        scale.
 - type: side-by-side
   heading: Things to consider
   list:

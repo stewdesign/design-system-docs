@@ -69,26 +69,57 @@ sections:
       stack alignment option for narrow contexts.
     image: https://placehold.co/1280x720
     imageAlt: 'Button group: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A primary and secondary (or tertiary) action presented together, e.g. "Save"
-    and "Cancel".
-  - >-
-    Any set of related buttons that should visually group together with consistent
-    spacing.
-  - Stacking buttons full-width on narrow layouts (align="stack").
-  dont:
-  - A single standalone button — use Button directly with no wrapping group.
-  - >-
-    Mutually exclusive or multi-select choices — use the relevant selection component
-    (radio/checkbox group, or Chip group), not a set of buttons.
-  - >-
-    Icon-only controls needing a compact row — consider whether Icon button instances
-    need their own grouping treatment.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button group example: A primary and secondary (or tertiary) action presented
+        together, e.g. "Save" and "Cancel".
+      label: Do
+      caption: >-
+        A primary and secondary (or tertiary) action presented together, e.g. "Save"
+        and "Cancel".
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button group example: A single standalone button — use Button directly with
+        no wrapping group.
+      label: Don't
+      caption: A single standalone button — use Button directly with no wrapping
+        group.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button group example: Any set of related buttons that should visually group
+        together with consistent spacing.
+      label: Do
+      caption: >-
+        Any set of related buttons that should visually group together with consistent
+        spacing.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button group example: Mutually exclusive or multi-select choices — use the
+        relevant selection component (radio/checkbox group, or Chip group), not
+        a set of buttons.
+      label: Don't
+      caption: >-
+        Mutually exclusive or multi-select choices — use the relevant selection
+        component (radio/checkbox group, or Chip group), not a set of buttons.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button group example: Stacking buttons full-width on narrow layouts (align="stack").
+      label: Do
+      caption: Stacking buttons full-width on narrow layouts (align="stack").
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button group example: Icon-only controls needing a compact row — consider
+        whether Icon button instances need their own grouping treatment.
+      label: Don't
+      caption: >-
+        Icon-only controls needing a compact row — consider whether Icon button
+        instances need their own grouping treatment.
 - type: side-by-side
   heading: Content guidance
   list:

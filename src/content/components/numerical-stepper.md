@@ -97,27 +97,58 @@ sections:
     - Calling .focus() on the component focuses the underlying value input.
     image: https://placehold.co/1280x720
     imageAlt: 'Numerical stepper: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Choosing a whole number within a bounded range, e.g. quantity of an item or
-    number of passengers.
-  - >-
-    A list of steppers that share a common outer context, using variant="stacked"
-    with an inlineLabel per row.
-  - >-
-    A standalone stepper that already has its own outer label, using variant="compact".
-  - A settings-style label-left, control-right row, using orientation="inline".
-  dont:
-  - >-
-    Free-form numeric entry with no meaningful stepping (e.g. currency amounts)
-    — use Text field with a numeric input mode instead.
-  - >-
-    A choice between a small number of discrete named options — use a selection
-    component instead of a numeric range.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Numerical stepper example: Choosing a whole number within a bounded range,
+        e.g. quantity of an item or number of passengers.
+      label: Do
+      caption: >-
+        Choosing a whole number within a bounded range, e.g. quantity of an item
+        or number of passengers.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Numerical stepper example: Free-form numeric entry with no meaningful stepping
+        (e.g. currency amounts) — use Text field with a numeric input mode instead.
+      label: Don't
+      caption: >-
+        Free-form numeric entry with no meaningful stepping (e.g. currency amounts)
+        — use Text field with a numeric input mode instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Numerical stepper example: A list of steppers that share a common outer
+        context, using variant="stacked" with an inlineLabel per row.
+      label: Do
+      caption: >-
+        A list of steppers that share a common outer context, using variant="stacked"
+        with an inlineLabel per row.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Numerical stepper example: A choice between a small number of discrete named
+        options — use a selection component instead of a numeric range.
+      label: Don't
+      caption: >-
+        A choice between a small number of discrete named options — use a selection
+        component instead of a numeric range.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Numerical stepper example: A standalone stepper that already has its own
+        outer label, using variant="compact".
+      label: Do
+      caption: >-
+        A standalone stepper that already has its own outer label, using variant="compact".
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Numerical stepper example: A settings-style label-left, control-right row,
+        using orientation="inline".
+      label: Do
+      caption: A settings-style label-left, control-right row, using orientation="inline".
 - type: side-by-side
   heading: Content guidance
   list:

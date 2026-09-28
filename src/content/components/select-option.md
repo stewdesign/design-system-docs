@@ -70,21 +70,36 @@ sections:
       behaviour.
     image: https://placehold.co/1280x720
     imageAlt: 'Select option: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - As a direct child of Select, one per selectable value.
-  dont:
-  - >-
-    Anywhere outside Select — it has no standalone story or supported usage and
-    depends entirely on its parent for state (active, selected) and behaviour (keyboard
-    navigation, commit-on-select).
-  - >-
-    As a rich multi-line or heavily interactive item — keep option content to the
-    label text Select needs for its display value; if a selection needs richer content,
-    review with the design system team.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Select option example: As a direct child of Select, one per selectable
+        value.'
+      label: Do
+      caption: As a direct child of Select, one per selectable value.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Select option example: Anywhere outside Select — it has no standalone story
+        or supported usage and depends entirely on its parent for state (active,
+        selected) and behaviour (keyboard navigation, commit-on-select).
+      label: Don't
+      caption: >-
+        Anywhere outside Select — it has no standalone story or supported usage
+        and depends entirely on its parent for state (active, selected) and behaviour
+        (keyboard navigation, commit-on-select).
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Select option example: As a rich multi-line or heavily interactive item
+        — keep option content to the label text Select needs for its display value;
+        if a selection needs richer content, review with the design system team.
+      label: Don't
+      caption: >-
+        As a rich multi-line or heavily interactive item — keep option content to
+        the label text Select needs for its display value; if a selection needs
+        richer content, review with the design system team.
 - type: side-by-side
   heading: Content guidance
   list:

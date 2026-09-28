@@ -116,30 +116,77 @@ sections:
       guidance requires labels short enough not to wrap on mobile.
     image: https://placehold.co/1280x720
     imageAlt: 'Button: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Any primary, secondary or tertiary call-to-action, in-page or navigating elsewhere.
-  - >-
-    Form submission, resets, or in-page actions (type="submit", type="reset", type="button").
-  - >-
-    Navigational CTAs that should look and behave like part of the action hierarchy
-    (set href).
-  - >-
-    Destructive or high-consequence actions (intent="danger"), e.g. deleting cover
-    or cancelling a policy.
-  dont:
-  - An icon-only control with no visible label — use Icon button instead.
-  - >-
-    Grouped, mutually exclusive or multi-select choices — use the relevant selection
-    component (e.g. radio/checkbox group), not a set of buttons.
-  - >-
-    Plain inline navigation within body copy — use a standard inline text link,
-    not variant="link" at button scale, unless the action needs button-level prominence.
-  - A set of related actions that should visually group together — use Button group.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button example: Any primary, secondary or tertiary call-to-action, in-page
+        or navigating elsewhere.
+      label: Do
+      caption: >-
+        Any primary, secondary or tertiary call-to-action, in-page or navigating
+        elsewhere.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button example: An icon-only control with no visible label — use Icon button
+        instead.
+      label: Don't
+      caption: An icon-only control with no visible label — use Icon button instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button example: Form submission, resets, or in-page actions (type="submit",
+        type="reset", type="button").
+      label: Do
+      caption: >-
+        Form submission, resets, or in-page actions (type="submit", type="reset",
+        type="button").
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button example: Grouped, mutually exclusive or multi-select choices — use
+        the relevant selection component (e.g. radio/checkbox group), not a set
+        of buttons.
+      label: Don't
+      caption: >-
+        Grouped, mutually exclusive or multi-select choices — use the relevant selection
+        component (e.g. radio/checkbox group), not a set of buttons.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button example: Navigational CTAs that should look and behave like part
+        of the action hierarchy (set href).
+      label: Do
+      caption: >-
+        Navigational CTAs that should look and behave like part of the action hierarchy
+        (set href).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button example: Plain inline navigation within body copy — use a standard
+        inline text link, not variant="link" at button scale, unless the action
+        needs button-level prominence.
+      label: Don't
+      caption: >-
+        Plain inline navigation within body copy — use a standard inline text link,
+        not variant="link" at button scale, unless the action needs button-level
+        prominence.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button example: Destructive or high-consequence actions (intent="danger"),
+        e.g. deleting cover or cancelling a policy.
+      label: Do
+      caption: >-
+        Destructive or high-consequence actions (intent="danger"), e.g. deleting
+        cover or cancelling a policy.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Button example: A set of related actions that should visually group together
+        — use Button group.
+      label: Don't
+      caption: A set of related actions that should visually group together — use
+        Button group.
 - type: side-by-side
   heading: Content guidance
   list:

@@ -57,18 +57,34 @@ sections:
       transition.
     image: https://placehold.co/1280x720
     imageAlt: 'Input helper: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Composed inside Input label or Input legend when helper is set, to turn a static
-    description into a collapsed disclosure.
-  dont:
-  - As a standalone, general-purpose accordion — use Accordion item for that.
-  - >-
-    As a static hint line with no need to collapse — set description directly instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input helper example: Composed inside Input label or Input legend when helper
+        is set, to turn a static description into a collapsed disclosure.
+      label: Do
+      caption: >-
+        Composed inside Input label or Input legend when helper is set, to turn
+        a static description into a collapsed disclosure.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input helper example: As a standalone, general-purpose accordion — use Accordion
+        item for that.
+      label: Don't
+      caption: As a standalone, general-purpose accordion — use Accordion item for
+        that.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input helper example: As a static hint line with no need to collapse — set
+        description directly instead.
+      label: Don't
+      caption: >-
+        As a static hint line with no need to collapse — set description directly
+        instead.
 - type: side-by-side
   heading: Content guidance
   list:

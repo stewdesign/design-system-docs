@@ -103,20 +103,41 @@ sections:
     description: Calling .focus() on the host focuses the inner <textarea> directly.
     image: https://placehold.co/1280x720
     imageAlt: 'Textarea: focus delegation'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Collecting longer free-text input, such as a comment, description, or explanation,
-    where a single-line field would be too short.
-  - >-
-    Any form field where the expected answer could reasonably run to multiple lines
-    or sentences.
-  dont:
-  - A single line of text, e.g. a name or reference number — use Text field instead.
-  - A fixed set of options — use a select, radio group, or checkbox group instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Textarea example: Collecting longer free-text input, such as a comment,
+        description, or explanation, where a single-line field would be too short.
+      label: Do
+      caption: >-
+        Collecting longer free-text input, such as a comment, description, or explanation,
+        where a single-line field would be too short.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Textarea example: A single line of text, e.g. a name or reference number
+        — use Text field instead.
+      label: Don't
+      caption: A single line of text, e.g. a name or reference number — use Text
+        field instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Textarea example: Any form field where the expected answer could reasonably
+        run to multiple lines or sentences.
+      label: Do
+      caption: >-
+        Any form field where the expected answer could reasonably run to multiple
+        lines or sentences.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Textarea example: A fixed set of options — use a select, radio group, or
+        checkbox group instead.
+      label: Don't
+      caption: A fixed set of options — use a select, radio group, or checkbox group
+        instead.
 - type: side-by-side
   heading: Content guidance
   list:

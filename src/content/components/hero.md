@@ -111,26 +111,57 @@ sections:
       band Figma shows; it is purely decorative (alt="", aria-hidden="true").
     image: https://placehold.co/1280x720
     imageAlt: 'Hero: brand stripe asset'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    The top of a landing or campaign page, to introduce the page's purpose with
-    a heading, description and primary call(s) to action.
-  - seo when there's a relevant image to show alongside the copy.
-  - >-
-    background-image when a full-bleed photograph should set the scene behind the
-    message.
-  - >-
-    slim for a simpler, image-free introduction with no list or actions, e.g. a
-    single-purpose booking page.
-  dont:
-  - Mid-page section headers — use a standard heading/section component instead.
-  - >-
-    When the list or actions need to be present on the slim variant — switch to
-    seo or background-image instead, since slim has no such regions.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Hero example: The top of a landing or campaign page, to introduce the page's
+        purpose with a heading, description and primary call(s) to action.
+      label: Do
+      caption: >-
+        The top of a landing or campaign page, to introduce the page's purpose with
+        a heading, description and primary call(s) to action.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Hero example: Mid-page section headers — use a standard heading/section
+        component instead.
+      label: Don't
+      caption: Mid-page section headers — use a standard heading/section component
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Hero example: seo when there''s a relevant image to show alongside
+        the copy.'
+      label: Do
+      caption: seo when there's a relevant image to show alongside the copy.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Hero example: When the list or actions need to be present on the slim variant
+        — switch to seo or background-image instead, since slim has no such regions.
+      label: Don't
+      caption: >-
+        When the list or actions need to be present on the slim variant — switch
+        to seo or background-image instead, since slim has no such regions.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Hero example: background-image when a full-bleed photograph should set the
+        scene behind the message.
+      label: Do
+      caption: >-
+        background-image when a full-bleed photograph should set the scene behind
+        the message.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Hero example: slim for a simpler, image-free introduction with no list or
+        actions, e.g. a single-purpose booking page.
+      label: Do
+      caption: >-
+        slim for a simpler, image-free introduction with no list or actions, e.g.
+        a single-purpose booking page.
 - type: side-by-side
   heading: Content guidance
   list:

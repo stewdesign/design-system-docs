@@ -90,18 +90,29 @@ sections:
       undimmed above the scrim.
     image: https://placehold.co/1280x720
     imageAlt: 'Header dropdown: stacking with header'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Never authored directly — it is rendered internally by Header whenever a slotted
-    Menu's label matches a data-dropdown panel supplied to Header's slot="dropdown".
-  dont:
-  - >-
-    Do not instantiate Header dropdown directly in application code; compose mega-menu
-    content through Header's dropdown slot instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Header dropdown example: Never authored directly — it is rendered internally
+        by Header whenever a slotted Menu's label matches a data-dropdown panel
+        supplied to Header's slot="dropdown".
+      label: Do
+      caption: >-
+        Never authored directly — it is rendered internally by Header whenever a
+        slotted Menu's label matches a data-dropdown panel supplied to Header's
+        slot="dropdown".
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Header dropdown example: Do not instantiate Header dropdown directly in
+        application code; compose mega-menu content through Header's dropdown slot
+        instead.
+      label: Don't
+      caption: >-
+        Do not instantiate Header dropdown directly in application code; compose
+        mega-menu content through Header's dropdown slot instead.
 - type: side-by-side
   heading: Things to consider
   list:

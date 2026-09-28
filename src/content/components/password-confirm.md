@@ -101,22 +101,42 @@ sections:
       toggle.
     image: https://placehold.co/1280x720
     imageAlt: 'Password confirm: password visibility'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Any password creation or change flow where the user must set a password and
-    confirm it, e.g. account sign-up or password reset.
-  - >-
-    Where live feedback on password strength/requirements and confirmation match
-    materially helps the user succeed on the first attempt.
-  dont:
-  - >-
-    A single password entry with no confirmation step (e.g. login) — use Text field
-    with type="password" directly.
-  - A password field where requirements shouldn't be surfaced live
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Password confirm example: Any password creation or change flow where the
+        user must set a password and confirm it, e.g. account sign-up or password
+        reset.
+      label: Do
+      caption: >-
+        Any password creation or change flow where the user must set a password
+        and confirm it, e.g. account sign-up or password reset.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Password confirm example: A single password entry with no confirmation step
+        (e.g. login) — use Text field with type="password" directly.
+      label: Don't
+      caption: >-
+        A single password entry with no confirmation step (e.g. login) — use Text
+        field with type="password" directly.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Password confirm example: Where live feedback on password strength/requirements
+        and confirmation match materially helps the user succeed on the first attempt.
+      label: Do
+      caption: >-
+        Where live feedback on password strength/requirements and confirmation match
+        materially helps the user succeed on the first attempt.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Password confirm example: A password field where requirements shouldn't
+        be surfaced live
+      label: Don't
+      caption: A password field where requirements shouldn't be surfaced live
 - type: side-by-side
   heading: Content guidance
   list:

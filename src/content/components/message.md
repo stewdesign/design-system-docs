@@ -67,29 +67,57 @@ sections:
       to its text.
     image: https://placehold.co/1280x720
     imageAlt: 'Message: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Inside a form control to surface a validation error, warning, informational
-    hint, or success confirmation tied to that field (this is its only current use
-    in the codebase).
-  - >-
-    Anywhere a short, single-line, icon-plus-text status message is needed at the
-    same visual weight as existing usages.
-  dont:
-  - >-
-    As a standalone, user-facing component — it is an internal primitive with no
-    story and no established API contract for direct use; compose it inside a host
-    component instead.
-  - >-
-    For multi-line or complex feedback content — keep it to one line of text; use
-    a different pattern for longer explanatory copy or dismissible banners.
-  - >-
-    For page- or section-level system status — use a banner/alert pattern intended
-    for that scope.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Message example: Inside a form control to surface a validation error, warning,
+        informational hint, or success confirmation tied to that field (this is
+        its only current use in the codebase).
+      label: Do
+      caption: >-
+        Inside a form control to surface a validation error, warning, informational
+        hint, or success confirmation tied to that field (this is its only current
+        use in the codebase).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Message example: As a standalone, user-facing component — it is an internal
+        primitive with no story and no established API contract for direct use;
+        compose it inside a host component instead.
+      label: Don't
+      caption: >-
+        As a standalone, user-facing component — it is an internal primitive with
+        no story and no established API contract for direct use; compose it inside
+        a host component instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Message example: Anywhere a short, single-line, icon-plus-text status message
+        is needed at the same visual weight as existing usages.
+      label: Do
+      caption: >-
+        Anywhere a short, single-line, icon-plus-text status message is needed at
+        the same visual weight as existing usages.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Message example: For multi-line or complex feedback content — keep it to
+        one line of text; use a different pattern for longer explanatory copy or
+        dismissible banners.
+      label: Don't
+      caption: >-
+        For multi-line or complex feedback content — keep it to one line of text;
+        use a different pattern for longer explanatory copy or dismissible banners.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Message example: For page- or section-level system status — use a banner/alert
+        pattern intended for that scope.
+      label: Don't
+      caption: >-
+        For page- or section-level system status — use a banner/alert pattern intended
+        for that scope.
 - type: side-by-side
   heading: Content guidance
   list:

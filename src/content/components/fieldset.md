@@ -65,17 +65,27 @@ sections:
       nothing is slotted into slot="action".
     image: https://placehold.co/1280x720
     imageAlt: 'Fieldset: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Grouping one or more related inputs (e.g. an Input group of radios or checkboxes)
-    under a shared legend.
-  - >-
-    Providing a single action, such as a "Continue" button, that applies to the
-    whole group of inputs.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Fieldset example: Grouping one or more related inputs (e.g. an Input group
+        of radios or checkboxes) under a shared legend.
+      label: Do
+      caption: >-
+        Grouping one or more related inputs (e.g. an Input group of radios or checkboxes)
+        under a shared legend.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Fieldset example: Providing a single action, such as a "Continue" button,
+        that applies to the whole group of inputs.
+      label: Do
+      caption: >-
+        Providing a single action, such as a "Continue" button, that applies to
+        the whole group of inputs.
 - type: side-by-side
   heading: Content guidance
   list:

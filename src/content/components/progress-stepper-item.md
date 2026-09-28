@@ -102,22 +102,37 @@ sections:
       the current implementation).
     image: https://placehold.co/1280x720
     imageAlt: 'Progress stepper item: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    As a direct light-DOM child of Progress stepper, one per step in a multi-step
-    journey (e.g. Quote, Cover, Details).
-  dont:
-  - >-
-    Standalone, outside Progress stepper — its number, current and showDivider state
-    are managed by the parent, and it has no independent story or usage pattern
-    of its own.
-  - >-
-    A general-purpose list item or navigation link — use a plain link/list pattern
-    instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Progress stepper item example: As a direct light-DOM child of Progress stepper,
+        one per step in a multi-step journey (e.g. Quote, Cover, Details).
+      label: Do
+      caption: >-
+        As a direct light-DOM child of Progress stepper, one per step in a multi-step
+        journey (e.g. Quote, Cover, Details).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Progress stepper item example: Standalone, outside Progress stepper — its
+        number, current and showDivider state are managed by the parent, and it
+        has no independent story or usage pattern of its own.
+      label: Don't
+      caption: >-
+        Standalone, outside Progress stepper — its number, current and showDivider
+        state are managed by the parent, and it has no independent story or usage
+        pattern of its own.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Progress stepper item example: A general-purpose list item or navigation
+        link — use a plain link/list pattern instead.
+      label: Don't
+      caption: >-
+        A general-purpose list item or navigation link — use a plain link/list pattern
+        instead.
 - type: side-by-side
   heading: Content guidance
   list:

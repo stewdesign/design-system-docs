@@ -81,26 +81,54 @@ sections:
       of its own size property, so sizing set here is ignored in that context.
     image: https://placehold.co/1280x720
     imageAlt: 'Icon: consumed by button'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    General-purpose UI iconography — arrows, checks, alerts, chevrons, etc. — anywhere
-    in the interface.
-  - >-
-    Alongside text to reinforce meaning (e.g. a check icon next to a list item),
-    typically with label left empty since the adjacent text already conveys the
-    meaning.
-  - >-
-    As a semantic icon on its own with no adjacent text (e.g. a standalone status
-    icon), with label set so its meaning is available to assistive technology.
-  dont:
-  - Displaying an AA product/brand mark (e.g. "AA Cars") — use Brand icon instead.
-  - >-
-    An icon-only interactive control — use Icon button, which wraps an icon in a
-    proper button semantics and accessible name.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon example: General-purpose UI iconography — arrows, checks, alerts, chevrons,
+        etc. — anywhere in the interface.
+      label: Do
+      caption: >-
+        General-purpose UI iconography — arrows, checks, alerts, chevrons, etc.
+        — anywhere in the interface.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon example: Displaying an AA product/brand mark (e.g. "AA Cars") — use
+        Brand icon instead.
+      label: Don't
+      caption: Displaying an AA product/brand mark (e.g. "AA Cars") — use Brand
+        icon instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon example: Alongside text to reinforce meaning (e.g. a check icon next
+        to a list item), typically with label left empty since the adjacent text
+        already conveys the meaning.
+      label: Do
+      caption: >-
+        Alongside text to reinforce meaning (e.g. a check icon next to a list item),
+        typically with label left empty since the adjacent text already conveys
+        the meaning.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon example: An icon-only interactive control — use Icon button, which
+        wraps an icon in a proper button semantics and accessible name.
+      label: Don't
+      caption: >-
+        An icon-only interactive control — use Icon button, which wraps an icon
+        in a proper button semantics and accessible name.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon example: As a semantic icon on its own with no adjacent text (e.g.
+        a standalone status icon), with label set so its meaning is available to
+        assistive technology.
+      label: Do
+      caption: >-
+        As a semantic icon on its own with no adjacent text (e.g. a standalone status
+        icon), with label set so its meaning is available to assistive technology.
 - type: side-by-side
   heading: Content guidance
   list:

@@ -113,26 +113,64 @@ sections:
       is handled by a parent like Chip group).
     image: https://placehold.co/1280x720
     imageAlt: 'Chip: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - A single selectable option among several, especially inside Chip group (choice).
-  - A filter toggle in a filter bar (filter).
-  - >-
-    A quick, icon-led action suggestion (assist), e.g. offering to open a date picker.
-  - >-
-    A removable value representing an already-applied input, like a selected tag
-    (input).
-  dont:
-  - A binary on/off setting in a traditional form — use Checkbox instead.
-  - >-
-    Mutually exclusive choices needing full radio-button semantics and native form
-    submission — use Radio.
-  - >-
-    A standalone chip expecting click feedback with no managing group — pair choice/filter/assist
-    chips with Chip group, since a standalone chip is inert on click.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip example: A single selectable option among several, especially inside
+        Chip group (choice).
+      label: Do
+      caption: A single selectable option among several, especially inside Chip
+        group (choice).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip example: A binary on/off setting in a traditional form — use Checkbox
+        instead.
+      label: Don't
+      caption: A binary on/off setting in a traditional form — use Checkbox instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Chip example: A filter toggle in a filter bar (filter).'
+      label: Do
+      caption: A filter toggle in a filter bar (filter).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip example: Mutually exclusive choices needing full radio-button semantics
+        and native form submission — use Radio.
+      label: Don't
+      caption: >-
+        Mutually exclusive choices needing full radio-button semantics and native
+        form submission — use Radio.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip example: A quick, icon-led action suggestion (assist), e.g. offering
+        to open a date picker.
+      label: Do
+      caption: >-
+        A quick, icon-led action suggestion (assist), e.g. offering to open a date
+        picker.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip example: A standalone chip expecting click feedback with no managing
+        group — pair choice/filter/assist chips with Chip group, since a standalone
+        chip is inert on click.
+      label: Don't
+      caption: >-
+        A standalone chip expecting click feedback with no managing group — pair
+        choice/filter/assist chips with Chip group, since a standalone chip is inert
+        on click.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip example: A removable value representing an already-applied input, like
+        a selected tag (input).
+      label: Do
+      caption: >-
+        A removable value representing an already-applied input, like a selected
+        tag (input).
 - type: side-by-side
   heading: Content guidance
   list:

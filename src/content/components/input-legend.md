@@ -46,22 +46,37 @@ sections:
     - error recolours the legend label only.
     image: https://placehold.co/1280x720
     imageAlt: 'Input legend: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    As the heading over a group of related inputs, e.g. inside a <fieldset> or Input
-    group, where the heading needs more visual weight than an individual input's
-    label.
-  dont:
-  - >-
-    As the label for a single input — use Input label instead, which uses the smaller
-    input-label type scale.
-  - >-
-    As a standalone public component — it isn't intended to be used directly outside
-    of a group-level component.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input legend example: As the heading over a group of related inputs, e.g.
+        inside a <fieldset> or Input group, where the heading needs more visual
+        weight than an individual input's label.
+      label: Do
+      caption: >-
+        As the heading over a group of related inputs, e.g. inside a <fieldset>
+        or Input group, where the heading needs more visual weight than an individual
+        input's label.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input legend example: As the label for a single input — use Input label
+        instead, which uses the smaller input-label type scale.
+      label: Don't
+      caption: >-
+        As the label for a single input — use Input label instead, which uses the
+        smaller input-label type scale.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input legend example: As a standalone public component — it isn't intended
+        to be used directly outside of a group-level component.
+      label: Don't
+      caption: >-
+        As a standalone public component — it isn't intended to be used directly
+        outside of a group-level component.
 - type: side-by-side
   heading: Content guidance
   list:
