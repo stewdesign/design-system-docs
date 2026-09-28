@@ -2,8 +2,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 // Shared shape for anything rendered as a labeled card with an optional
-// image — anatomy parts, variants, and behavior/states all use this same
-// template on the page, just under different headings.
+// image — used only by the legacy fixed fields and legacy section types.
 const propertyItem = z.object({
   name: z.string(),
   description: z.string(),
@@ -11,12 +10,8 @@ const propertyItem = z.object({
 });
 
 // ─── Ordered, block-based sections ──────────────────────────────────────
-// A component's page can be built as an ordered list of typed sections
-// instead of (or alongside) the fixed fields below. Each `type` maps to
-// one reusable block component in src/components/blocks/ or one of the
-// existing global section components — see ComponentLayout.astro. This is
-// what lets a page be assembled from a fixed vocabulary of blocks rather
-// than a hardcoded field-by-field layout.
+// A component's page is built as an ordered list of typed sections. Each
+// `type` maps to one reusable block component — see ComponentLayout.astro.
 
 const figureItem = z.object({
   image: z.string(),
@@ -25,15 +20,13 @@ const figureItem = z.object({
   caption: z.string(),
 });
 
-// New, generic page-building blocks (hand-coded and reviewed in the
-// components/playground page before being promoted here).
 const anatomySection = z.object({
   type: z.literal('anatomy'),
   heading: z.string().default('Anatomy'),
   items: z.array(z.string()),
   image: z.string(),
   imageAlt: z.string().optional(),
-  caption: z.string(),
+  caption: z.string().optional(),
 });
 
 const twoColSection = z.object({
@@ -45,7 +38,7 @@ const twoColSection = z.object({
     list: z.array(z.string()).optional(),
     image: z.string(),
     imageAlt: z.string().optional(),
-    caption: z.string(),
+    caption: z.string().optional(),
   })),
 });
 
@@ -61,30 +54,55 @@ const largeSection = z.object({
   })),
 });
 
+// CHANGED: optional section-level `description` and `list`, rendered above
+// the paired figures. Lets Content guidance carry its full set of writing
+// rules, with do/don't pairs as illustrated examples beneath. `items` may
+// now be empty when a component has rules but no do/don't examples.
 const sideBySideSection = z.object({
   type: z.literal('side-by-side'),
   heading: z.string(),
+  description: z.string().optional(),
+  list: z.array(z.string()).optional(),
   items: z.array(z.object({
-    title: z.string(),
+    title: z.string().optional(),
     figures: z.tuple([figureItem, figureItem]),
+  })).default([]),
+});
+
+// NEW: the component API as a table (Property | Options | Default |
+// Description). `tables` is an array so composite components (e.g. a
+// parent and its child item) can show one titled table each.
+const propertiesSection = z.object({
+  type: z.literal('properties'),
+  heading: z.string().default('Properties'),
+  tables: z.array(z.object({
+    title: z.string().optional(),
+    rows: z.array(z.object({
+      name: z.string(),
+      options: z.string(),
+      defaultValue: z.string().optional(),
+      description: z.string(),
+    })),
   })),
 });
 
-// Existing sections, folded into the same union so a page can mix them
-// with the new blocks in one ordered list. Heading/id for these stay
-// fixed, matching the components that already render them.
-const variantsSection = z.object({ type: z.literal('variants'), items: z.array(propertyItem) });
-const behaviorSection = z.object({ type: z.literal('behavior'), items: z.array(propertyItem) });
-const bestPracticesSection = z.object({
-  type: z.literal('best-practices'),
-  do: z.array(z.string()),
-  dont: z.array(z.string()),
-});
 const designTokensSection = z.object({
   type: z.literal('design-tokens'),
   tokens: z.array(z.object({ name: z.string(), value: z.string() })),
 });
-const accessibilitySection = z.object({ type: z.literal('accessibility'), items: z.array(z.string()) });
+
+// CHANGED: fixed sub-sections instead of "### Heading" strings mixed into
+// a flat list. Each renders under its own h3 only when present. `items`
+// stays for pages already using the flat list.
+const accessibilitySection = z.object({
+  type: z.literal('accessibility'),
+  items: z.array(z.string()).optional(),
+  focusOrder: z.array(z.string()).optional(),
+  keyboard: z.array(z.object({ key: z.string(), action: z.string() })).optional(),
+  aria: z.array(z.string()).optional(),
+  seo: z.array(z.string()).optional(),
+});
+
 const relatedComponentsSection = z.object({
   type: z.literal('related-components'),
   items: z.array(z.object({
@@ -94,17 +112,34 @@ const relatedComponentsSection = z.object({
   })),
 });
 
+// Two text columns, "Do" and "Don't". Used for When to use / When not to
+// use, where the points aren't one-to-one pairs. Heading and column titles
+// are optional and default to "Best practices", "Do" and "Don't".
+const bestPracticesSection = z.object({
+  type: z.literal('best-practices'),
+  heading: z.string().default('Best practices'),
+  doHeading: z.string().default('Do'),
+  dontHeading: z.string().default("Don't"),
+  do: z.array(z.string()).default([]),
+  dont: z.array(z.string()).default([]),
+});
+
+// Legacy section types — keep until no page uses them.
+const variantsSection = z.object({ type: z.literal('variants'), items: z.array(propertyItem) });
+const behaviorSection = z.object({ type: z.literal('behavior'), items: z.array(propertyItem) });
+
 const section = z.discriminatedUnion('type', [
   anatomySection,
   twoColSection,
   largeSection,
   sideBySideSection,
-  variantsSection,
-  behaviorSection,
-  bestPracticesSection,
+  propertiesSection,
   designTokensSection,
   accessibilitySection,
   relatedComponentsSection,
+  variantsSection,
+  behaviorSection,
+  bestPracticesSection,
 ]);
 
 const components = defineCollection({
@@ -112,6 +147,8 @@ const components = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    // NEW: drafts are built in dev only and hidden from production.
+    draft: z.boolean().default(false),
     storybookUrl: z.string().optional(),
     figmaUrl: z.string().optional(),
     previewImage: z.string().optional(),
@@ -119,13 +156,10 @@ const components = defineCollection({
     lastUpdated: z.coerce.date().optional(),
     platforms: z.array(z.enum(['Web', 'Mobile app'])).optional(),
 
-    // New, ordered block-based sections (see above). A migrated component
-    // uses this instead of the fixed fields below.
     sections: z.array(section).optional(),
 
     // Legacy fixed fields — still supported for components not yet
-    // migrated onto `sections`. Remove a field here only once every
-    // component using it has moved to the new shape.
+    // migrated onto `sections`. Remove once every page has moved over.
     anatomy: z.object({
       image: z.string().optional(),
       parts: z.array(propertyItem),

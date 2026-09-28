@@ -5,13 +5,18 @@ export interface Props {
 }
 
 const { items } = Astro.props;
+
+// Content files write internal links from the site root ("/components/x");
+// prefix them with the deployed base path so they resolve on GitHub Pages.
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const resolve = (href: string) => (href.startsWith('/') ? `${base}${href}` : href);
 ---
 <section id="related-components" aria-label="Related components">
   <h2>Related components</h2>
   <ul>
     {items.map((item) => (
       <li>
-        <a href={item.href}>{item.label}</a>
+        <a href={resolve(item.href)}>{item.label}</a>
         {item.note && <> — {item.note}</>}
       </li>
     ))}

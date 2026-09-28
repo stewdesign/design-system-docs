@@ -10,9 +10,11 @@ import AnatomyBlock from '../components/blocks/AnatomyBlock.astro';
 import TwoColSection from '../components/blocks/TwoColSection.astro';
 import LargeSection from '../components/blocks/LargeSection.astro';
 import SideBySideSection from '../components/blocks/SideBySideSection.astro';
+import PropertiesTable from '../components/blocks/PropertiesTable.astro';
 
 const {
   title,
+  draft = false,
   description,
   storybookUrl,
   figmaUrl,
@@ -62,13 +64,14 @@ function sectionMeta(s) {
     case 'two-col':
     case 'large':
     case 'side-by-side':
+    case 'properties':
       return { id: slugify(s.heading), label: s.heading };
     case 'variants':
       return { id: 'variants', label: 'Variants' };
     case 'behavior':
       return { id: 'behavior', label: 'Behavior' };
     case 'best-practices':
-      return { id: 'best-practices', label: 'Best practices' };
+      return { id: slugify(s.heading), label: s.heading };
     case 'design-tokens':
       return { id: 'design-tokens', label: 'Design tokens' };
     case 'accessibility':
@@ -109,6 +112,7 @@ const tocSections = [
 >
   <article class="component-article">
     <header class="article-header">
+      {draft && <p class="draft-label">Draft</p>}
       <h1>{title}</h1>
       <p>{description}</p>
 
@@ -170,17 +174,19 @@ const tocSections = [
         case 'large':
           return <LargeSection id={id} title={label} items={s.items} />;
         case 'side-by-side':
-          return <SideBySideSection id={id} title={label} items={s.items} />;
+          return <SideBySideSection id={id} title={label} description={s.description} list={s.list} items={s.items} />;
+        case 'properties':
+          return <PropertiesTable id={id} title={label} tables={s.tables} />;
         case 'variants':
           return <PropertyGrid id="variants" title="Variants" items={s.items} />;
         case 'behavior':
           return <PropertyGrid id="behavior" title="Behavior" items={s.items} />;
         case 'best-practices':
-          return <BestPractices doItems={s.do} dontItems={s.dont} />;
+          return <BestPractices id={id} heading={label} doHeading={s.doHeading} dontHeading={s.dontHeading} doItems={s.do} dontItems={s.dont} />;
         case 'design-tokens':
           return <TokenList tokens={s.tokens} />;
         case 'accessibility':
-          return <AccessibilityList items={s.items} />;
+          return <AccessibilityList items={s.items} focusOrder={s.focusOrder} keyboard={s.keyboard} aria={s.aria} seo={s.seo} />;
         case 'related-components':
           return <RelatedComponents items={s.items} />;
         default:

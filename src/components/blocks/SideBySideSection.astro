@@ -12,17 +12,19 @@ export interface Figure {
 }
 
 export interface SideBySideItem {
-  title: string;
+  title?: string;
   figures: [Figure, Figure];
 }
 
 export interface Props {
   id: string;
   title: string;
-  items: SideBySideItem[];
+  description?: string;
+  list?: string[];
+  items?: SideBySideItem[];
 }
 
-const { id, title, items } = Astro.props;
+const { id, title, description, list, items = [] } = Astro.props;
 
 // Turns "Do" / "Don't" into "do" / "dont" so CSS can target
 // `.do-dont-label[data-variant="do"]` / `[data-variant="dont"]` without
@@ -32,9 +34,16 @@ const variantOf = (label: string) => label.toLowerCase().replace(/[^a-z]/g, '');
 <section class="cards" aria-labelledby={id}>
   <h2 id={id}>{title}</h2>
 
+  {description && <p>{description}</p>}
+  {list && (
+    <ul>
+      {list.map((entry) => <li>{entry}</li>)}
+    </ul>
+  )}
+
   {items.map((item) => (
     <div class="grid">
-      <h3 class="grid-item-100">{item.title}</h3>
+      {item.title && <h3 class="grid-item-100">{item.title}</h3>}
 
       {item.figures.map((fig) => (
         <figure class="nested-grid-item-50-lg">

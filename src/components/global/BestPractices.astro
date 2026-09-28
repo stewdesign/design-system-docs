@@ -1,26 +1,43 @@
 ---
 // Do/Don't comparison, generated from two plain lists of short statements.
+// Also used for When to use / When not to use, with its own heading and
+// column titles. An empty column isn't rendered.
 export interface Props {
+  id?: string;
+  heading?: string;
+  doHeading?: string;
+  dontHeading?: string;
   doItems: string[];
   dontItems: string[];
 }
 
-const { doItems, dontItems } = Astro.props;
+const {
+  id = 'best-practices',
+  heading = 'Best practices',
+  doHeading = 'Do',
+  dontHeading = "Don't",
+  doItems = [],
+  dontItems = [],
+} = Astro.props;
 ---
-<section id="best-practices" aria-label="Best practices">
-  <h2>Best practices</h2>
+<section id={id} aria-label={heading}>
+  <h2>{heading}</h2>
   <div class="best-practices-grid">
-    <div>
-      <h3>Do</h3>
-      <ul>
-        {doItems.map((item) => <li>{item}</li>)}
-      </ul>
-    </div>
-    <div>
-      <h3>Don't</h3>
-      <ul>
-        {dontItems.map((item) => <li>{item}</li>)}
-      </ul>
-    </div>
+    {doItems.length > 0 && (
+      <div>
+        <h3>{doHeading}</h3>
+        <ul>
+          {doItems.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    )}
+    {dontItems.length > 0 && (
+      <div>
+        <h3>{dontHeading}</h3>
+        <ul>
+          {dontItems.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    )}
   </div>
 </section>

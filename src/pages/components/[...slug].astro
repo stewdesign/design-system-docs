@@ -1,9 +1,12 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import ComponentLayout from '../../layouts/ComponentLayout.astro';
+import { getComponents } from '../../lib/components';
 
+// Rest param so draft entries in the drafts/ folder (id "drafts/button")
+// get a route in dev.
 export async function getStaticPaths() {
-  const components = await getCollection('components');
+  const components = await getComponents();
   return components.map(entry => ({
     params: { slug: entry.id },
     props: { entry },
@@ -14,16 +17,17 @@ const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 
 const base = import.meta.env.BASE_URL;
-const allComponents = await getCollection('components');
+const allComponents = await getComponents();
 const sectionItems = allComponents.map(c => ({
   href: `${base}/components/${c.id}`,
-  label: c.data.title,
+  label: c.data.draft ? `${c.data.title} (draft)` : c.data.title,
 }));
 const current = `${base}/components/${entry.id}`;
 ---
 
 <ComponentLayout
   title={entry.data.title}
+  draft={entry.data.draft}
   description={entry.data.description}
   storybookUrl={entry.data.storybookUrl}
   figmaUrl={entry.data.figmaUrl}
