@@ -74,31 +74,62 @@ sections:
       its column count based on available width.
     image: https://placehold.co/1280x720
     imageAlt: 'Chip group: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A set of mutually exclusive filter or choice options presented as chips rather
-    than radio buttons.
-  - >-
-    A multi-select set of options where multiple is more appropriate than a checkbox
-    list (e.g. tag-like filters).
-  - >-
-    Grouping filter or assist chips visually, even though the group doesn't manage
-    their selection state directly.
-  dont:
-  - >-
-    A single standalone chip with no group semantics — use Chip directly; a chip
-    outside a group is inert on click.
-  - >-
-    Removable tags representing already-applied selections — while input-variant
-    chips can sit inside a group visually, the group does not manage their removal;
-    handle chip-remove events directly.
-  - >-
-    Traditional form fields needing native validation/required-field semantics —
-    consider Checkbox/Radio instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip group example: A set of mutually exclusive filter or choice options
+        presented as chips rather than radio buttons.
+      label: Do
+      caption: >-
+        A set of mutually exclusive filter or choice options presented as chips
+        rather than radio buttons.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip group example: A single standalone chip with no group semantics — use
+        Chip directly; a chip outside a group is inert on click.
+      label: Don't
+      caption: >-
+        A single standalone chip with no group semantics — use Chip directly; a
+        chip outside a group is inert on click.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip group example: A multi-select set of options where multiple is more
+        appropriate than a checkbox list (e.g. tag-like filters).
+      label: Do
+      caption: >-
+        A multi-select set of options where multiple is more appropriate than a
+        checkbox list (e.g. tag-like filters).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip group example: Removable tags representing already-applied selections
+        — while input-variant chips can sit inside a group visually, the group does
+        not manage their removal; handle chip-remove events directly.
+      label: Don't
+      caption: >-
+        Removable tags representing already-applied selections — while input-variant
+        chips can sit inside a group visually, the group does not manage their removal;
+        handle chip-remove events directly.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip group example: Grouping filter or assist chips visually, even though
+        the group doesn't manage their selection state directly.
+      label: Do
+      caption: >-
+        Grouping filter or assist chips visually, even though the group doesn't
+        manage their selection state directly.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Chip group example: Traditional form fields needing native validation/required-field
+        semantics — consider Checkbox/Radio instead.
+      label: Don't
+      caption: >-
+        Traditional form fields needing native validation/required-field semantics
+        — consider Checkbox/Radio instead.
 - type: side-by-side
   heading: Content guidance
   list:

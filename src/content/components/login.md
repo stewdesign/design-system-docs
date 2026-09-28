@@ -104,30 +104,61 @@ sections:
       column; it has no other breakpoints of its own.
     image: https://placehold.co/1280x720
     imageAlt: 'Login: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A dedicated log-in page or modal for returning users, covering email/password
-    and one-time-code paths in one pattern.
-  - >-
-    Products that need to resume a user directly into a specific step (e.g. deep-linking
-    into code after an email prompt sent elsewhere).
-  - >-
-    Flows where validation, error display and network calls are owned by the consuming
-    team via slotted fields/actions and cancelable events.
-  dont:
-  - >-
-    Account creation — use a dedicated sign-up pattern, not this component (the
-    "Create an account" prompt only links out to one).
-  - >-
-    A single stand-alone field or button outside a login context — use Text field/Button
-    directly.
-  - >-
-    A flow whose steps don't match this pattern's four steps (email, password, destination,
-    code) — build a custom flow rather than forcing it into Login.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Login example: A dedicated log-in page or modal for returning users, covering
+        email/password and one-time-code paths in one pattern.
+      label: Do
+      caption: >-
+        A dedicated log-in page or modal for returning users, covering email/password
+        and one-time-code paths in one pattern.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Login example: Account creation — use a dedicated sign-up pattern, not this
+        component (the "Create an account" prompt only links out to one).
+      label: Don't
+      caption: >-
+        Account creation — use a dedicated sign-up pattern, not this component (the
+        "Create an account" prompt only links out to one).
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Login example: Products that need to resume a user directly into a specific
+        step (e.g. deep-linking into code after an email prompt sent elsewhere).
+      label: Do
+      caption: >-
+        Products that need to resume a user directly into a specific step (e.g.
+        deep-linking into code after an email prompt sent elsewhere).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Login example: A single stand-alone field or button outside a login context
+        — use Text field/Button directly.
+      label: Don't
+      caption: >-
+        A single stand-alone field or button outside a login context — use Text
+        field/Button directly.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Login example: Flows where validation, error display and network calls are
+        owned by the consuming team via slotted fields/actions and cancelable events.
+      label: Do
+      caption: >-
+        Flows where validation, error display and network calls are owned by the
+        consuming team via slotted fields/actions and cancelable events.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Login example: A flow whose steps don't match this pattern's four steps
+        (email, password, destination, code) — build a custom flow rather than forcing
+        it into Login.
+      label: Don't
+      caption: >-
+        A flow whose steps don't match this pattern's four steps (email, password,
+        destination, code) — build a custom flow rather than forcing it into Login.
 - type: side-by-side
   heading: Content guidance
   list:

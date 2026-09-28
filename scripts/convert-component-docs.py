@@ -202,15 +202,19 @@ def convert(path):
     if rows:
         secs.append({'type': 'two-col', 'heading': 'Behaviour and states', 'items': rows})
 
-    # ─ Usage → best-practices
+    # ─ Usage → side-by-side (Do / Don't figures, same layout as Content guidance)
     use = text_items(S['Usage'].get('When to use', []), 'When to use', gaps)
     avoid = text_items(S['Usage'].get('When not to use', []), 'When not to use', gaps)
-    if use or avoid:
-        bp = {'type': 'best-practices', 'heading': 'When to use',
-              'doHeading': 'Use it for', 'dontHeading': "Don't use it for"}
-        if use: bp['do'] = use
-        if avoid: bp['dont'] = avoid
-        secs.append(bp)
+    rows = []
+    for i in range(max(len(use), len(avoid))):
+        figs = []
+        if i < len(use):
+            figs.append({'image': PH, 'imageAlt': f'{title} example: {use[i]}', 'label': 'Do', 'caption': use[i]})
+        if i < len(avoid):
+            figs.append({'image': PH, 'imageAlt': f'{title} example: {avoid[i]}', 'label': "Don't", 'caption': avoid[i]})
+        rows.append({'figures': figs})
+    if rows:
+        secs.append({'type': 'side-by-side', 'heading': 'When to use', 'items': rows})
 
     # ─ Content guidance → side-by-side
     cg = S['Content guidance']

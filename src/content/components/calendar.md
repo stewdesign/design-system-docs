@@ -99,25 +99,53 @@ sections:
       to handle horizontal scrolling or scaling on very narrow viewports.
     image: https://placehold.co/1280x720
     imageAlt: 'Calendar: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Picking a single date visually, especially when browsing nearby dates helps
-    (e.g. choosing an appointment or start date).
-  - Picking a date range (mode="range"), e.g. a trip start/end or a cover period.
-  - >-
-    Constraining selection to a valid window via min/max (e.g. no dates in the past).
-  dont:
-  - >-
-    Capturing a date of birth — use Date of birth's typed-entry pattern instead,
-    since typing three known numbers is faster and more accessible than browsing
-    a calendar for a date decades in the past.
-  - >-
-    A lightweight, low-stakes date entry where a plain text field with format guidance
-    is sufficient.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Calendar example: Picking a single date visually, especially when browsing
+        nearby dates helps (e.g. choosing an appointment or start date).
+      label: Do
+      caption: >-
+        Picking a single date visually, especially when browsing nearby dates helps
+        (e.g. choosing an appointment or start date).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Calendar example: Capturing a date of birth — use Date of birth's typed-entry
+        pattern instead, since typing three known numbers is faster and more accessible
+        than browsing a calendar for a date decades in the past.
+      label: Don't
+      caption: >-
+        Capturing a date of birth — use Date of birth's typed-entry pattern instead,
+        since typing three known numbers is faster and more accessible than browsing
+        a calendar for a date decades in the past.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Calendar example: Picking a date range (mode="range"), e.g. a trip start/end
+        or a cover period.
+      label: Do
+      caption: Picking a date range (mode="range"), e.g. a trip start/end or a cover
+        period.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Calendar example: A lightweight, low-stakes date entry where a plain text
+        field with format guidance is sufficient.
+      label: Don't
+      caption: >-
+        A lightweight, low-stakes date entry where a plain text field with format
+        guidance is sufficient.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Calendar example: Constraining selection to a valid window via min/max (e.g.
+        no dates in the past).
+      label: Do
+      caption: >-
+        Constraining selection to a valid window via min/max (e.g. no dates in the
+        past).
 - type: side-by-side
   heading: Content guidance
   list:

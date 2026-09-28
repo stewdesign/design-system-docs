@@ -138,28 +138,60 @@ sections:
       within that range, and tags/price rows wrap onto multiple lines if needed.
     image: https://placehold.co/1280x720
     imageAlt: 'Selector: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A single option that needs more visual weight or content than a plain checkbox/radio
-    — e.g. product tiles with a price, an icon, or tags.
-  - >-
-    Grouped, mutually exclusive choices with input-type="radio" and a shared name,
-    where richer context (price, tags, media) helps the user compare options.
-  - On/off toggles that benefit from a card layout, using input-type="switch".
-  dont:
-  - >-
-    A plain, low-context checkbox or radio with no supporting content — use Checkbox
-    or Radio directly instead.
-  - >-
-    A single, isolated on/off setting with no surrounding card content — use Switch
-    directly instead.
-  - >-
-    A long list of simple, text-only options — use Select for a more compact, scrollable
-    list.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Selector example: A single option that needs more visual weight or content
+        than a plain checkbox/radio — e.g. product tiles with a price, an icon,
+        or tags.
+      label: Do
+      caption: >-
+        A single option that needs more visual weight or content than a plain checkbox/radio
+        — e.g. product tiles with a price, an icon, or tags.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Selector example: A plain, low-context checkbox or radio with no supporting
+        content — use Checkbox or Radio directly instead.
+      label: Don't
+      caption: >-
+        A plain, low-context checkbox or radio with no supporting content — use
+        Checkbox or Radio directly instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Selector example: Grouped, mutually exclusive choices with input-type="radio"
+        and a shared name, where richer context (price, tags, media) helps the user
+        compare options.
+      label: Do
+      caption: >-
+        Grouped, mutually exclusive choices with input-type="radio" and a shared
+        name, where richer context (price, tags, media) helps the user compare options.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Selector example: A single, isolated on/off setting with no surrounding
+        card content — use Switch directly instead.
+      label: Don't
+      caption: >-
+        A single, isolated on/off setting with no surrounding card content — use
+        Switch directly instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Selector example: On/off toggles that benefit from a card layout, using
+        input-type="switch".
+      label: Do
+      caption: On/off toggles that benefit from a card layout, using input-type="switch".
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Selector example: A long list of simple, text-only options — use Select
+        for a more compact, scrollable list.
+      label: Don't
+      caption: >-
+        A long list of simple, text-only options — use Select for a more compact,
+        scrollable list.
 - type: side-by-side
   heading: Content guidance
   list:

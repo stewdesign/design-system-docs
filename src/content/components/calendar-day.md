@@ -89,21 +89,36 @@ sections:
     description: Fixed 48×48px cell size; no breakpoints of its own.
     image: https://placehold.co/1280x720
     imageAlt: 'Calendar day: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Exclusively as a child cell inside Calendar's day grid — it has no standalone
-    use case.
-  dont:
-  - >-
-    Anywhere outside Calendar — its tabindex-value, selection and range state are
-    all driven by the parent grid and have no meaning in isolation.
-  - >-
-    As a general-purpose numeric button — use a plain button or another control
-    for anything not representing a calendar date.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Calendar day example: Exclusively as a child cell inside Calendar's day
+        grid — it has no standalone use case.
+      label: Do
+      caption: >-
+        Exclusively as a child cell inside Calendar's day grid — it has no standalone
+        use case.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Calendar day example: Anywhere outside Calendar — its tabindex-value, selection
+        and range state are all driven by the parent grid and have no meaning in
+        isolation.
+      label: Don't
+      caption: >-
+        Anywhere outside Calendar — its tabindex-value, selection and range state
+        are all driven by the parent grid and have no meaning in isolation.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Calendar day example: As a general-purpose numeric button — use a plain
+        button or another control for anything not representing a calendar date.
+      label: Don't
+      caption: >-
+        As a general-purpose numeric button — use a plain button or another control
+        for anything not representing a calendar date.
 - type: side-by-side
   heading: Content guidance
   list:

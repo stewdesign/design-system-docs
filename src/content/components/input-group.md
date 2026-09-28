@@ -70,24 +70,43 @@ sections:
       rather than the two stacking together.
     image: https://placehold.co/1280x720
     imageAlt: 'Input group: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A set of related radio buttons, checkboxes, switches or selectors that share
-    one label, description and error.
-  - >-
-    Anywhere a native <fieldset>/<legend> grouping would apply, but with the design
-    system's own label/description/error styling.
-  dont:
-  - >-
-    A single standalone input — use the input's own labelling (e.g. Text field),
-    not Input group.
-  - >-
-    Inputs that aren't related to each other or don't share a common error — group
-    them separately instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input group example: A set of related radio buttons, checkboxes, switches
+        or selectors that share one label, description and error.
+      label: Do
+      caption: >-
+        A set of related radio buttons, checkboxes, switches or selectors that share
+        one label, description and error.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input group example: A single standalone input — use the input's own labelling
+        (e.g. Text field), not Input group.
+      label: Don't
+      caption: >-
+        A single standalone input — use the input's own labelling (e.g. Text field),
+        not Input group.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input group example: Anywhere a native <fieldset>/<legend> grouping would
+        apply, but with the design system's own label/description/error styling.
+      label: Do
+      caption: >-
+        Anywhere a native <fieldset>/<legend> grouping would apply, but with the
+        design system's own label/description/error styling.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Input group example: Inputs that aren't related to each other or don't share
+        a common error — group them separately instead.
+      label: Don't
+      caption: >-
+        Inputs that aren't related to each other or don't share a common error —
+        group them separately instead.
 - type: side-by-side
   heading: Content guidance
   list:

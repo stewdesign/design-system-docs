@@ -90,22 +90,43 @@ sections:
       1fr 1.25fr, giving the year field slightly more room for its four digits).
     image: https://placehold.co/1280x720
     imageAlt: 'Date of birth: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Capturing a user's date of birth in a form, especially where quick, precise
-    typed entry is preferable to picking from a calendar.
-  - Any context where Figma's Pattern/Date Of Birth has been specified.
-  dont:
-  - >-
-    Picking an arbitrary future or past date (e.g. an appointment date) where visually
-    browsing a calendar helps — use Calendar/a date-picker pattern instead.
-  - >-
-    A single combined date field — this pattern is specifically three separate segments,
-    not one text field.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Date of birth example: Capturing a user's date of birth in a form, especially
+        where quick, precise typed entry is preferable to picking from a calendar.
+      label: Do
+      caption: >-
+        Capturing a user's date of birth in a form, especially where quick, precise
+        typed entry is preferable to picking from a calendar.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Date of birth example: Picking an arbitrary future or past date (e.g. an
+        appointment date) where visually browsing a calendar helps — use Calendar/a
+        date-picker pattern instead.
+      label: Don't
+      caption: >-
+        Picking an arbitrary future or past date (e.g. an appointment date) where
+        visually browsing a calendar helps — use Calendar/a date-picker pattern
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Date of birth example: Any context where Figma's Pattern/Date Of Birth has
+        been specified.
+      label: Do
+      caption: Any context where Figma's Pattern/Date Of Birth has been specified.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Date of birth example: A single combined date field — this pattern is specifically
+        three separate segments, not one text field.
+      label: Don't
+      caption: >-
+        A single combined date field — this pattern is specifically three separate
+        segments, not one text field.
 - type: side-by-side
   heading: Content guidance
   list:

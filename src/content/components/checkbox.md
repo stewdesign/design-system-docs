@@ -114,22 +114,55 @@ sections:
       width of 120px.
     image: https://placehold.co/1280x720
     imageAlt: 'Checkbox: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - A single binary choice within a form (agree/disagree, opt in/out).
-  - One option within a group of independently selectable choices.
-  - >-
-    A tri-state "select all" control representing a partially-selected group (indeterminate).
-  - A more prominent, card-like selectable option — variant="outline".
-  dont:
-  - Mutually exclusive choices — use Radio instead.
-  - >-
-    A toggle for an immediate setting change (rather than a form field to submit)
-    — consider a switch/toggle component instead.
-  - Multiple related choice chips in a compact row — use Chip group instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Checkbox example: A single binary choice within a form (agree/disagree,
+        opt in/out).
+      label: Do
+      caption: A single binary choice within a form (agree/disagree, opt in/out).
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Checkbox example: Mutually exclusive choices — use Radio instead.'
+      label: Don't
+      caption: Mutually exclusive choices — use Radio instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Checkbox example: One option within a group of independently selectable
+        choices.'
+      label: Do
+      caption: One option within a group of independently selectable choices.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Checkbox example: A toggle for an immediate setting change (rather than
+        a form field to submit) — consider a switch/toggle component instead.
+      label: Don't
+      caption: >-
+        A toggle for an immediate setting change (rather than a form field to submit)
+        — consider a switch/toggle component instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Checkbox example: A tri-state "select all" control representing a partially-selected
+        group (indeterminate).
+      label: Do
+      caption: >-
+        A tri-state "select all" control representing a partially-selected group
+        (indeterminate).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Checkbox example: Multiple related choice chips in a compact row — use Chip
+        group instead.
+      label: Don't
+      caption: Multiple related choice chips in a compact row — use Chip group instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Checkbox example: A more prominent, card-like selectable option — variant="outline".
+      label: Do
+      caption: A more prominent, card-like selectable option — variant="outline".
 - type: side-by-side
   heading: Content guidance
   list:

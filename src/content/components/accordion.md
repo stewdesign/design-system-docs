@@ -92,29 +92,61 @@ sections:
       inline size.
     image: https://placehold.co/1280x720
     imageAlt: 'Accordion: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - FAQ sections, help content, or any list of question/answer pairs.
-  - >-
-    Grouping several related, optional content sections a user may or may not want
-    to open.
-  - >-
-    Where only one item's content is usually relevant at a time (leave multiple
-    off).
-  dont:
-  - >-
-    For primary or required content the user must see without extra interaction
-    — don't hide critical information behind a collapsed accordion.
-  - >-
-    For a single standalone collapsible section with no group semantics — a bare
-    Accordion item still requires the group as its parent, so use it inside a single-item
-    Accordion rather than reaching for something else.
-  - >-
-    For navigation menus or mutually exclusive selection — use a purpose-built navigation
-    or selection component instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion example: FAQ sections, help content, or any list of question/answer
+        pairs.
+      label: Do
+      caption: FAQ sections, help content, or any list of question/answer pairs.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion example: For primary or required content the user must see without
+        extra interaction — don't hide critical information behind a collapsed accordion.
+      label: Don't
+      caption: >-
+        For primary or required content the user must see without extra interaction
+        — don't hide critical information behind a collapsed accordion.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion example: Grouping several related, optional content sections a
+        user may or may not want to open.
+      label: Do
+      caption: >-
+        Grouping several related, optional content sections a user may or may not
+        want to open.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion example: For a single standalone collapsible section with no group
+        semantics — a bare Accordion item still requires the group as its parent,
+        so use it inside a single-item Accordion rather than reaching for something
+        else.
+      label: Don't
+      caption: >-
+        For a single standalone collapsible section with no group semantics — a
+        bare Accordion item still requires the group as its parent, so use it inside
+        a single-item Accordion rather than reaching for something else.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion example: Where only one item's content is usually relevant at
+        a time (leave multiple off).
+      label: Do
+      caption: >-
+        Where only one item's content is usually relevant at a time (leave multiple
+        off).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Accordion example: For navigation menus or mutually exclusive selection
+        — use a purpose-built navigation or selection component instead.
+      label: Don't
+      caption: >-
+        For navigation menus or mutually exclusive selection — use a purpose-built
+        navigation or selection component instead.
 - type: side-by-side
   heading: Content guidance
   list:

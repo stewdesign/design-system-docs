@@ -108,24 +108,49 @@ sections:
       from every other semantic colour, which switches to white text at strong emphasis.
     image: https://placehold.co/1280x720
     imageAlt: 'Tag: warning'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Indicating a status or category next to other content, e.g. a policy state or
-    a classification label.
-  - Displaying a member's benefit tier (gold/silver/bronze).
-  - >-
-    Displaying a road classification or motorway number in journey or breakdown-related
-    content.
-  dont:
-  - >-
-    As an interactive control — Tag is not clickable or focusable; use Button or
-    Tile for actions.
-  - As a dismissible filter chip or removable input value
-  - For a longer message with supporting detail — use Message instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tag example: Indicating a status or category next to other content, e.g.
+        a policy state or a classification label.
+      label: Do
+      caption: >-
+        Indicating a status or category next to other content, e.g. a policy state
+        or a classification label.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tag example: As an interactive control — Tag is not clickable or focusable;
+        use Button or Tile for actions.
+      label: Don't
+      caption: >-
+        As an interactive control — Tag is not clickable or focusable; use Button
+        or Tile for actions.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Tag example: Displaying a member''s benefit tier (gold/silver/bronze).'
+      label: Do
+      caption: Displaying a member's benefit tier (gold/silver/bronze).
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Tag example: As a dismissible filter chip or removable input value'
+      label: Don't
+      caption: As a dismissible filter chip or removable input value
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tag example: Displaying a road classification or motorway number in journey
+        or breakdown-related content.
+      label: Do
+      caption: >-
+        Displaying a road classification or motorway number in journey or breakdown-related
+        content.
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Tag example: For a longer message with supporting detail — use
+        Message instead.'
+      label: Don't
+      caption: For a longer message with supporting detail — use Message instead.
 - type: side-by-side
   heading: Content guidance
   list:

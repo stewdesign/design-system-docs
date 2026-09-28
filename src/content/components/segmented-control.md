@@ -106,30 +106,62 @@ sections:
       should be checked against the available width.
     image: https://placehold.co/1280x720
     imageAlt: 'Segmented control: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Switching between 2-4 closely related views, filters or time ranges that are
-    visible on the same screen (e.g. "Monthly" / "Annual").
-  - >-
-    Compact, single-selection choices where all options should be visible at once,
-    unlike a dropdown.
-  - >-
-    Content that benefits from an icon or a notification badge alongside a short
-    label.
-  dont:
-  - >-
-    More than a handful of options, or options with long labels — use Select or
-    a tab pattern instead.
-  - >-
-    Navigating to a different page or route — segmented control is for in-page state,
-    not navigation; use Button or standard links for navigation.
-  - >-
-    Multi-select choices — this component enforces single selection only, matching
-    native radio-group semantics.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Segmented control example: Switching between 2-4 closely related views,
+        filters or time ranges that are visible on the same screen (e.g. "Monthly"
+        / "Annual").
+      label: Do
+      caption: >-
+        Switching between 2-4 closely related views, filters or time ranges that
+        are visible on the same screen (e.g. "Monthly" / "Annual").
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Segmented control example: More than a handful of options, or options with
+        long labels — use Select or a tab pattern instead.
+      label: Don't
+      caption: >-
+        More than a handful of options, or options with long labels — use Select
+        or a tab pattern instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Segmented control example: Compact, single-selection choices where all options
+        should be visible at once, unlike a dropdown.
+      label: Do
+      caption: >-
+        Compact, single-selection choices where all options should be visible at
+        once, unlike a dropdown.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Segmented control example: Navigating to a different page or route — segmented
+        control is for in-page state, not navigation; use Button or standard links
+        for navigation.
+      label: Don't
+      caption: >-
+        Navigating to a different page or route — segmented control is for in-page
+        state, not navigation; use Button or standard links for navigation.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Segmented control example: Content that benefits from an icon or a notification
+        badge alongside a short label.
+      label: Do
+      caption: >-
+        Content that benefits from an icon or a notification badge alongside a short
+        label.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Segmented control example: Multi-select choices — this component enforces
+        single selection only, matching native radio-group semantics.
+      label: Don't
+      caption: >-
+        Multi-select choices — this component enforces single selection only, matching
+        native radio-group semantics.
 - type: side-by-side
   heading: Content guidance
   list:

@@ -108,30 +108,63 @@ sections:
       content only (display: inline-flex, width: auto).
     image: https://placehold.co/1280x720
     imageAlt: 'Switch: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A single setting that applies immediately when changed, with no separate confirmation
-    step (e.g. enabling notifications, turning a feature on or off).
-  - >-
-    Icon-only, space-constrained contexts where a full label isn't needed visually
-    — use variant="atom", but still supply label for assistive tech.
-  - >-
-    Settings where the current state (on/off) is the primary thing the user needs
-    to see at a glance.
-  dont:
-  - >-
-    A choice that requires an explicit save/submit action before taking effect —
-    use Checkbox instead.
-  - >-
-    Selecting one option from a list of two or more mutually exclusive choices that
-    aren't simply "on/off" — use a radio group.
-  - >-
-    Multiple independent selections from a list — use Checkbox in a group, not a
-    set of switches.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Switch example: A single setting that applies immediately when changed,
+        with no separate confirmation step (e.g. enabling notifications, turning
+        a feature on or off).
+      label: Do
+      caption: >-
+        A single setting that applies immediately when changed, with no separate
+        confirmation step (e.g. enabling notifications, turning a feature on or
+        off).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Switch example: A choice that requires an explicit save/submit action before
+        taking effect — use Checkbox instead.
+      label: Don't
+      caption: >-
+        A choice that requires an explicit save/submit action before taking effect
+        — use Checkbox instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Switch example: Icon-only, space-constrained contexts where a full label
+        isn't needed visually — use variant="atom", but still supply label for assistive
+        tech.
+      label: Do
+      caption: >-
+        Icon-only, space-constrained contexts where a full label isn't needed visually
+        — use variant="atom", but still supply label for assistive tech.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Switch example: Selecting one option from a list of two or more mutually
+        exclusive choices that aren't simply "on/off" — use a radio group.
+      label: Don't
+      caption: >-
+        Selecting one option from a list of two or more mutually exclusive choices
+        that aren't simply "on/off" — use a radio group.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Switch example: Settings where the current state (on/off) is the primary
+        thing the user needs to see at a glance.
+      label: Do
+      caption: >-
+        Settings where the current state (on/off) is the primary thing the user
+        needs to see at a glance.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Switch example: Multiple independent selections from a list — use Checkbox
+        in a group, not a set of switches.
+      label: Don't
+      caption: >-
+        Multiple independent selections from a list — use Checkbox in a group, not
+        a set of switches.
 - type: side-by-side
   heading: Content guidance
   list:

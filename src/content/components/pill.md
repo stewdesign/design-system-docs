@@ -98,23 +98,44 @@ sections:
       to its content, wrapping only if forced by the container.
     image: https://placehold.co/1280x720
     imageAlt: 'Pill: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    As a child of Segmented control — this is its only intended host; do not use
-    Pill standalone.
-  - >-
-    Options that need an inline icon and/or notification badge alongside their label
-    within a segmented control.
-  dont:
-  - >-
-    Anywhere outside Segmented control — it has no keyboard roving-focus or exclusive-selection
-    logic of its own; that all lives in the parent. Use Segmented control with its
-    child pills instead of assembling Pill independently.
-  - A single standalone toggle — use a dedicated toggle/switch component instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pill example: As a child of Segmented control — this is its only intended
+        host; do not use Pill standalone.
+      label: Do
+      caption: >-
+        As a child of Segmented control — this is its only intended host; do not
+        use Pill standalone.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pill example: Anywhere outside Segmented control — it has no keyboard roving-focus
+        or exclusive-selection logic of its own; that all lives in the parent. Use
+        Segmented control with its child pills instead of assembling Pill independently.
+      label: Don't
+      caption: >-
+        Anywhere outside Segmented control — it has no keyboard roving-focus or
+        exclusive-selection logic of its own; that all lives in the parent. Use
+        Segmented control with its child pills instead of assembling Pill independently.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pill example: Options that need an inline icon and/or notification badge
+        alongside their label within a segmented control.
+      label: Do
+      caption: >-
+        Options that need an inline icon and/or notification badge alongside their
+        label within a segmented control.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pill example: A single standalone toggle — use a dedicated toggle/switch
+        component instead.
+      label: Don't
+      caption: A single standalone toggle — use a dedicated toggle/switch component
+        instead.
 - type: side-by-side
   heading: Content guidance
   list:

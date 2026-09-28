@@ -104,28 +104,60 @@ sections:
       of its own beyond what Card group's row layout provides.
     image: https://placehold.co/1280x720
     imageAlt: 'Card: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Presenting a self-contained piece of content (a feature, a cover option, a service)
-    with an optional image, icon and call-to-action.
-  - Inside Card group for an equal-height row of related cards.
-  - >-
-    Either with a real link/button action (interactive, hover-responsive) or as
-    a purely informational block with no action.
-  dont:
-  - >-
-    A simple text-only content block with no card framing — use plain content in
-    Container instead.
-  - >-
-    A clickable card with no visible action content — set a real action (button/link)
-    in the action slot rather than relying on the whole card surface being implicitly
-    clickable; the hover/focus treatment only activates when real action content
-    is present.
-  - Displaying tabular or list-style data — use a table or list component instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Card example: Presenting a self-contained piece of content (a feature, a
+        cover option, a service) with an optional image, icon and call-to-action.
+      label: Do
+      caption: >-
+        Presenting a self-contained piece of content (a feature, a cover option,
+        a service) with an optional image, icon and call-to-action.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Card example: A simple text-only content block with no card framing — use
+        plain content in Container instead.
+      label: Don't
+      caption: >-
+        A simple text-only content block with no card framing — use plain content
+        in Container instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Card example: Inside Card group for an equal-height row of related
+        cards.'
+      label: Do
+      caption: Inside Card group for an equal-height row of related cards.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Card example: A clickable card with no visible action content — set a real
+        action (button/link) in the action slot rather than relying on the whole
+        card surface being implicitly clickable; the hover/focus treatment only
+        activates when real action content is present.
+      label: Don't
+      caption: >-
+        A clickable card with no visible action content — set a real action (button/link)
+        in the action slot rather than relying on the whole card surface being implicitly
+        clickable; the hover/focus treatment only activates when real action content
+        is present.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Card example: Either with a real link/button action (interactive, hover-responsive)
+        or as a purely informational block with no action.
+      label: Do
+      caption: >-
+        Either with a real link/button action (interactive, hover-responsive) or
+        as a purely informational block with no action.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Card example: Displaying tabular or list-style data — use a table or list
+        component instead.
+      label: Don't
+      caption: Displaying tabular or list-style data — use a table or list component
+        instead.
 - type: side-by-side
   heading: Content guidance
   list:

@@ -119,17 +119,27 @@ sections:
       via Escape, scrim click or the close button.
     image: https://placehold.co/1280x720
     imageAlt: 'Dialog: events'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Presenting content or a focused task that requires the user's full attention
-    before returning to the page, e.g. a confirmation with actions.
-  - >-
-    Displaying an image alongside supporting content and actions (media/media-hero
-    variants).
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Dialog example: Presenting content or a focused task that requires the user's
+        full attention before returning to the page, e.g. a confirmation with actions.
+      label: Do
+      caption: >-
+        Presenting content or a focused task that requires the user's full attention
+        before returning to the page, e.g. a confirmation with actions.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Dialog example: Displaying an image alongside supporting content and actions
+        (media/media-hero variants).
+      label: Do
+      caption: >-
+        Displaying an image alongside supporting content and actions (media/media-hero
+        variants).
 - type: side-by-side
   heading: Content guidance
   list:

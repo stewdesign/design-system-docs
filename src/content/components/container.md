@@ -76,31 +76,64 @@ sections:
       content vertically with a consistent gap by default.
     image: https://placehold.co/1280x720
     imageAlt: 'Container: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Wrapping arbitrary content (text, a single component, or a nested layout) in
-    a padded, optionally coloured card surface.
-  - >-
-    As the surface for a composed layout, with Columns nested inside for positioning,
-    splitting, or ratio-based sizing.
-  - >-
-    Recreating structured card-like patterns (e.g. a plan/pricing card) using only
-    real components — a heading, a radio, a list, a link — without needing a purpose-built
-    card variant.
-  dont:
-  - >-
-    When a fuller card anatomy (image, icon, tag, action slot) is needed — use Card
-    instead.
-  - >-
-    For custom positioning or splitting logic — don't add bespoke CSS; nest Columns
-    inside the container instead, which is the sanctioned pattern.
-  - >-
-    As a general-purpose layout primitive on its own — it has no layout props; pair
-    it with Columns for anything beyond a single stacked column of content.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Container example: Wrapping arbitrary content (text, a single component,
+        or a nested layout) in a padded, optionally coloured card surface.
+      label: Do
+      caption: >-
+        Wrapping arbitrary content (text, a single component, or a nested layout)
+        in a padded, optionally coloured card surface.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Container example: When a fuller card anatomy (image, icon, tag, action
+        slot) is needed — use Card instead.
+      label: Don't
+      caption: >-
+        When a fuller card anatomy (image, icon, tag, action slot) is needed — use
+        Card instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Container example: As the surface for a composed layout, with Columns nested
+        inside for positioning, splitting, or ratio-based sizing.
+      label: Do
+      caption: >-
+        As the surface for a composed layout, with Columns nested inside for positioning,
+        splitting, or ratio-based sizing.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Container example: For custom positioning or splitting logic — don't add
+        bespoke CSS; nest Columns inside the container instead, which is the sanctioned
+        pattern.
+      label: Don't
+      caption: >-
+        For custom positioning or splitting logic — don't add bespoke CSS; nest
+        Columns inside the container instead, which is the sanctioned pattern.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Container example: Recreating structured card-like patterns (e.g. a plan/pricing
+        card) using only real components — a heading, a radio, a list, a link —
+        without needing a purpose-built card variant.
+      label: Do
+      caption: >-
+        Recreating structured card-like patterns (e.g. a plan/pricing card) using
+        only real components — a heading, a radio, a list, a link — without needing
+        a purpose-built card variant.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Container example: As a general-purpose layout primitive on its own — it
+        has no layout props; pair it with Columns for anything beyond a single stacked
+        column of content.
+      label: Don't
+      caption: >-
+        As a general-purpose layout primitive on its own — it has no layout props;
+        pair it with Columns for anything beyond a single stacked column of content.
 - type: side-by-side
   heading: Content guidance
   list:

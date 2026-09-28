@@ -113,16 +113,31 @@ sections:
       start or end changes, from either typed entry or calendar selection.
     image: https://placehold.co/1280x720
     imageAlt: 'Date picker: events'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - Collecting a single date, e.g. a date of birth or policy start date.
-  - Collecting a date range, e.g. a period of cover exclusion.
-  - >-
-    Where users may want to either type a date directly or pick it visually from
-    a calendar.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Date picker example: Collecting a single date, e.g. a date of birth or policy
+        start date.
+      label: Do
+      caption: Collecting a single date, e.g. a date of birth or policy start date.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Date picker example: Collecting a date range, e.g. a period of
+        cover exclusion.'
+      label: Do
+      caption: Collecting a date range, e.g. a period of cover exclusion.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Date picker example: Where users may want to either type a date directly
+        or pick it visually from a calendar.
+      label: Do
+      caption: >-
+        Where users may want to either type a date directly or pick it visually
+        from a calendar.
 - type: side-by-side
   heading: Content guidance
   list:

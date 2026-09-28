@@ -95,20 +95,38 @@ sections:
       when active.
     image: https://placehold.co/1280x720
     imageAlt: 'Tab: size variants'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - As a child of Tabs, one per tab in the set — not standalone.
-  - When you need each tab to optionally carry a leading icon alongside its label.
-  dont:
-  - >-
-    Directly, outside an Tabs wrapper — it has no tablist semantics or keyboard
-    handling of its own; those are owned by the parent.
-  - >-
-    For actions that aren't part of a mutually-exclusive set of panels/views — use
-    Button instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Tab example: As a child of Tabs, one per tab in the set — not standalone.'
+      label: Do
+      caption: As a child of Tabs, one per tab in the set — not standalone.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tab example: Directly, outside an Tabs wrapper — it has no tablist semantics
+        or keyboard handling of its own; those are owned by the parent.
+      label: Don't
+      caption: >-
+        Directly, outside an Tabs wrapper — it has no tablist semantics or keyboard
+        handling of its own; those are owned by the parent.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tab example: When you need each tab to optionally carry a leading icon alongside
+        its label.
+      label: Do
+      caption: When you need each tab to optionally carry a leading icon alongside
+        its label.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tab example: For actions that aren't part of a mutually-exclusive set of
+        panels/views — use Button instead.
+      label: Don't
+      caption: >-
+        For actions that aren't part of a mutually-exclusive set of panels/views
+        — use Button instead.
 - type: side-by-side
   heading: Content guidance
   list:

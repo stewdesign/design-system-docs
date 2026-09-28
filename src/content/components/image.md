@@ -77,21 +77,44 @@ sections:
       image to match.
     image: https://placehold.co/1280x720
     imageAlt: 'Image: corners'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Any content image that needs to be constrained to one of the documented aspect
-    ratios (square, widescreen, or 4:3), e.g. in cards, galleries or content blocks.
-  - Where a placeholder should be shown before a real image source is available.
-  dont:
-  - >-
-    Full-bleed or background images with bespoke sizing outside the documented ratios
-    — e.g. Hero's background-image variant manages its own background image directly
-    rather than using Image.
-  - Purely decorative graphics or icons — use Icon or Brand icon instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Image example: Any content image that needs to be constrained to one of
+        the documented aspect ratios (square, widescreen, or 4:3), e.g. in cards,
+        galleries or content blocks.
+      label: Do
+      caption: >-
+        Any content image that needs to be constrained to one of the documented
+        aspect ratios (square, widescreen, or 4:3), e.g. in cards, galleries or
+        content blocks.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Image example: Full-bleed or background images with bespoke sizing outside
+        the documented ratios — e.g. Hero's background-image variant manages its
+        own background image directly rather than using Image.
+      label: Don't
+      caption: >-
+        Full-bleed or background images with bespoke sizing outside the documented
+        ratios — e.g. Hero's background-image variant manages its own background
+        image directly rather than using Image.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Image example: Where a placeholder should be shown before a real image source
+        is available.
+      label: Do
+      caption: Where a placeholder should be shown before a real image source is
+        available.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Image example: Purely decorative graphics or icons — use Icon or Brand icon
+        instead.
+      label: Don't
+      caption: Purely decorative graphics or icons — use Icon or Brand icon instead.
 - type: side-by-side
   heading: Content guidance
   list:

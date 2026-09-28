@@ -69,27 +69,49 @@ sections:
       a single visually-aligned block rather than drifting apart independently.
     image: https://placehold.co/1280x720
     imageAlt: 'Heading: alignment'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Any page or section title that should appear in the document's heading outline,
-    at whatever semantic level (h1–h6) is correct for that position in the page
-    structure.
-  - >-
-    Pairing a heading with a short line of supporting copy underneath it, via the
-    subheading slot.
-  dont:
-  - >-
-    Purely decorative large text that is not a genuine section/page title — use
-    styled body text instead, so the heading outline isn't polluted with non-structural
-    entries.
-  - >-
-    Supporting copy that itself needs to be a heading (e.g. a sub-section title)
-    — the subheading slot renders a <p>, not a heading, so use a second Heading
-    at the appropriate level instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Heading example: Any page or section title that should appear in the document's
+        heading outline, at whatever semantic level (h1–h6) is correct for that
+        position in the page structure.
+      label: Do
+      caption: >-
+        Any page or section title that should appear in the document's heading outline,
+        at whatever semantic level (h1–h6) is correct for that position in the page
+        structure.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Heading example: Purely decorative large text that is not a genuine section/page
+        title — use styled body text instead, so the heading outline isn't polluted
+        with non-structural entries.
+      label: Don't
+      caption: >-
+        Purely decorative large text that is not a genuine section/page title —
+        use styled body text instead, so the heading outline isn't polluted with
+        non-structural entries.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Heading example: Pairing a heading with a short line of supporting copy
+        underneath it, via the subheading slot.
+      label: Do
+      caption: >-
+        Pairing a heading with a short line of supporting copy underneath it, via
+        the subheading slot.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Heading example: Supporting copy that itself needs to be a heading (e.g.
+        a sub-section title) — the subheading slot renders a <p>, not a heading,
+        so use a second Heading at the appropriate level instead.
+      label: Don't
+      caption: >-
+        Supporting copy that itself needs to be a heading (e.g. a sub-section title)
+        — the subheading slot renders a <p>, not a heading, so use a second Heading
+        at the appropriate level instead.
 - type: side-by-side
   heading: Content guidance
   list:

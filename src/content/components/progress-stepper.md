@@ -101,27 +101,52 @@ sections:
       a persistent secondary-surface background and bolder number/title styling.
     image: https://placehold.co/1280x720
     imageAlt: 'Progress stepper: item states'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A multi-step flow (e.g. quote journeys) where the user needs to see their current
-    step and jump back to a previous one.
-  - >-
-    Contexts where space is constrained and a full horizontal stepper won't fit
-    — this is a dropdown, not an inline stepper.
-  dont:
-  - >-
-    A flow where every step should be visible at once inline — use a different,
-    non-collapsing stepper pattern.
-  - >-
-    A simple linear progress indication with no navigation to previous steps — a
-    plain progress bar or label may be more appropriate.
-  - >-
-    Grouping unrelated actions — this component is specifically for sequential journey
-    steps.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Progress stepper example: A multi-step flow (e.g. quote journeys) where
+        the user needs to see their current step and jump back to a previous one.
+      label: Do
+      caption: >-
+        A multi-step flow (e.g. quote journeys) where the user needs to see their
+        current step and jump back to a previous one.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Progress stepper example: A flow where every step should be visible at once
+        inline — use a different, non-collapsing stepper pattern.
+      label: Don't
+      caption: >-
+        A flow where every step should be visible at once inline — use a different,
+        non-collapsing stepper pattern.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Progress stepper example: Contexts where space is constrained and a full
+        horizontal stepper won't fit — this is a dropdown, not an inline stepper.
+      label: Do
+      caption: >-
+        Contexts where space is constrained and a full horizontal stepper won't
+        fit — this is a dropdown, not an inline stepper.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Progress stepper example: A simple linear progress indication with no navigation
+        to previous steps — a plain progress bar or label may be more appropriate.
+      label: Don't
+      caption: >-
+        A simple linear progress indication with no navigation to previous steps
+        — a plain progress bar or label may be more appropriate.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Progress stepper example: Grouping unrelated actions — this component is
+        specifically for sequential journey steps.
+      label: Don't
+      caption: >-
+        Grouping unrelated actions — this component is specifically for sequential
+        journey steps.
 - type: side-by-side
   heading: Content guidance
   list:

@@ -98,25 +98,58 @@ sections:
       viewport.
     image: https://placehold.co/1280x720
     imageAlt: 'Icon button: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    An icon-only control with no visible label, where the icon alone is clear in
-    context (e.g. a close "x", a chevron "next" button).
-  - Compact toolbar or card actions where space doesn't allow a labelled button.
-  - >-
-    Navigation controls like "previous"/"next" (e.g. inside Calendar's month navigation).
-  dont:
-  - Any action where a visible text label would aid clarity — use Button instead.
-  - >-
-    A set of mutually exclusive or multi-select icon toggles — use a purpose-built
-    selection component.
-  - >-
-    When the icon's meaning isn't obvious without a label — pair with visible text
-    or use a fully labelled Button.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon button example: An icon-only control with no visible label, where the
+        icon alone is clear in context (e.g. a close "x", a chevron "next" button).
+      label: Do
+      caption: >-
+        An icon-only control with no visible label, where the icon alone is clear
+        in context (e.g. a close "x", a chevron "next" button).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon button example: Any action where a visible text label would aid clarity
+        — use Button instead.
+      label: Don't
+      caption: Any action where a visible text label would aid clarity — use Button
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon button example: Compact toolbar or card actions where space doesn't
+        allow a labelled button.
+      label: Do
+      caption: Compact toolbar or card actions where space doesn't allow a labelled
+        button.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon button example: A set of mutually exclusive or multi-select icon toggles
+        — use a purpose-built selection component.
+      label: Don't
+      caption: >-
+        A set of mutually exclusive or multi-select icon toggles — use a purpose-built
+        selection component.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon button example: Navigation controls like "previous"/"next" (e.g. inside
+        Calendar's month navigation).
+      label: Do
+      caption: >-
+        Navigation controls like "previous"/"next" (e.g. inside Calendar's month
+        navigation).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Icon button example: When the icon's meaning isn't obvious without a label
+        — pair with visible text or use a fully labelled Button.
+      label: Don't
+      caption: >-
+        When the icon's meaning isn't obvious without a label — pair with visible
+        text or use a fully labelled Button.
 - type: side-by-side
   heading: Content guidance
   list:

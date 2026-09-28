@@ -74,26 +74,49 @@ sections:
       interactive transition tokens.
     image: https://placehold.co/1280x720
     imageAlt: 'Pagination counter: general behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Paginating a single ordered set of content (e.g. table rows, a list, or a carousel)
-    where "page X of Y" is the clearest way to communicate position, and stepping
-    one page at a time is sufficient (no jump-to-page or numbered page links).
-  - >-
-    When you want compact, icon-driven pagination controls rather than a row of
-    numbered page buttons.
-  dont:
-  - >-
-    When users need to jump to specific page numbers, not just step forward/back
-    — build a numbered pagination pattern instead.
-  - >-
-    When there is no meaningful "page of total" framing (e.g. a small, fixed number
-    of items like onboarding steps or a carousel) — use Pagination simple's dot
-    indicator instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination counter example: Paginating a single ordered set of content (e.g.
+        table rows, a list, or a carousel) where "page X of Y" is the clearest way
+        to communicate position, and stepping one page at a time is sufficient (no
+        jump-to-page or numbered page links).
+      label: Do
+      caption: >-
+        Paginating a single ordered set of content (e.g. table rows, a list, or
+        a carousel) where "page X of Y" is the clearest way to communicate position,
+        and stepping one page at a time is sufficient (no jump-to-page or numbered
+        page links).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination counter example: When users need to jump to specific page numbers,
+        not just step forward/back — build a numbered pagination pattern instead.
+      label: Don't
+      caption: >-
+        When users need to jump to specific page numbers, not just step forward/back
+        — build a numbered pagination pattern instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination counter example: When you want compact, icon-driven pagination
+        controls rather than a row of numbered page buttons.
+      label: Do
+      caption: >-
+        When you want compact, icon-driven pagination controls rather than a row
+        of numbered page buttons.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination counter example: When there is no meaningful "page of total"
+        framing (e.g. a small, fixed number of items like onboarding steps or a
+        carousel) — use Pagination simple's dot indicator instead.
+      label: Don't
+      caption: >-
+        When there is no meaningful "page of total" framing (e.g. a small, fixed
+        number of items like onboarding steps or a carousel) — use Pagination simple's
+        dot indicator instead.
 - type: side-by-side
   heading: Content guidance
   list:

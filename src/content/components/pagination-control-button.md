@@ -72,19 +72,33 @@ sections:
       rings use the shared focus-ring transition token.
     image: https://placehold.co/1280x720
     imageAlt: 'Pagination control button: transitions'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    As the previous/next control inside Pagination counter (its only current composed
-    usage).
-  dont:
-  - >-
-    As a general-purpose icon button — use Icon button for standalone icon-only
-    actions unrelated to pagination.
-  - For dot-style page indicators — use Pagination simple instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination control button example: As the previous/next control inside Pagination
+        counter (its only current composed usage).
+      label: Do
+      caption: >-
+        As the previous/next control inside Pagination counter (its only current
+        composed usage).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination control button example: As a general-purpose icon button — use
+        Icon button for standalone icon-only actions unrelated to pagination.
+      label: Don't
+      caption: >-
+        As a general-purpose icon button — use Icon button for standalone icon-only
+        actions unrelated to pagination.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Pagination control button example: For dot-style page indicators — use Pagination
+        simple instead.
+      label: Don't
+      caption: For dot-style page indicators — use Pagination simple instead.
 - type: side-by-side
   heading: Content guidance
   list:

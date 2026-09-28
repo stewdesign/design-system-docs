@@ -121,25 +121,58 @@ sections:
       100%); intended for use inside a grid such as Columns.
     image: https://placehold.co/1280x720
     imageAlt: 'Tile: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    A grid of navigational or selectable options, e.g. product categories, service
-    types or account actions.
-  - >-
-    A destructive or high-consequence action presented as a tile, e.g. cancelling
-    a policy (intent="danger").
-  - Highlighting a new or noteworthy option with a badge (standout).
-  - A Breakdown-branded action tile (surface="breakdown").
-  dont:
-  - A single, standalone call-to-action outside a grid layout — use Button instead.
-  - An icon-only control with no heading — use Icon button instead.
-  - >-
-    A card-style container with more complex content than an icon, heading and short
-    description — use Card instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tile example: A grid of navigational or selectable options, e.g. product
+        categories, service types or account actions.
+      label: Do
+      caption: >-
+        A grid of navigational or selectable options, e.g. product categories, service
+        types or account actions.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tile example: A single, standalone call-to-action outside a grid layout
+        — use Button instead.
+      label: Don't
+      caption: A single, standalone call-to-action outside a grid layout — use Button
+        instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tile example: A destructive or high-consequence action presented as a tile,
+        e.g. cancelling a policy (intent="danger").
+      label: Do
+      caption: >-
+        A destructive or high-consequence action presented as a tile, e.g. cancelling
+        a policy (intent="danger").
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Tile example: An icon-only control with no heading — use Icon button
+        instead.'
+      label: Don't
+      caption: An icon-only control with no heading — use Icon button instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Tile example: Highlighting a new or noteworthy option with a badge
+        (standout).'
+      label: Do
+      caption: Highlighting a new or noteworthy option with a badge (standout).
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tile example: A card-style container with more complex content than an icon,
+        heading and short description — use Card instead.
+      label: Don't
+      caption: >-
+        A card-style container with more complex content than an icon, heading and
+        short description — use Card instead.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Tile example: A Breakdown-branded action tile (surface="breakdown").'
+      label: Do
+      caption: A Breakdown-branded action tile (surface="breakdown").
 - type: side-by-side
   heading: Content guidance
   list:

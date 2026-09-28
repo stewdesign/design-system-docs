@@ -82,25 +82,48 @@ sections:
       on mobile.
     image: https://placehold.co/1280x720
     imageAlt: 'Tabs: responsive behaviour'
-- type: best-practices
+- type: side-by-side
   heading: When to use
-  doHeading: Use it for
-  dontHeading: Don't use it for
-  do:
-  - >-
-    Switching between related views or panels of content within the same context,
-    where only one is visible at a time.
-  - >-
-    Grouping sub-navigation within a page or section, e.g. switching between "Cover",
-    "Claims" and "Documents" for the same policy.
-  dont:
-  - A single standalone action — use Button.
-  - >-
-    Primary, page-level navigation between distinct areas of the product — use a
-    dedicated navigation component.
-  - >-
-    A small, fixed set of mutually exclusive options that aren't panels of content
-    — use a radio group instead.
+  items:
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tabs example: Switching between related views or panels of content within
+        the same context, where only one is visible at a time.
+      label: Do
+      caption: >-
+        Switching between related views or panels of content within the same context,
+        where only one is visible at a time.
+    - image: https://placehold.co/1280x720
+      imageAlt: 'Tabs example: A single standalone action — use Button.'
+      label: Don't
+      caption: A single standalone action — use Button.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tabs example: Grouping sub-navigation within a page or section, e.g. switching
+        between "Cover", "Claims" and "Documents" for the same policy.
+      label: Do
+      caption: >-
+        Grouping sub-navigation within a page or section, e.g. switching between
+        "Cover", "Claims" and "Documents" for the same policy.
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tabs example: Primary, page-level navigation between distinct areas of the
+        product — use a dedicated navigation component.
+      label: Don't
+      caption: >-
+        Primary, page-level navigation between distinct areas of the product — use
+        a dedicated navigation component.
+  - figures:
+    - image: https://placehold.co/1280x720
+      imageAlt: >-
+        Tabs example: A small, fixed set of mutually exclusive options that aren't
+        panels of content — use a radio group instead.
+      label: Don't
+      caption: >-
+        A small, fixed set of mutually exclusive options that aren't panels of content
+        — use a radio group instead.
 - type: side-by-side
   heading: Content guidance
   list:
