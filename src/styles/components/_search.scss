@@ -1,0 +1,70 @@
+// Search toggle and Pagefind dialog.
+
+#search-toggle {
+  display: flex;
+  align-items: center;
+
+  kbd {
+    font-size: 0.75rem;
+    font-family: inherit;
+    border: 1px solid var(--border-default-secondary);
+    border-radius: 4px;
+    padding: 0 4px;
+  }
+}
+
+.search-dialog {
+  display: none;
+
+  &.is-open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+  }
+}
+
+.search-dialog-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.search-dialog-panel {
+  position: relative;
+  max-width: 40rem;
+  margin: 10vh auto 0;
+  padding: 1.5rem;
+  background: var(--surface-default-primary);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  // Theme the Pagefind search widget with the site's own design tokens
+  // instead of its default look. Variable names come from Pagefind's
+  // Component UI: https://pagefind.app/docs/css-variables
+  --pf-font: var(--font-family-family-sans), Arial, sans-serif;
+  --pf-text: var(--text-default-headings);
+  --pf-text-secondary: var(--text-default-body);
+  --pf-text-muted: var(--text-default-body);
+  --pf-background: var(--surface-default-primary);
+  --pf-border: var(--border-default-tertiary);
+  --pf-border-focus: var(--border-action-focus);
+  --pf-outline-focus: var(--border-action-focus);
+  --pf-hover: var(--surface-default-secondary);
+  --pf-mark: var(--surface-primary-primary);
+  --pf-border-radius: 8px;
+  --pf-searchbox-max-width: 100%;
+  --pf-dropdown-max-height: 60vh;
+  --pf-error-bg: var(--surface-danger-tertiary);
+  --pf-error-border: var(--surface-danger-primary-default);
+  --pf-error-text: var(--surface-danger-primary-default);
+  --pf-error-text-secondary: var(--surface-danger-secondary);
+}
+
+.search-dialog-close {
+  margin-top: 1rem;
+}
+
+body.search-open {
+  overflow: hidden;
+}

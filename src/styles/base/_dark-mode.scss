@@ -1,0 +1,12 @@
+// Dark mode. Loaded last so it overrides the element defaults.
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--surface-default-primary);
+    color: var(--text-default-headings);
+  }
+}

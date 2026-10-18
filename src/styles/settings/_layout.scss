@@ -1,0 +1,57 @@
+// Layout custom properties: grid columns and spans, gaps and padding.
+
+:root {
+  --grid-column: repeat(4, 1fr);
+  --grid-col-width: 1fr;
+  --grid-gutter: 1.5rem;
+  --grid-gap: 2.5rem;
+  --inner-gap: 1rem;
+
+  --grid-item-100: span 4;
+  --grid-item-75: span 4;
+  --grid-item-66: span 4;
+  --grid-item-50: span 2;
+  --grid-item-33: span 4;
+  --grid-item-25: span 4;
+
+  --nested-grid-item-50: span 4;
+  --nested-grid-item-50-lg: span 4;
+
+  --grid-item-single: span 4;
+
+  --gap-sm: .5rem;
+  --gap-md: 1rem;
+  --gap-lg: 1.5rem;
+  --gap-xl: 2rem;
+
+  --padding-sm: .5rem;
+  --padding-md: 1rem;
+  --padding-lg: 1.5rem;
+  --padding-xl: 2rem;
+  --padding-xxl: 3rem;
+}
+
+@media screen and (min-width: 48em) {
+  :root {
+    --grid-column: repeat(12, 1fr);
+
+    --grid-item-100: span 12;
+    --grid-item-75: span 9;
+    --grid-item-66: span 8;
+    --grid-item-50: span 6;
+    --grid-item-33: span 4;
+    --grid-item-25: span 3;
+
+    --nested-grid-item-50: span 6;
+    --nested-grid-item-50-lg: span 12;
+
+    --grid-item-single: 2 / span 10;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  :root {
+    --grid-item-single: 3 / span 8;
+    --nested-grid-item-50-lg: span 6;
+  }
+}

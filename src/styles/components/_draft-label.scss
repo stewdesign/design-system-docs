@@ -1,0 +1,11 @@
+// Draft label (dev only; drafts are not built in production).
+
+.draft-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--surface-danger-tertiary);
+  font-size: 0.85em;
+  text-transform: uppercase;
+}

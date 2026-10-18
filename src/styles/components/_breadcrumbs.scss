@@ -1,0 +1,7 @@
+// Breadcrumb trail.
+
+.breadcrumbs ul {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: var(--padding-md);
+}

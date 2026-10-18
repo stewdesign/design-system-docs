@@ -1,0 +1,58 @@
+// Grid utility classes and the detail-page content subgrid.
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--grid-column);
+  grid-template-rows: var(--grid-col-width);
+  grid-column-gap: var(--grid-gutter);
+}
+
+.row {
+  gap: var(--inner-gap);
+}
+
+.grid-item-100 { grid-column: var(--grid-item-100); }
+.grid-item-75  { grid-column: var(--grid-item-75); }
+.grid-item-66  { grid-column: var(--grid-item-66); }
+.grid-item-50  { grid-column: var(--grid-item-50); }
+.grid-item-33  { grid-column: var(--grid-item-33); }
+.grid-item-25  { grid-column: var(--grid-item-25); }
+
+.nested-grid-item-50      { grid-column: var(--nested-grid-item-50); }
+.nested-grid-item-50-lg   { grid-column: var(--nested-grid-item-50-lg); }
+
+// Subgrid layout used on component/foundation detail pages
+.content {
+  grid-template-columns: subgrid;
+}
+
+.inner-section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 56.25em) {
+  .inner-section {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: var(--grid-gutter);
+  }
+
+  .inner-section-content, .inner-section ol {
+    grid-column: span 4;
+  }
+
+  .inner-section figure {
+    grid-column: span 5;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .inner-section-content, .inner-section ol {
+    grid-column: span 3;
+  }
+
+  .inner-section figure {
+    grid-column: span 6;
+  }
+}

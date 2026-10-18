@@ -1,0 +1,66 @@
+// Shared styles for content sections on detail pages, plus the two-col and side-by-side (.cards) blocks.
+
+.content section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: var(--padding-lg) 0;
+
+  @media (min-width: 48em) {
+    padding: var(--padding-xxl) 0;
+  }
+
+  h2 {
+    padding-bottom: var(--padding-md);
+    border-bottom: 1px solid var(--border-default-tertiary);
+  }
+
+  p, ul, ol {
+    margin-top: 1rem;
+  }
+
+  ul, ol {
+    li {
+      margin-top: 0.5rem;
+    }
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+  }
+}
+
+.two-col {
+  @media (max-width: 70em) {
+    figure {
+      order: -1;
+    }
+  }
+}
+
+.cards, .two-col {
+  .grid {
+    gap: var(--gap-lg);
+  }
+}
+
+// "Do"/"Don't" label in the side-by-side (.cards) block's figcaptions —
+// see SideBySideSection.astro, which sets data-variant from the label text.
+.do-dont-label {
+  font-family: var(--font-family-family-display), Arial, sans-serif;
+  text-transform: uppercase;
+
+  &[data-variant="do"] {
+    color: var(--text-positive-secondary);
+  }
+
+  &[data-variant="dont"] {
+    color: var(--text-danger-primary);
+  }
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

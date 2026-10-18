@@ -1,0 +1,12 @@
+// Site header.
+
+#site-header {
+  padding: var(--padding-xl) 0;
+}
+
+#global-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}

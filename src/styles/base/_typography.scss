@@ -1,0 +1,57 @@
+// Headings, body text, lists and code.
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-family-display), Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+h3 { font-size: var(--h3); }
+h4 { font-size: var(--h4); }
+h5 { font-size: var(--h5); }
+
+// Size classes, usable on any tag when the visual size needs to differ from
+// the semantic heading level — e.g. an <h2> styled to look like an <h3>.
+.h1 { font-size: var(--h1); }
+.h2 { font-size: var(--h2); }
+.h3 { font-size: var(--h3); }
+.h4 { font-size: var(--h4); }
+.h5 { font-size: var(--h5); }
+
+// Component article pages (single component detail pages) nest every
+// section one level below the page's own H1, whether that heading comes
+// from a frontmatter-driven component (PropertyGrid, BestPractices, etc.)
+// or is written directly in the markdown body. Scoping the size reduction
+// here — rather than adding a class to every individual heading — means
+// any h2/h3 an editor or AI writes into the markdown body automatically
+// matches, with nothing to remember.
+.component-article {
+  h2 { font-size: var(--h3); }
+  h3 { font-size: var(--h4); }
+}
+
+p  {
+  font-size: var(--base-size);
+  max-width: 66ch;
+}
+
+h1.scale {
+  font-size: clamp(1.5rem, 15vw, 9rem);
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+code {
+  background: var(--surface-default-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}

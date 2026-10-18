@@ -1,0 +1,17 @@
+// "On this page" contents list.
+
+.on-this-page {
+  gap: var(--gap-lg);
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding: var(--padding-sm) 0;
+    border-top: 1px solid var(--border-default-tertiary);
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: .125rem;
+    }
+  }
+}

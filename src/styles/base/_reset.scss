@@ -1,0 +1,38 @@
+// Reset and element defaults.
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// CSS-only smooth scrolling for anchor jumps, e.g. the "On this page" links
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-family-sans), Arial, sans-serif;
+  font-size: var(--base-size);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--surface-default-primary);
+  color: var(--text-default-headings);
+}
+
+a {
+  color: var(--text-action-link);
+  text-underline-offset: .5rem;
+}
+
+a:hover {
+   text-decoration-thickness: .125rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 1rem;
+}

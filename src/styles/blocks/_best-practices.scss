@@ -1,0 +1,10 @@
+// Do / Don't columns (best-practices block).
+
+.best-practices-grid {
+  display: grid;
+  gap: var(--gap-lg);
+
+  @media (min-width: 48em) {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}

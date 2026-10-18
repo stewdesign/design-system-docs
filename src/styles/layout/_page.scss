@@ -1,0 +1,31 @@
+// Page container, main and article header.
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+}
+
+.article-header, .on-this-page {
+  padding: var(--padding-lg) 0;
+
+  @media (min-width: 48em) {
+    padding: var(--padding-xxl) 0;
+  }
+}
+
+.meta-data {
+  padding: 1rem;
+  border: 1px solid var(--border-default-tertiary);
+  margin-top: 2rem;
+}
+
+.article-header h1 {
+  padding-bottom: var(--padding-lg);
+  margin-bottom: var(--padding-lg);
+  border-bottom: 1px solid var(--border-default-tertiary);
+}
+
+main {
+  padding-top: var(--padding-xl);
+}
