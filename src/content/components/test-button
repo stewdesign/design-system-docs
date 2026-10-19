@@ -1,4 +1,9 @@
-# Aa-button
+---
+# Gaps from the source doc (TODOs), for review:
+#   - Anatomy: reference a labeled anatomy diagram once one exists in Figma.
+#   - When not to use: name the multi-line/textarea equivalent, if one exists in this system.
+#   - SEO and AI discovery: confirm whether this component is expected to appear inside a <form> landmark or with any additional metadata for SEO purposes.
+title: test
 
 ## Overview
 `aa-button` is the single control for every button and link call-to-action in the design system. It renders as a native `<button>` by default, or as an `<a>` when an `href` is supplied, so the same variants, sizes and states apply whether the action is in-page or a navigation.
