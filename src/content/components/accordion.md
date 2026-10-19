@@ -68,7 +68,7 @@ sections:
       item has its own shadow root and cannot share that mechanism.
     image: https://placehold.co/1280x720
     imageAlt: 'Accordion: exclusive open by default'
-  - title: multiple
+  - title: Multiple
     description: >-
       Switching this on lets several items stay open independently; switching it
       off collapses all but the first still-open item.
